@@ -15,6 +15,13 @@ public class StoryModeTextureScreen : StoryModeScreen {
 	public float minDelayBeforeSkipping = 0.1f;
 	#endregion
 
+	public Slider slider;
+	public float fillTime = 7f; // Time in seconds to fill the slider completely
+	//public string levelToLoad = "NextLevel"; // Name of the level to load
+
+	private float currentTime = 0f;
+	private bool isSliderFilled = false;
+
 
 
 	#region public override methods
@@ -36,17 +43,47 @@ public class StoryModeTextureScreen : StoryModeScreen {
 		this.StartCoroutine(this.ShowScreen());
 	}
 
-    public void Nextlevel()
+
+	private void Update()
+	{
+		// Check if the slider is not yet filled completely
+		if (!isSliderFilled)
+		{
+			currentTime += Time.deltaTime;
+
+			// Calculate the fill percentage based on current time and fillTime
+			float fillPercentage = currentTime / fillTime;
+			slider.value = fillPercentage;
+
+			// Check if the slider is filled completely
+			if (fillPercentage >= 1f)
+			{
+				isSliderFilled = true;
+				Nextlevel();
+			}
+		}
+	}
+
+
+	public void Nextlevel()
     {
 		this.GoToNextScreen();
     }
+
+	public void restart()
+	{
+		UFE.RestartMatch();
+	}
 
 
 	public void GoToMainMenu()
     {
 		UFE.EndGame(true);
+		
 		SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
+
+	
 
 
 	public virtual IEnumerator ShowScreen(){

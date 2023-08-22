@@ -29,22 +29,22 @@ public class NextLevelUnlock : MonoBehaviour
         currentCoins = PlayerPrefs.GetInt("coin");
         Debug.Log("Current Ammount of Coins are " + currentCoins);
 
-        reward = 500;
+        reward = 1000;
 
         PlayerPrefs.SetInt("coin", currentCoins + reward);
 
-        coinReward.text = $"You were rewarded {reward} Coins, Your Current coin balance is {PlayerPrefs.GetInt("coin")}";
+        coinReward.text = $"Rewarded {reward} Coins";
     }
 
     public void rewardAddition()
     {
         rewardSuccess.gameObject.SetActive(true);
-        successText.text = "Successfully watched video ad";
+        successText.text = "Congratulations you 2X'd your reward";
     }
 
     public void VideoRewardSuccess()
     {
-        reward *= 3;
+        reward *= 2;
 
         PlayerPrefs.SetInt("coin", currentCoins + reward);
 

@@ -31,7 +31,7 @@ public class StatsScreen : MonoBehaviour
     {
         if(PlayerPrefs.GetInt("coin") >=500 && PlayerPrefs.GetInt("Health") <= 1500) { 
             PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") + 100);
-            PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - 500);
+            PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - 1000);
         }
         StatsSetup();
     }
@@ -41,7 +41,7 @@ public class StatsScreen : MonoBehaviour
         if (PlayerPrefs.GetInt("coin") >= 500)
         {
             PlayerPrefs.SetInt("playerStamina", PlayerPrefs.GetInt("playerStamina") + 1);
-            PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - 500);
+            PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - 1000);
         }
         StatsSetup();
     }
