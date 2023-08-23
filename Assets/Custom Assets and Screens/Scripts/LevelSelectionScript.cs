@@ -68,7 +68,7 @@ public class LevelSelectionScript : MonoBehaviour
                 myImageComponent = GameObject.Find($"Level {i + 1}");
                 buttons[i].interactable = true;
                 button_text = myImageComponent.GetComponentInChildren<TMP_Text>();
-                button_text.text = $"Level {i + 1}";
+                button_text.text = $"{i + 1}";
 
                 if(allLevelsUnlock == 1)
                 {

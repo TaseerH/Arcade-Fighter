@@ -48,7 +48,7 @@ public class NextLevelUnlock : MonoBehaviour
 
         PlayerPrefs.SetInt("coin", currentCoins + reward);
 
-        coinReward.text = $"Congrats you added {reward} Coins to your reward, Current balance: {PlayerPrefs.GetInt("coin")}";
+        coinReward.text = $"Congrats you added {reward} Coins to your reward";
 
         rewardSuccess.gameObject.SetActive(false);
 

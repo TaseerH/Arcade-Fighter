@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     public void BuyCoin()
     {
-        PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + 100);
+        PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + 5000);
     }
 
     public void GoToCharacterLevelSelection()

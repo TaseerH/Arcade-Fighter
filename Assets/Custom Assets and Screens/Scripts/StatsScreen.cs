@@ -29,7 +29,7 @@ public class StatsScreen : MonoBehaviour
 
     public void BuyHealth()
     {
-        if(PlayerPrefs.GetInt("coin") >=500 && PlayerPrefs.GetInt("Health") <= 1500) { 
+        if(PlayerPrefs.GetInt("coin") >=1000 && PlayerPrefs.GetInt("Health") <= 1500) { 
             PlayerPrefs.SetInt("Health", PlayerPrefs.GetInt("Health") + 100);
             PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - 1000);
         }
@@ -37,8 +37,8 @@ public class StatsScreen : MonoBehaviour
     }
 
     public void BuyStamina()
-    {
-        if (PlayerPrefs.GetInt("coin") >= 500)
+    { 
+        if (PlayerPrefs.GetInt("coin") >= 1000)
         {
             PlayerPrefs.SetInt("playerStamina", PlayerPrefs.GetInt("playerStamina") + 1);
             PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - 1000);

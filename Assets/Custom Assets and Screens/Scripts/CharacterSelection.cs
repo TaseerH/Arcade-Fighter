@@ -12,7 +12,7 @@ public class CharacterSelection : MonoBehaviour
     public UFE3D.CharacterInfo[] playercharacters;
     public GameObject[] characters;
     public int selectedCharacter = 0;
-    public int j = 1000;
+    //public int j = 10000;
 
     public Button Play;
     public Button Buy;
@@ -36,7 +36,7 @@ public class CharacterSelection : MonoBehaviour
         Buy.gameObject.SetActive(false);
         
 
-        Debug.Log($"The Letter J is {j}");
+        //Debug.Log($"The Letter J is {j}");
         if (PlayerPrefs.GetInt("freshinstall") == 0)
         {
             for (int i = 0; i < characters.Length; i++)
@@ -47,14 +47,21 @@ public class CharacterSelection : MonoBehaviour
                 }
                 else
                 {
-                    PlayerPrefs.SetInt($"characterprice{i}", j);
+                    
                     PlayerPrefs.SetInt($"character{i}", 0);
                 }
                 
 
                 Debug.Log($"Characters are {PlayerPrefs.GetInt($"character{i}")}");
-                j += 1000;
+                //j += 15000;
             }
+
+            PlayerPrefs.SetInt($"characterprice{1}", 10000);
+            PlayerPrefs.SetInt($"characterprice{2}", 30000);
+            PlayerPrefs.SetInt($"characterprice{3}", 50000);
+            PlayerPrefs.SetInt($"characterprice{4}", 150000);
+            PlayerPrefs.SetInt($"characterprice{5}", 250000);
+            PlayerPrefs.SetInt($"characterprice{6}", 350000);
 
             PlayerPrefs.SetInt("playerHealth", 1);
             PlayerPrefs.SetInt("playerStamina", 0);
