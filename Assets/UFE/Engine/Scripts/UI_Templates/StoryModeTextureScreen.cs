@@ -59,19 +59,30 @@ public class StoryModeTextureScreen : StoryModeScreen {
 			if (fillPercentage >= 1f)
 			{
 				isSliderFilled = true;
-				Nextlevel();
+				NextScreen();
 			}
 		}
 	}
 
 
+	private void NextScreen()
+    {
+		this.GoToNextScreen();
+    }
+
 	public void Nextlevel()
     {
+		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
+		PlayerPrefs.SetInt($"level{currentLevel}", 1);
+		PlayerPrefs.SetInt("selectedLevel", currentLevel + 1);
+
+
 		this.GoToNextScreen();
     }
 
 	public void restart()
 	{
+		
 		UFE.RestartMatch();
 	}
 

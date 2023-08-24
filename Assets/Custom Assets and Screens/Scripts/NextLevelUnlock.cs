@@ -16,15 +16,12 @@ public class NextLevelUnlock : MonoBehaviour
 
     private void OnEnable()
     {
-        int currentLevel = PlayerPrefs.GetInt("selectedLevel");
-        PlayerPrefs.SetInt($"level{currentLevel}", 1);
-        PlayerPrefs.SetInt("selectedLevel", currentLevel + 1);
 
-        if (currentLevel == 5)
+
+        if (PlayerPrefs.GetInt("selectedLevel") == 5)
         {
             PlayerPrefs.SetInt("KnockOut_Unlock", 1);
         }
-
 
         currentCoins = PlayerPrefs.GetInt("coin");
         Debug.Log("Current Ammount of Coins are " + currentCoins);

@@ -117,6 +117,12 @@ public class DefaultBattleGUI : BattleGUI{
 		SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
+	public void restart()
+    {
+		panel.gameObject.SetActive(false);
+		UFE.RestartMatch();
+    }
+
     private void UFE_OnGameBegin(ControlsScript player1, ControlsScript player2, StageOptions stage)
     {
 		
