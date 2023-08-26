@@ -145,7 +145,7 @@ MonoBehaviour:
   searchimage: {fileID: 453777308413261841}
   battleStart: {fileID: 2151842799090542343}
   player2: {fileID: 100004}
-  fillTime: 7
+  fillTime: 3
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
         m_CallState: 1
 --- !u!95 &9500000
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -818,8 +818,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &100024
 GameObject:
   m_ObjectHideFlags: 0

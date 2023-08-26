@@ -38,7 +38,7 @@ public class StatsScreen : MonoBehaviour
 
     public void BuyStamina()
     { 
-        if (PlayerPrefs.GetInt("coin") >= 1000)
+        if (PlayerPrefs.GetInt("coin") >= 1000 && PlayerPrefs.GetInt("playerStamina") <= 10)
         {
             PlayerPrefs.SetInt("playerStamina", PlayerPrefs.GetInt("playerStamina") + 1);
             PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - 1000);

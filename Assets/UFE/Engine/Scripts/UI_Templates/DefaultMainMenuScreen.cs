@@ -54,6 +54,23 @@ public class DefaultMainMenuScreen : MainMenuScreen
 
     private void Start()
     {
+
+		if(PlayerPrefs.GetInt("music") == 1)
+        {
+			UFE.SetMusic(true);
+        } else
+        {
+			UFE.SetMusic(false);
+        }
+
+		if(PlayerPrefs.GetInt("sound") == 1)
+        {
+			UFE.SetSoundFX(true);
+        } else
+        {
+			UFE.SetSoundFX(false);
+        }
+
 		UFE.StartStoryMode();
 		int loadLevelNumber = PlayerPrefs.GetInt("selectedLevel") - 1;
 		Debug.Log("Level Being Loaded is = " + loadLevelNumber);
