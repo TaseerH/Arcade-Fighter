@@ -145,7 +145,7 @@ MonoBehaviour:
   searchimage: {fileID: 453777308413261841}
   battleStart: {fileID: 2151842799090542343}
   player2: {fileID: 100004}
-  fillTime: 3
+  fillTime: 1
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,8 +17,11 @@ public class GameManager : MonoBehaviour
     public GameObject reviewPanel;
     public GameObject storePage;
     public GameObject Settings;
-
+    public GameObject QuitPanel;
     public Button knockOutMode;
+
+    public GameObject adWatchPanelsuccess;
+    public GameObject adWatchPanelfail;
 
     public Button HealthButton;
 
@@ -90,10 +93,35 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("freshinstall", 0);
     }
 
+    public void addwatch()
+    {
+        adwatchSuccess();
+    }
+
+    public void adwatchSuccess()
+    {
+        adWatchPanelsuccess.SetActive(true);
+        Characters.SetActive(false);
+    }
+
+    public void adwatchFail()
+    {
+        adWatchPanelfail.SetActive(true);
+        Characters.SetActive(false);
+    }
+
+    public void adFail()
+    {
+        adWatchPanelfail.SetActive(false);
+        Characters.SetActive(true);
+    }
+
     public void BuyCoin()
     {
         PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + 5000);
-    }
+        adWatchPanelsuccess.SetActive(false);
+        Characters.SetActive(true);
+;    }
 
     public void GoToCharacterLevelSelection()
     {
@@ -136,6 +164,18 @@ public class GameManager : MonoBehaviour
     {
         Settings.SetActive(true);
         Characters.SetActive(false);
+    }
+
+    public void QuitPanelActive()
+    {
+        QuitPanel.SetActive(true);
+        Characters.SetActive(false);
+    }
+
+    public void QuitPanelDeactive()
+    {
+        QuitPanel.SetActive(false);
+        Characters.SetActive(true);
     }
 
     public void quit()
