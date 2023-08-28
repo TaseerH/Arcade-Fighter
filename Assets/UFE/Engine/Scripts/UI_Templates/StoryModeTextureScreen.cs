@@ -82,7 +82,8 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
 	public void restart()
 	{
-		
+		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
+		PlayerPrefs.SetInt($"level{currentLevel}", 1);
 		UFE.RestartMatch();
 	}
 

@@ -7,16 +7,16 @@ using TMPro;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public TMP_Text Currency;
-    public UFE3D.GlobalInfo globalConfigFile;
+    public TMP_Text Currency = null;
+    public UFE3D.GlobalInfo globalConfigFile = null;
     public UFE3D.CharacterInfo[] playercharacters;
     public GameObject[] characters;
     public int selectedCharacter = 0;
     //public int j = 10000;
 
-    public Button Play;
-    public Button Buy;
-    public TMP_Text buyText;
+    public Button Play = null;
+    public Button Buy = null;
+    public TMP_Text buyText = null;
 
     private void FixedUpdate()
     {
@@ -71,6 +71,11 @@ public class CharacterSelection : MonoBehaviour
         if (PlayerPrefs.GetInt("freshinstall") == 1)
         {
             Debug.Log("Fresh Install is 1");
+        }
+
+        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            unlockAllCharacters();
         }
     }
 
@@ -188,6 +193,9 @@ public class CharacterSelection : MonoBehaviour
     public void DoFreshInstall()
     {
         PlayerPrefs.SetInt("freshinstall", 0);
+        PlayerPrefs.SetInt("freshcoin", 0);
+        PlayerPrefs.SetInt("allCharactersUnlocked", 0);
+        PlayerPrefs.SetInt("allLevelsUnlocked", 0);
         PlayerPrefs.SetInt("Health", 0);
     }
 }

@@ -52,13 +52,18 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("freshinstall") == 0)
+        if (PlayerPrefs.GetInt("freshcoin") == 0)
         {
             PlayerPrefs.SetInt("coin", 500);
+            //PlayerPrefs.SetInt("KnockOut_Unlock", 0);
+        }
+        if (PlayerPrefs.GetInt("freshinstall") == 0)
+        {
+            //PlayerPrefs.SetInt("coin", 500);
             PlayerPrefs.SetInt("KnockOut_Unlock", 0);
         }
 
-        if(PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
+        if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
         {
             knockOutMode.interactable = true;
         } else
@@ -121,6 +126,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + 5000);
         adWatchPanelsuccess.SetActive(false);
         Characters.SetActive(true);
+        PlayerPrefs.SetInt("freshcoin", 1);
+        //PlayerPrefs.SetInt("freshinstall", 1);
 ;    }
 
     public void GoToCharacterLevelSelection()

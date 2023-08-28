@@ -50,6 +50,11 @@ public class LevelSelectionScript : MonoBehaviour
 
 
         levelSystem();
+
+        if (PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            unlockAllLevels();
+        }
     }
 
 
