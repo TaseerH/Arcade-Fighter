@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UFE3D;
+using UnityEngine.SceneManagement;
 
 public class DefaultContinueScreen : StoryModeContinueScreen{
 	#region public instance properties
@@ -30,6 +31,12 @@ public class DefaultContinueScreen : StoryModeContinueScreen{
 			this.selectSound,
 			this.cancelSound
 		);
+	}
+
+	public void mainMenu()
+    {
+		UFE.EndGame(true);
+		SceneManager.LoadScene(0, LoadSceneMode.Single);
 	}
 
 	public override void OnShow (){

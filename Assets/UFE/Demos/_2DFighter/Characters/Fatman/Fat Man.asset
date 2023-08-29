@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fat Man
   m_EditorClassIdentifier: 
   gameplayType: 0
-  profilePictureSmall: {fileID: 2800000, guid: f0d62a9ef8283eb4aaf6f75196891290, type: 3}
-  profilePictureBig: {fileID: 2800000, guid: 887338c49b5ae2042b9076496df1f074, type: 3}
+  profilePictureSmall: {fileID: 2800000, guid: ed805ce47f33102419b4ef6b9ba56a5f, type: 3}
+  profilePictureBig: {fileID: 2800000, guid: 7d759518d140bd745a7482add63b6231, type: 3}
   characterName: Fat Man
   gender: 0
   characterDescription: 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Ripped Chink
   m_EditorClassIdentifier: 
   gameplayType: 0
-  profilePictureSmall: {fileID: 2800000, guid: f0d62a9ef8283eb4aaf6f75196891290, type: 3}
-  profilePictureBig: {fileID: 2800000, guid: 887338c49b5ae2042b9076496df1f074, type: 3}
+  profilePictureSmall: {fileID: 2800000, guid: 76648398ff6a65b40966350edb8079ba, type: 3}
+  profilePictureBig: {fileID: 2800000, guid: a9e2cebf018d3b245ab9fc781b6ec89c, type: 3}
   characterName: Ripped Chink
   gender: 0
   characterDescription: 

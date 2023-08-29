@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: UFCFighter1
   m_EditorClassIdentifier: 
   gameplayType: 0
-  profilePictureSmall: {fileID: 2800000, guid: f0d62a9ef8283eb4aaf6f75196891290, type: 3}
-  profilePictureBig: {fileID: 2800000, guid: 887338c49b5ae2042b9076496df1f074, type: 3}
+  profilePictureSmall: {fileID: 2800000, guid: 68cf954d35cd1484896d0a67cb76c4d0, type: 3}
+  profilePictureBig: {fileID: 2800000, guid: 3940d9dc041c16b4692ff9ab95ced24c, type: 3}
   characterName: UFC Fighter1
   gender: 0
   characterDescription: 

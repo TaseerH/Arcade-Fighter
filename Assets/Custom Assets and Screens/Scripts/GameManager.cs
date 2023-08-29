@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject privacyPolicyMain;
+    public GameObject LoadingMainMenuScreen;
+    
+
 
     public TMP_Text[] Currency;
     public GameObject PlayButtons;
@@ -50,6 +54,8 @@ public class GameManager : MonoBehaviour
 
     }
 
+
+
     private void Start()
     {
         if (PlayerPrefs.GetInt("freshcoin") == 0)
@@ -61,6 +67,9 @@ public class GameManager : MonoBehaviour
         {
             //PlayerPrefs.SetInt("coin", 500);
             PlayerPrefs.SetInt("KnockOut_Unlock", 0);
+            MainPrivacyMenu();
+        } else {
+            acceptPrivacyPolicy();
         }
 
         if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
@@ -80,6 +89,26 @@ public class GameManager : MonoBehaviour
         
 
 
+    }
+
+    public void MainPrivacyMenu()
+    {
+        privacyPolicyMain.SetActive(true);
+        Characters.SetActive(false);
+    }
+
+    public void acceptPrivacyPolicy()
+    {
+
+        LoadingMainMenuScreen.SetActive(true);
+        //Characters.SetActive(true);
+        privacyPolicyMain.SetActive(false);
+    }
+
+    public void readMore()
+    {
+        Characters.SetActive(false);
+        Application.OpenURL("https://play.google.com/store/apps/dev?id=8542001137219996574&hl=en&gl=US");
     }
 
     public void selectLevel(int level)

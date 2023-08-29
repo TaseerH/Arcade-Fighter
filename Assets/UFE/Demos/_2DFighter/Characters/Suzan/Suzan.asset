@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Suzan
   m_EditorClassIdentifier: 
   gameplayType: 0
-  profilePictureSmall: {fileID: 2800000, guid: 6eff9a7e671f1734cab53b70469d8913, type: 3}
-  profilePictureBig: {fileID: 2800000, guid: 10f6aa8b06972ab4885fa826c0fc8312, type: 3}
+  profilePictureSmall: {fileID: 2800000, guid: ea6f62ab6cd723d4692a4a3a3def9a14, type: 3}
+  profilePictureBig: {fileID: 2800000, guid: 0d960364f6ba1cc4faed6a3055e5cfae, type: 3}
   characterName: Suzan
   gender: 2
   characterDescription: 'Project: Fighter 2D

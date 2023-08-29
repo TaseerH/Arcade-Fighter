@@ -154,7 +154,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 14
-          possibleStagesIndexes: 00000000
+          possibleStagesIndexes: 0000000002000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -164,7 +164,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 10
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 0100000002000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -174,7 +174,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 8
-          possibleStagesIndexes: 00000000
+          possibleStagesIndexes: 0000000001000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -214,7 +214,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 17
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 02000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -224,7 +224,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 7
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 00000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -234,7 +234,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 11
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 01000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -244,7 +244,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 12
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 00000000
         showOpponentsInEditor: 1
       showStoryInEditor: 1
     selectableCharactersInStoryMode: 00000000020000000200000001000000040000000500000006000000030000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
@@ -371,7 +371,7 @@ MonoBehaviour:
   deploymentOptions:
     deploymentType: 0
     activeCharacters:
-    - {fileID: 11400000, guid: 4fe2658a49448ff4aab20cb5895e134c, type: 2}
+    - {fileID: 11400000, guid: b8e1fa666d3d95441b958463415f3330, type: 2}
     - {fileID: 11400000, guid: f67c4d57b3d97f040ac77eb3d894ba25, type: 2}
     - {fileID: 11400000, guid: d6338f103bbb0da46ba6acf3b027f17a, type: 2}
     - {fileID: 11400000, guid: ac6ffbd93fffdbb47a2a75f1f84ecd37, type: 2}
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   player2_Inputs:
   - inputType: 0
     inputButtonName: P2KeyboardHorizontal
-    engineRelatedButton: 0
+    engineRelatedButton: 1
     joystickAxisName: P2JoystickHorizontal
     cInputPositiveKeyName: P2Right
     cInputPositiveDefaultKey: RightArrow
@@ -1228,7 +1228,7 @@ MonoBehaviour:
     inputViewerIcon6: {fileID: 2800000, guid: 90523496d8897124e989ad256f109d27, type: 3}
   - inputType: 1
     inputButtonName: P2KeyboardVertical
-    engineRelatedButton: 2
+    engineRelatedButton: 3
     joystickAxisName: P2JoystickVertical
     cInputPositiveKeyName: P2Up
     cInputPositiveDefaultKey: UpArrow

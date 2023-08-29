@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Gym Boy
   m_EditorClassIdentifier: 
   gameplayType: 0
-  profilePictureSmall: {fileID: 2800000, guid: f0d62a9ef8283eb4aaf6f75196891290, type: 3}
-  profilePictureBig: {fileID: 2800000, guid: 887338c49b5ae2042b9076496df1f074, type: 3}
+  profilePictureSmall: {fileID: 2800000, guid: e26cd200a35fecf4c91dfc677e9c9a37, type: 3}
+  profilePictureBig: {fileID: 2800000, guid: 48c18ae3d25c96e439a80325b9b72c99, type: 3}
   characterName: Gym Boy
   gender: 0
   characterDescription: 

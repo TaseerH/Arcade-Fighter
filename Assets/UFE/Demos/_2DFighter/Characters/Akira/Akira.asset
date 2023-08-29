@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Akira
   m_EditorClassIdentifier: 
   gameplayType: 0
-  profilePictureSmall: {fileID: 2800000, guid: f0d62a9ef8283eb4aaf6f75196891290, type: 3}
-  profilePictureBig: {fileID: 2800000, guid: 887338c49b5ae2042b9076496df1f074, type: 3}
+  profilePictureSmall: {fileID: 2800000, guid: cf0b53b4c9b5f944db30a5d160ebf588, type: 3}
+  profilePictureBig: {fileID: 2800000, guid: de4f2a30e761bcc4a958764da6796b08, type: 3}
   characterName: Akira
   gender: 0
   characterDescription: 

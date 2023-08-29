@@ -4,8 +4,12 @@ using System;
 using System.Collections.Generic;
 using UFE3D;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DefaultBattleGUI : BattleGUI{
+
+	public TMP_Text currentLevel;
+	
 	#region public class definitions
 	[Serializable]
 	public class PlayerGUI{
@@ -90,6 +94,8 @@ public class DefaultBattleGUI : BattleGUI{
 
 	private void Start()
 	{
+		currentLevel.text = $"Current level: {PlayerPrefs.GetInt("selectedLevel")}";
+
 		health = PlayerPrefs.GetInt("Health");
 		Debug.Log("Current Life Points are " + UFE.GetPlayer1ControlsScript().myInfo.lifePoints);
 		UFE.OnRoundBegins += UFE_OnRoundBegins;
