@@ -3044,7 +3044,7 @@ MonoBehaviour:
   fps: 60
   ignoreGravity: 0
   ignoreFriction: 0
-  cancelMoveWheLanding: 0
+  cancelMoveWhenLanding: 0
   landingMoveLink: {fileID: 0}
   forceMirrorLeft: 0
   forceMirrorRight: 0
@@ -3178,7 +3178,7 @@ MonoBehaviour:
     onBlock: 1
     onParry: 1
     activeFramesBegins: 6
-    activeFramesEnds: 8
+    activeFramesEnds: 7
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}
     disableHitImpact: 1
@@ -3233,7 +3233,7 @@ MonoBehaviour:
     resetPreviousVertical: 1
     resetPreviousHorizontal: 1
     affectAssists: 0
-    affecCharacter: 1
+    affectCharacter: 1
     _force:
       x:
         _serializedValue: 85899345920

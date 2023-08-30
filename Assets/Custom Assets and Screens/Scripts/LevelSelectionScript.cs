@@ -19,6 +19,9 @@ public class LevelSelectionScript : MonoBehaviour
     Image image;
     TMP_Text button_text;
 
+    public GameObject successMessage;
+    public GameObject FailedMessage;
+
 
     private int allLevelsUnlock;
 
@@ -53,12 +56,12 @@ public class LevelSelectionScript : MonoBehaviour
 
         if (PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
         {
-            unlockAllLevels();
+            unlockAllLevelsSuccess();
         }
     }
 
 
-    private void Update()
+    private void LateUpdate()
     {
         levelSystem();
     }
@@ -107,15 +110,33 @@ public class LevelSelectionScript : MonoBehaviour
 
     public void unlockAllLevels ()
     {
-        for (int i = 0; i < buttons.Length; i++) {
-            PlayerPrefs.SetInt($"level{i}", 1);    
-        }
+        if(PlayerPrefs.GetInt("KnockOut_Unlock") == 0)
+        {
+            successMessage.SetActive(true);
 
-        allLevelsUnlock = 1;
-        PlayerPrefs.SetInt("KnockOut_Unlock", 1);
-        levelSystem();
+        } else { 
+            FailedMessage.SetActive(true); 
+        }
 
     }
 
+    public void unlockAllLevelsSuccess()
+    {
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                PlayerPrefs.SetInt($"level{i}", 1);
+            }
 
+            allLevelsUnlock = 1;
+            PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+            levelSystem();
+
+            successMessage.SetActive(false);
+        
+    }
+
+    public void unlockAllLevelsFailed()
+    {
+        FailedMessage.SetActive(false);
+    }
 }

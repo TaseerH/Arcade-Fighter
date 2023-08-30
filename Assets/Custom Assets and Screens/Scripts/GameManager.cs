@@ -7,27 +7,27 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject privacyPolicyMain;
-    public GameObject LoadingMainMenuScreen;
-    
+    public GameObject privacyPolicyMain = null;
+    public GameObject LoadingMainMenuScreen = null;
+
+    public GameObject miniPrivacy = null;
+
+    public TMP_Text[] Currency = null;
+    public GameObject PlayButtons = null;
+    public GameObject Characters = null;
+    public GameObject StoryModeCanvas = null;
 
 
-    public TMP_Text[] Currency;
-    public GameObject PlayButtons;
-    public GameObject Characters;
-    public GameObject StoryModeCanvas;
-    
+    public GameObject reviewPanel = null;
+    public GameObject storePage = null;
+    public GameObject Settings = null;
+    public GameObject QuitPanel = null;
+    public Button knockOutMode = null;
 
-    public GameObject reviewPanel;
-    public GameObject storePage;
-    public GameObject Settings;
-    public GameObject QuitPanel;
-    public Button knockOutMode;
+    public GameObject adWatchPanelsuccess = null;
+    public GameObject adWatchPanelfail = null;
 
-    public GameObject adWatchPanelsuccess;
-    public GameObject adWatchPanelfail;
-
-    public Button HealthButton;
+    public Button HealthButton = null;
 
     private void FixedUpdate()
     {
@@ -89,6 +89,19 @@ public class GameManager : MonoBehaviour
         
 
 
+    }
+
+
+    public void knockout()
+    {
+        if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
+        {
+            knockOutMode.interactable = true;
+        }
+        else
+        {
+            knockOutMode.interactable = false;
+        }
     }
 
     public void MainPrivacyMenu()
@@ -257,4 +270,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    public void miniPrivacyOpen()
+    {
+        miniPrivacy.SetActive(true);
+    }
+
+    public void miniPrivacyClose()
+    {
+        miniPrivacy.SetActive(false);
+    }
 }

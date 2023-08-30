@@ -11,6 +11,10 @@ public class CharacterSelection : MonoBehaviour
     public UFE3D.GlobalInfo globalConfigFile = null;
     public UFE3D.CharacterInfo[] playercharacters;
     public GameObject[] characters;
+
+    public GameObject adWatchSuccess;
+    public GameObject adWatchFailed;
+
     public int selectedCharacter = 0;
     //public int j = 10000;
 
@@ -75,7 +79,7 @@ public class CharacterSelection : MonoBehaviour
 
         if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
         {
-            unlockAllCharacters();
+            unlockAllSuccess();
         }
     }
 
@@ -173,18 +177,46 @@ public class CharacterSelection : MonoBehaviour
         
     }
 
-
+    private bool charactersUnlocked;
     public void unlockAllCharacters()
     {
-        for(int i = 0; i < characters.Length; i++)
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (PlayerPrefs.GetInt($"character{i}") == 1) {
+                charactersUnlocked = (true);
+            } else
+            {
+                charactersUnlocked = (false);
+            }
+        }
+        if (charactersUnlocked)
+        {
+            adWatchFailed.SetActive(true);
+        } else
+        {
+            adWatchSuccess.SetActive(true);
+        }
+
+        characters[selectedCharacter].SetActive(false);
+    }
+
+    public void unlockAllSuccess()
+    {
+        for (int i = 0; i < characters.Length; i++)
         {
             PlayerPrefs.SetInt($"character{i}", 1);
             Play.gameObject.SetActive(true);
             Buy.gameObject.SetActive(false);
         }
+        adWatchSuccess.SetActive(false);
+        characters[selectedCharacter].SetActive(true);
     }
 
-
+    public void unlockAllFailed()
+    {
+        adWatchFailed.SetActive(false);
+        characters[selectedCharacter].SetActive(true);
+    }
     public void BuyCoin()
     {
         PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + 500);

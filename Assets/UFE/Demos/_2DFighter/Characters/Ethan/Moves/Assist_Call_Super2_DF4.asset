@@ -6244,18 +6244,6 @@ MonoBehaviour:
     enterMove: {fileID: 11400000, guid: 1509ed23960c9c14780e2aadcf10d6db, type: 2}
     exitMove: {fileID: 11400000, guid: 0dfa710ec70ef42429c2fc269305abc6, type: 2}
     animationPreview: 0
-  - _spawnPosition:
-      x:
-        _serializedValue: -25769803776
-      y:
-        _serializedValue: 0
-      z:
-        _serializedValue: 6871947776
-    castingFrame: 2
-    characterInfo: {fileID: 11400000, guid: 54057043117984643925ed339c232c0d, type: 2}
-    enterMove: {fileID: 11400000, guid: bae9635c3cc5d2041b80afe7dc1628a3, type: 2}
-    exitMove: {fileID: 11400000, guid: 81c326b65dafe2f4d872e527080ac60f, type: 2}
-    animationPreview: 0
   soundEffects: []
   inGameAlert: []
   stanceChanges: []

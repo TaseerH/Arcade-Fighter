@@ -27,7 +27,7 @@ public class StoreUnlocks : MonoBehaviour
 
     public GameObject purchaseSuccess;
 
-    
+    public GameManager manager;
 
     private void Start()
     {
@@ -91,7 +91,17 @@ public class StoreUnlocks : MonoBehaviour
     {
         purchaseSuccess.SetActive(true);
         PlayerPrefs.SetInt("allLevelsUnlocked", 1);
+        PlayerPrefs.SetInt("KnockOut_Unlock", 1);
         //unlockAllLevelsScript.unlockAllLevels();
+    }
+
+    public void unlockEverything()
+    {
+        purchaseSuccess.SetActive(true);
+        PlayerPrefs.SetInt("allCharactersUnlocked", 1);
+        PlayerPrefs.SetInt("allLevelsUnlocked", 1);
+        PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+        manager.knockout();
     }
     
     public void CoinPackOkay()
