@@ -24,13 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d6dc227d62e62a40af291dbbd4c5276, type: 2}
   - {fileID: 11400000, guid: 54057043117984643925ed339c232c0d, type: 2}
   selectedStage:
-    stageName: Kung
+    stageName: Space
     stageLoadingMethod: 0
     stagePath: 
-    screenshot: {fileID: 2800000, guid: 8b65ee547a225914da7255c72477c87c, type: 3}
-    prefab: {fileID: 2257122650570177812, guid: 63ea5c54b4cc90d4eb5b5ebbead7566d,
+    screenshot: {fileID: 2800000, guid: 55e457740fe60405dac77af143e1a867, type: 3}
+    prefab: {fileID: 1600292898635669906, guid: c92c8143f39565c48925320cf53b5e8b,
       type: 3}
-    music: {fileID: 8300000, guid: f677a794af65dfe46917f53cc9810eec, type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:
@@ -154,7 +154,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 14
-          possibleStagesIndexes: 0000000002000000
+          possibleStagesIndexes: 00000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -404,8 +404,8 @@ MonoBehaviour:
     enableZoom: 1
     followCharacters: 0
     initialFieldOfView: 16
-    verticalPriority: 1
-    verticalThreshold: 2
+    verticalPriority: 2
+    verticalThreshold: 5
     movementSpeed: 12
     minZoom: 40
     maxZoom: 60
@@ -483,9 +483,9 @@ MonoBehaviour:
     _newRoundDelay:
       _serializedValue: 4294967296
     _slowMoTimer:
-      _serializedValue: 12884901888
+      _serializedValue: 8589934592
     _slowMoSpeed:
-      _serializedValue: 1073741824
+      _serializedValue: 1288490240
     victoryMusic: {fileID: 8300000, guid: 641189ac87f861f41bfd4a406b0d3294, type: 3}
     resetLifePoints: 1
     resetPositions: 1
@@ -971,7 +971,7 @@ MonoBehaviour:
   player1_Inputs:
   - inputType: 0
     inputButtonName: P1KeyboardHorizontal
-    engineRelatedButton: 0
+    engineRelatedButton: 1
     joystickAxisName: P1JoystickHorizontal
     cInputPositiveKeyName: P1Right
     cInputPositiveDefaultKey: D
@@ -1879,9 +1879,9 @@ MonoBehaviour:
     inputMessageFrequency: 0
     synchronizationMessageFrequency: 0
     synchronizationAction: 0
-  music: 0
+  music: 1
   musicVolume: 1
-  soundfx: 0
+  soundfx: 1
   soundfxVolume: 1
   colorStateOne: {r: 1, g: 0, b: 0, a: 1}
   colorIsHit: {r: 1, g: 0, b: 1, a: 1}

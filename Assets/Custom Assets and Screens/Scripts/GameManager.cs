@@ -28,7 +28,12 @@ public class GameManager : MonoBehaviour
     public GameObject adWatchPanelfail = null;
 
     public Button HealthButton = null;
+    public Button knockOutModeBtn;
 
+    public Sprite knockOn;
+    public Sprite knockOff;
+
+    public bool knockOut;
     private void FixedUpdate()
     {
         if (Currency == null || PlayButtons == null || StoryModeCanvas == null || knockOutMode == null || reviewPanel == null)
@@ -50,7 +55,18 @@ public class GameManager : MonoBehaviour
             HealthButton.interactable = true;
         }
 
-        
+        if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
+        {
+            //Debug.Log("Knockout mode is:" + PlayerPrefs.GetInt("KnockOut_Unlock"));
+            knockOut = true;
+            knockoutLevels();
+        }
+        else
+        {
+            //Debug.Log("Knockout mode is:" + PlayerPrefs.GetInt("KnockOut_Unlock"));
+            knockOut = false;
+            knockoutLevels();
+        }
 
     }
 
@@ -74,10 +90,12 @@ public class GameManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
         {
-            knockOutMode.interactable = true;
+            knockOut = true;
+            knockoutLevels();
         } else
         {
-            knockOutMode.interactable = false;
+            knockOut = false;
+            knockoutLevels();
         }
 
         //Debug.Log(health.text + character.text);
@@ -91,16 +109,28 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void knockoutLevels()
+    {
+        if(knockOut == true)
+        {
+            knockOutModeBtn.image.sprite = knockOn;
+        } else if (knockOut == false)
+        {
+            knockOutModeBtn.image.sprite = knockOff;
+        }
+    }
 
     public void knockout()
     {
         if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
         {
-            knockOutMode.interactable = true;
+            knockOut = true;
+            knockoutLevels();
         }
         else
         {
-            knockOutMode.interactable = false;
+            knockOut = false;
+            knockoutLevels();
         }
     }
 
