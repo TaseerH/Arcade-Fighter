@@ -117,7 +117,7 @@ public class CharacterSelection : MonoBehaviour
         {
             Play.gameObject.SetActive(false);
             Buy.gameObject.SetActive(true);
-            buyText.text = $"Buy For {PlayerPrefs.GetInt($"characterprice{selectedCharacter}")}";
+            buyText.text = $"Buy For: {PlayerPrefs.GetInt($"characterprice{selectedCharacter}")}";
         }
         else
         {
