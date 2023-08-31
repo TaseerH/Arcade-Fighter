@@ -1747,15 +1747,15 @@ MonoBehaviour:
     difficultySettings:
     - difficultyLevel: 0
       overrideTimeBetweenDecisions: 1
-      timeBetweenDecisions: 0.5
+      timeBetweenDecisions: 0.44
       overrideTimeBetweenActions: 1
-      timeBetweenActions: 0.5
+      timeBetweenActions: 0.359
       overrideAggressiveness: 1
-      aggressiveness: 0.356
+      aggressiveness: 0.348
       overrideRuleCompliance: 1
-      ruleCompliance: 0.986
+      ruleCompliance: 0.53
       overrideComboEfficiency: 1
-      comboEfficiency: 0.203
+      comboEfficiency: 0.08
       startupBehavior: 0
     - difficultyLevel: 1
       overrideTimeBetweenDecisions: 1
