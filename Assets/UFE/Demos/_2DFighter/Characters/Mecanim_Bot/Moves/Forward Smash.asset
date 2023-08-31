@@ -74,7 +74,7 @@ MonoBehaviour:
     requireButtonPress: 1
     onPressExecution: 1
     buttonSequence: 
-    buttonExecution: 0c000000
+    buttonExecution: 0d000000
     editorToggle: 1
     buttonSequenceToggle: 0
     buttonExecutionToggle: 1
@@ -112,7 +112,7 @@ MonoBehaviour:
     recoverySpeed: 2
     hitConfirmType: 0
     preferableDistance: 2
-    gaugeUsage: 2
+    gaugeUsage: 3
     anyAttackType: 1
     anyHitType: 1
     anyHitConfirmType: 1

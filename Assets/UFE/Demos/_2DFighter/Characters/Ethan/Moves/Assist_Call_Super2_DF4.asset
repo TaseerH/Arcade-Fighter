@@ -6140,7 +6140,7 @@ MonoBehaviour:
     requireButtonPress: 1
     onPressExecution: 1
     buttonSequence: 
-    buttonExecution: 0d000000
+    buttonExecution: 0c000000
     editorToggle: 1
     buttonSequenceToggle: 0
     buttonExecutionToggle: 1
@@ -6240,7 +6240,7 @@ MonoBehaviour:
       z:
         _serializedValue: 6012954112
     castingFrame: 10
-    characterInfo: {fileID: 11400000, guid: ae0965c05211662419b34dc00bed22f5, type: 2}
+    characterInfo: {fileID: 11400000, guid: a3dcfa52a2dffa14f829c6ddda5ae716, type: 2}
     enterMove: {fileID: 11400000, guid: 1509ed23960c9c14780e2aadcf10d6db, type: 2}
     exitMove: {fileID: 11400000, guid: 0dfa710ec70ef42429c2fc269305abc6, type: 2}
     animationPreview: 0

@@ -15800,7 +15800,7 @@ MonoBehaviour:
     recoverySpeed: 1
     hitConfirmType: 0
     preferableDistance: 3
-    gaugeUsage: 0
+    gaugeUsage: 3
     anyAttackType: 1
     anyHitType: 1
     anyHitConfirmType: 1
@@ -16517,11 +16517,11 @@ MonoBehaviour:
         _serializedValue: 0
     position:
       x:
-        _serializedValue: -3715709440
+        _serializedValue: -936478272
       y:
-        _serializedValue: 17051746304
+        _serializedValue: 16946479104
       z:
-        _serializedValue: -1050471424
+        _serializedValue: -1405567232
   lockOnTargets: []
   switchCharacterOptions: []
   invincibleBodyParts:
