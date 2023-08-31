@@ -94,8 +94,8 @@ MonoBehaviour:
     otherRounds: {fileID: 8300000, guid: 8f28c0add4599cb409fde079faf05036, type: 3}
     finalRound: {fileID: 8300000, guid: 8f28c0add4599cb409fde079faf05036, type: 3}
     fight: {fileID: 8300000, guid: 8e39e137a16e6d44699979a55a3f5391, type: 3}
-    player1Wins: {fileID: 0}
-    player2Wins: {fileID: 0}
+    player1Wins: {fileID: 8300000, guid: 3fca293d5e39617419a32ae58f54df66, type: 3}
+    player2Wins: {fileID: 8300000, guid: 87d1c5552489cc8469692c55dbf92c33, type: 3}
     perfect: {fileID: 0}
     firstHit: {fileID: 0}
     counterHit: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
       type: 3}
     WonRounds: {fileID: 21300000, guid: 68686dd7fc69c8d45aaffddfedd2614a, type: 3}
     LostRounds: {fileID: 21300000, guid: 04fbf82e88e5aec46a19cbdd69c36c66, type: 3}
-    VisibleImages: 0
+    VisibleImages: 1
   player1GUI:
     name: {fileID: 11400024}
     portrait: {fileID: 11424808}
@@ -121,8 +121,8 @@ MonoBehaviour:
     - {fileID: 11400070}
     alert:
       text: {fileID: 11400000}
-      initialPosition: {x: 80, y: -250, z: 0}
-      finalPosition: {x: 80, y: -200, z: 0}
+      initialPosition: {x: 480, y: -150, z: 0}
+      finalPosition: {x: 480, y: -100, z: 0}
       movementSpeed: 15
   player2GUI:
     name: {fileID: 11400022}
@@ -136,8 +136,8 @@ MonoBehaviour:
     - {fileID: 11400068}
     alert:
       text: {fileID: 11400060}
-      initialPosition: {x: -80, y: -250, z: 0}
-      finalPosition: {x: -80, y: -200, z: 0}
+      initialPosition: {x: -480, y: -150, z: 0}
+      finalPosition: {x: -480, y: -100, z: 0}
       movementSpeed: 15
   mainAlert:
     text: {fileID: 11400002}
@@ -146,8 +146,8 @@ MonoBehaviour:
     movementSpeed: 15
   info: {fileID: 11400034}
   timer: {fileID: 11400066}
-  lifeDownSpeed: 500
-  lifeUpSpeed: 800
+  lifeDownSpeed: 350
+  lifeUpSpeed: 400
   pauseScreen: {fileID: 11400000, guid: 6241d31f6482b42a88a8e7c8b62e2716, type: 3}
   networkPlayerPointer: {fileID: 0}
   pointerTimer: 4
@@ -212,8 +212,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 301, y: -150}
-  m_SizeDelta: {x: 155, y: 90}
+  m_AnchoredPosition: {x: 481, y: -150}
+  m_SizeDelta: {x: 118.4951, y: 395.7211}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &22200002
 CanvasRenderer:
@@ -250,7 +250,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 90
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -1753,8 +1753,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -301.2876, y: -150}
-  m_SizeDelta: {x: 155, y: 90}
+  m_AnchoredPosition: {x: -488.15295, y: -150}
+  m_SizeDelta: {x: 118.4951, y: 395.7211}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &22200042
 CanvasRenderer:
@@ -1791,7 +1791,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 90
-    m_Alignment: 2
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
