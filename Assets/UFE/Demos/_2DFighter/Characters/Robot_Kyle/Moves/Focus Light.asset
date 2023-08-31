@@ -9354,7 +9354,7 @@ MonoBehaviour:
     requireButtonPress: 0
     onPressExecution: 1
     buttonSequence: 
-    buttonExecution: 09000000
+    buttonExecution: 
     editorToggle: 1
     buttonSequenceToggle: 0
     buttonExecutionToggle: 1
@@ -9843,11 +9843,11 @@ MonoBehaviour:
         _serializedValue: 0
     position:
       x:
-        _serializedValue: -1910312448
+        _serializedValue: -13026086912
       y:
-        _serializedValue: 13334888448
+        _serializedValue: 23362254848
       z:
-        _serializedValue: -585818368
+        _serializedValue: -1426307072
   lockOnTargets: []
   switchCharacterOptions: []
   invincibleBodyParts:

@@ -24,13 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d6dc227d62e62a40af291dbbd4c5276, type: 2}
   - {fileID: 11400000, guid: 54057043117984643925ed339c232c0d, type: 2}
   selectedStage:
-    stageName: Space
+    stageName: Kung
     stageLoadingMethod: 0
     stagePath: 
-    screenshot: {fileID: 2800000, guid: 55e457740fe60405dac77af143e1a867, type: 3}
-    prefab: {fileID: 1600292898635669906, guid: c92c8143f39565c48925320cf53b5e8b,
+    screenshot: {fileID: 2800000, guid: 8b65ee547a225914da7255c72477c87c, type: 3}
+    prefab: {fileID: 2257122650570177812, guid: 63ea5c54b4cc90d4eb5b5ebbead7566d,
       type: 3}
-    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    music: {fileID: 8300000, guid: f677a794af65dfe46917f53cc9810eec, type: 3}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:
@@ -971,7 +971,7 @@ MonoBehaviour:
   player1_Inputs:
   - inputType: 0
     inputButtonName: P1KeyboardHorizontal
-    engineRelatedButton: 1
+    engineRelatedButton: 0
     joystickAxisName: P1JoystickHorizontal
     cInputPositiveKeyName: P1Right
     cInputPositiveDefaultKey: D
@@ -1228,7 +1228,7 @@ MonoBehaviour:
     inputViewerIcon6: {fileID: 2800000, guid: 90523496d8897124e989ad256f109d27, type: 3}
   - inputType: 1
     inputButtonName: P2KeyboardVertical
-    engineRelatedButton: 3
+    engineRelatedButton: 2
     joystickAxisName: P2JoystickVertical
     cInputPositiveKeyName: P2Up
     cInputPositiveDefaultKey: UpArrow
@@ -1821,15 +1821,15 @@ MonoBehaviour:
     selectedDifficulty:
       difficultyLevel: 0
       overrideTimeBetweenDecisions: 1
-      timeBetweenDecisions: 0.5
+      timeBetweenDecisions: 0.44
       overrideTimeBetweenActions: 1
-      timeBetweenActions: 0.5
+      timeBetweenActions: 0.359
       overrideAggressiveness: 1
-      aggressiveness: 0.356
+      aggressiveness: 0.348
       overrideRuleCompliance: 1
-      ruleCompliance: 0.986
+      ruleCompliance: 0.53
       overrideComboEfficiency: 1
-      comboEfficiency: 0.203
+      comboEfficiency: 0.08
       startupBehavior: 0
   networkOptions:
     forceAnimationControl: 1

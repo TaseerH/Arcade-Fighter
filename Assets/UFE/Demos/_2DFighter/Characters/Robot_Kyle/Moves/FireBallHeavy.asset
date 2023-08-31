@@ -7316,7 +7316,7 @@ MonoBehaviour:
     chargeMove: 0
     _chargeTiming:
       _serializedValue: 2147483648
-    allowInputLeniency: 1
+    allowInputLeniency: 0
     allowNegativeEdge: 0
     forceAxisPrecision: 0
     leniencyBuffer: 2
@@ -7324,7 +7324,7 @@ MonoBehaviour:
     requireButtonPress: 0
     onPressExecution: 0
     buttonSequence: 
-    buttonExecution: 06000000
+    buttonExecution: 09000000
     editorToggle: 1
     buttonSequenceToggle: 1
     buttonExecutionToggle: 1
@@ -7338,12 +7338,12 @@ MonoBehaviour:
     leniencyBuffer: 3
     onReleaseExecution: 0
     requireButtonPress: 1
-    onPressExecution: 1
+    onPressExecution: 0
     buttonSequence: 
     buttonExecution: 
     editorToggle: 1
     buttonSequenceToggle: 0
-    buttonExecutionToggle: 1
+    buttonExecutionToggle: 0
   previousMoves: []
   opponentConditions:
     basicMoveLimitation: 

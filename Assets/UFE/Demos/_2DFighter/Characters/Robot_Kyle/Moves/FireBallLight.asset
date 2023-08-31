@@ -7316,7 +7316,7 @@ MonoBehaviour:
     chargeMove: 0
     _chargeTiming:
       _serializedValue: 2147483648
-    allowInputLeniency: 1
+    allowInputLeniency: 0
     allowNegativeEdge: 0
     forceAxisPrecision: 0
     leniencyBuffer: 2
