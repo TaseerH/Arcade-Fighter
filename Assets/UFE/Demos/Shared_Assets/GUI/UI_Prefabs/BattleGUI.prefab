@@ -76,8 +76,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasPreview: 1
   firstSelectableGameObject: {fileID: 0}
-  hasFadeIn: 1
-  hasFadeOut: 1
+  hasFadeIn: 0
+  hasFadeOut: 0
   wrapInput: 1
   inputTexturePlaceHolder: {fileID: 2800000, guid: 994bfcf558a120643b9496e55f85517e,
     type: 3}

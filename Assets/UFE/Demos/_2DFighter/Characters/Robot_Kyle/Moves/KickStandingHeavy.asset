@@ -4186,7 +4186,7 @@ MonoBehaviour:
     recoverySpeed: 3
     hitConfirmType: 0
     preferableDistance: 2
-    gaugeUsage: 0
+    gaugeUsage: 2
     anyAttackType: 1
     anyHitType: 1
     anyHitConfirmType: 1
@@ -4254,10 +4254,10 @@ MonoBehaviour:
   opponentOverride: []
   characterAssist: []
   soundEffects:
-  - castingFrame: 0
+  - castingFrame: 1
     sounds:
     - {fileID: 8300000, guid: c1fc60cc54dfe0c42bad64d9a9046926, type: 3}
-    soundEffectsToggle: 0
+    soundEffectsToggle: 1
   inGameAlert: []
   stanceChanges: []
   cameraMovements: []

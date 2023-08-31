@@ -20,7 +20,7 @@ MonoBehaviour:
   characterDescription: 
   selectionAnimation: {fileID: 7400000, guid: 4c5a09731afe0b84aa9a69930ffb2293, type: 2}
   selectionSound: {fileID: 0}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: b63e3d29dfdea934983fdd1096ce8fec, type: 3}
   height: 0
   age: 0
   bloodType: Unknown
