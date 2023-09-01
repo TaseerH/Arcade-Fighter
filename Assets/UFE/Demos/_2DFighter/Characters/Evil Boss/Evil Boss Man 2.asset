@@ -24,7 +24,7 @@ MonoBehaviour:
   height: 0
   age: 0
   bloodType: Unknown
-  lifePoints: 700
+  lifePoints: 2200
   maxGaugePoints: 500
   characterPrefabStorage: 0
   characterPrefab: {fileID: 6272517430332087487, guid: 0396c697b8c0ac5419c6959cd47b2afa,

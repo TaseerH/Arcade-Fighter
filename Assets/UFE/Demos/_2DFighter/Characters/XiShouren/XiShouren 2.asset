@@ -24,7 +24,7 @@ MonoBehaviour:
   height: 0
   age: 0
   bloodType: Unknown
-  lifePoints: 600
+  lifePoints: 2500
   maxGaugePoints: 500
   characterPrefabStorage: 0
   characterPrefab: {fileID: 7896892210723030097, guid: 7424b94f6fd9045458283e36c33fd4a4,
@@ -112,5 +112,5 @@ MonoBehaviour:
   - _2DFighter/MoveSets/Robot_Kyle
   moves: []
   aiInstructionsSet:
-  - aiInfo: {fileID: 11400000, guid: 388fce0a954ca8544a84bdd1c4b66fba, type: 2}
-    behavior: 0
+  - aiInfo: {fileID: 11400000, guid: 50d4630698994bd45b6f19bf649b3a90, type: 2}
+    behavior: 4

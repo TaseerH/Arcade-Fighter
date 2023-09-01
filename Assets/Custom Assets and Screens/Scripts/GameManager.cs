@@ -202,8 +202,14 @@ public class GameManager : MonoBehaviour
         //PlayerPrefs.SetInt("freshinstall", 1);
 ;    }
 
-    public void GoToCharacterLevelSelection()
+    public void GoToCharacterLevelSelection(int mode)
     {
+        if(mode == 1 && PlayerPrefs.GetInt("KnockOut_Unlock") == 0)
+        {
+            return;
+        }
+        
+        PlayerPrefs.SetInt("mode", mode);
         SceneManager.LoadScene(3, LoadSceneMode.Single);
     }
 

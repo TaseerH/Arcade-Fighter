@@ -22,13 +22,29 @@ public class LevelSelectionScript : MonoBehaviour
     public GameObject successMessage;
     public GameObject FailedMessage;
 
+    public GameObject Story;
+    public GameObject Knockout;
 
     private int allLevelsUnlock;
+
+    private void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (PlayerPrefs.GetInt("mode") == 1)
+        {
+            Knockout.SetActive(true);
+            Story.SetActive(false);
+        }
+        else
+        {
+            Knockout.SetActive(false);
+            Story.SetActive(true);
+        }
         //Debug.Log($"The Letter J is {j}");
         if (PlayerPrefs.GetInt("freshinstall") == 0)
         {

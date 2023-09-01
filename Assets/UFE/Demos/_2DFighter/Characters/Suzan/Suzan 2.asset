@@ -29,7 +29,7 @@ MonoBehaviour:
   height: 5.5
   age: 27
   bloodType: Unknown
-  lifePoints: 1100
+  lifePoints: 2400
   maxGaugePoints: 400
   characterPrefabStorage: 1
   characterPrefab: {fileID: 0}
