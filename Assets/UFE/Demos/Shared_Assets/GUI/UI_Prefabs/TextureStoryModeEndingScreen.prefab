@@ -100,7 +100,7 @@ MonoBehaviour:
   skippable: 1
   stopPreviousSoundEffectsOnLoad: 0
   delayBeforePlayingMusic: 0.1
-  delayBeforeGoingToNextScreen: 3
+  delayBeforeGoingToNextScreen: 1
   minDelayBeforeSkipping: 0.1
   slider: {fileID: 0}
   fillTime: 7
