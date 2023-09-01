@@ -26,6 +26,7 @@ public class StoreUnlocks : MonoBehaviour
     public GameObject bundlePanel;
 
     public GameObject purchaseSuccess;
+    public GameObject purchaseFailure;
 
     public GameManager manager;
 
@@ -82,30 +83,55 @@ public class StoreUnlocks : MonoBehaviour
 
     public void unlockAllChacracters()
     {
-        purchaseSuccess.SetActive(true);
-        PlayerPrefs.SetInt("allCharactersUnlocked", 1);
+        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            purchaseFailure.SetActive(true);
+        } else
+        {
+            purchaseSuccess.SetActive(true);
+            PlayerPrefs.SetInt("allCharactersUnlocked", 1);
+        }
         //unlockAllChacractersScript.unlockAllCharacters();
     }
 
     public void unlockAllLevels()
     {
-        purchaseSuccess.SetActive(true);
-        PlayerPrefs.SetInt("allLevelsUnlocked", 1);
-        PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            purchaseFailure.SetActive(true);
+        } else
+        {
+            purchaseSuccess.SetActive(true);
+            PlayerPrefs.SetInt("allLevelsUnlocked", 1);
+            PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+        }
+        
         //unlockAllLevelsScript.unlockAllLevels();
     }
 
     public void unlockEverything()
     {
-        purchaseSuccess.SetActive(true);
-        PlayerPrefs.SetInt("allCharactersUnlocked", 1);
-        PlayerPrefs.SetInt("allLevelsUnlocked", 1);
-        PlayerPrefs.SetInt("KnockOut_Unlock", 1);
-        manager.knockout();
+        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1 && PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            purchaseFailure.SetActive(true);
+        } else
+        {
+            purchaseSuccess.SetActive(true);
+            PlayerPrefs.SetInt("allCharactersUnlocked", 1);
+            PlayerPrefs.SetInt("allLevelsUnlocked", 1);
+            PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+            manager.knockout();
+        }
+        
     }
     
     public void CoinPackOkay()
     {
         purchaseSuccess.SetActive(false);
+    }
+
+    public void PurchaseFail()
+    {
+        purchaseFailure.SetActive(false);
     }
 }
