@@ -24,7 +24,7 @@ public class StatsScreen : MonoBehaviour
         playerHealth.text = $"{(PlayerPrefs.GetInt("Health") / 100) + (UFE.config.player1Character.lifePoints / 100)}";
         playerStamina.text = $"{PlayerPrefs.GetInt("playerStamina") + (UFE.config.player1Character.maxGaugePoints / 100) + 5}";
         enemyHealth.text = $"{UFE.config.player2Character.lifePoints / 100 + 5}";
-        enemyStamina.text = $"{UFE.config.player2Character.maxGaugePoints / 100 + 4}";
+        enemyStamina.text = $"{UFE.config.player2Character.maxGaugePoints / 100 + PlayerPrefs.GetInt("selectedLevel")}";
     }
 
     public void BuyHealth()

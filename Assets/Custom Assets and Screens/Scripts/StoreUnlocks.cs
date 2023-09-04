@@ -104,6 +104,7 @@ public class StoreUnlocks : MonoBehaviour
             purchaseSuccess.SetActive(true);
             PlayerPrefs.SetInt("allLevelsUnlocked", 1);
             PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+            manager.knockout();
         }
         
         //unlockAllLevelsScript.unlockAllLevels();

@@ -196,7 +196,7 @@ public class CharacterSelection : MonoBehaviour
         {
             adWatchSuccess.SetActive(true);
         }
-
+        PlayerPrefs.SetInt("freshinstall", 1);
         characters[selectedCharacter].SetActive(false);
     }
 

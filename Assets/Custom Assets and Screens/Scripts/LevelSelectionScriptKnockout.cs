@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class LevelSelectionScript : MonoBehaviour
+public class LevelSelectionScriptKnockout : MonoBehaviour
 {
 
     public Button[] buttons;
@@ -24,6 +24,7 @@ public class LevelSelectionScript : MonoBehaviour
 
     public GameObject Story;
     public GameObject Knockout;
+
 
     private int allLevelsUnlock;
 
@@ -51,15 +52,15 @@ public class LevelSelectionScript : MonoBehaviour
                 if (i == 0)
                 {
 
-                    PlayerPrefs.SetInt($"level{i}", 1);
+                    PlayerPrefs.SetInt($"level{i+21}", 1);
 
                 }
                 else
                 {
                     //PlayerPrefs.SetInt($"characterprice{i}", j);
-                    PlayerPrefs.SetInt($"level{i}", 0);
+                    PlayerPrefs.SetInt($"level{i + 21}", 0);
                 }
-                Debug.Log($"Levels are {PlayerPrefs.GetInt($"level{i}")}");
+                Debug.Log($"Knock Levels are {PlayerPrefs.GetInt($"level{i + 21}")}");
                 //j += 500;
             }
 
@@ -86,12 +87,13 @@ public class LevelSelectionScript : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             Debug.Log($"Levels in Level System are {PlayerPrefs.GetInt($"level{i}")}");
-            if (PlayerPrefs.GetInt($"level{i}") == 1)
+            if (PlayerPrefs.GetInt($"level{i + 21}") == 1)
             {
-                myImageComponent = GameObject.Find($"Level {i + 1}");
+                myImageComponent = GameObject.Find($"Knock Level {i + 1}");
+                //Debug.Log("Loop 1" + myImageComponent);
                 buttons[i].interactable = true;
-                button_text = myImageComponent.GetComponentInChildren<TMP_Text>();  
-                button_text.text = $"{i + 1}";
+                button_text = myImageComponent.GetComponentInChildren<TMP_Text>();
+                button_text.text = $"VICTORY";
 
                 if(allLevelsUnlock == 1)
                 {
@@ -101,21 +103,25 @@ public class LevelSelectionScript : MonoBehaviour
 
 
             }
-            else if (PlayerPrefs.GetInt($"level{i}") == 0)
+            else if (PlayerPrefs.GetInt($"level{i +21 }") == 0)
             {
 
-                if (PlayerPrefs.GetInt($"level{i - 1}") == 1)
+                if (PlayerPrefs.GetInt($"level{i + 21 - 1}") == 1)
                 {
-                    activeLevel = GameObject.Find($"Level {i}");
+                    activeLevel = GameObject.Find($"Knock Level {i}");
+                    //Debug.Log("Loop 2" + activeLevel);
                     activeLevelImageComponent = activeLevel.GetComponent<Image>();
                     activeLevelImageComponent.sprite = activeButton;
+                    TextMeshProUGUI activebtn_text = activeLevelImageComponent.GetComponentInChildren<TextMeshProUGUI>();
+                    activebtn_text.text = $"<sprite=0> FIGHT";
                 }
 
 
-                myImageComponent = GameObject.Find($"Level {i + 1}");
+                myImageComponent = GameObject.Find($"Knock Level {i + 1}");
+                //Debug.Log("Loop 3" + myImageComponent);
                 image = myImageComponent.GetComponent<Image>();
                 button_text = myImageComponent.GetComponentInChildren<TMP_Text>();
-                button_text.text = "";
+                button_text.text = "<sprite=1> LOCKED";
                 buttons[i].interactable = false;
                 image.sprite = levelLocked;
             }
@@ -139,13 +145,13 @@ public class LevelSelectionScript : MonoBehaviour
     {
             for (int i = 0; i < buttons.Length; i++)
             {
-                PlayerPrefs.SetInt($"level{i}", 1);
+                PlayerPrefs.SetInt($"level{i + 21}", 1);
             }
 
             allLevelsUnlock = 1;
             PlayerPrefs.SetInt("KnockOut_Unlock", 1);
             levelSystem();
-            PlayerPrefs.SetInt("freshinstall", 1);
+
             successMessage.SetActive(false);
         
     }

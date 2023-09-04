@@ -28,20 +28,25 @@ public class GameManager : MonoBehaviour
     public GameObject adWatchPanelfail = null;
 
     public Button HealthButton = null;
-    public Button knockOutModeBtn;
+    public Button knockOutModeBtn = null;
 
-    public Sprite knockOn;
-    public Sprite knockOff;
+    public Sprite knockOn = null;
+    public Sprite knockOff = null;
 
-    public bool knockOut;
-    private void FixedUpdate()
+    public bool knockOut = false;
+    private void Update()
     {
-        if (Currency == null || PlayButtons == null || StoryModeCanvas == null || knockOutMode == null || reviewPanel == null)
+
+        if (Currency == null || PlayButtons == null || StoryModeCanvas == null || knockOutMode == null || reviewPanel == null || privacyPolicyMain == null)
         {
             return;
         }
-        Currency[0].SetText(PlayerPrefs.GetInt("coin").ToString());
-        Currency[1].SetText(PlayerPrefs.GetInt("coin").ToString());
+
+        for (int i =0; i< Currency.Length; i++)
+        {
+            Currency[i].SetText(PlayerPrefs.GetInt("coin").ToString());
+        }
+        
 
         if (PlayerPrefs.GetInt("Health") >= 1500)
         {
@@ -55,18 +60,8 @@ public class GameManager : MonoBehaviour
             HealthButton.interactable = true;
         }
 
-        if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
-        {
-            //Debug.Log("Knockout mode is:" + PlayerPrefs.GetInt("KnockOut_Unlock"));
-            knockOut = true;
             knockoutLevels();
-        }
-        else
-        {
-            //Debug.Log("Knockout mode is:" + PlayerPrefs.GetInt("KnockOut_Unlock"));
-            knockOut = false;
-            knockoutLevels();
-        }
+        
 
     }
 
@@ -88,15 +83,8 @@ public class GameManager : MonoBehaviour
             acceptPrivacyPolicy();
         }
 
-        if (PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
-        {
-            knockOut = true;
             knockoutLevels();
-        } else
-        {
-            knockOut = false;
-            knockoutLevels();
-        }
+       
 
         //Debug.Log(health.text + character.text);
         if (PlayerPrefs.GetInt("Health") >= 1500 || PlayerPrefs.GetInt("coin") < 500)
@@ -111,10 +99,10 @@ public class GameManager : MonoBehaviour
 
     private void knockoutLevels()
     {
-        if(knockOut == true)
+        if(PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
         {
             knockOutModeBtn.image.sprite = knockOn;
-        } else if (knockOut == false)
+        } else
         {
             knockOutModeBtn.image.sprite = knockOff;
         }
@@ -204,13 +192,15 @@ public class GameManager : MonoBehaviour
 
     public void GoToCharacterLevelSelection(int mode)
     {
-        if(mode == 1 && PlayerPrefs.GetInt("KnockOut_Unlock") == 0)
+        if (mode == 1 && PlayerPrefs.GetInt("KnockOut_Unlock") == 0)
         {
             return;
         }
-        
-        PlayerPrefs.SetInt("mode", mode);
-        SceneManager.LoadScene(3, LoadSceneMode.Single);
+        else
+        {
+            PlayerPrefs.SetInt("mode", mode);
+            SceneManager.LoadScene(3, LoadSceneMode.Single);
+        }
     }
 
     public void StoryModeScreen()
