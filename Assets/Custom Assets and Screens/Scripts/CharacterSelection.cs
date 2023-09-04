@@ -41,7 +41,7 @@ public class CharacterSelection : MonoBehaviour
         
 
         //Debug.Log($"The Letter J is {j}");
-        if (PlayerPrefs.GetInt("freshinstall") == 0)
+        if (PlayerPrefs.GetInt("freshinstall") == 0 || PlayerPrefs.GetInt("allCharactersUnlocked") == 0)
         {
             for (int i = 0; i < characters.Length; i++)
             {
