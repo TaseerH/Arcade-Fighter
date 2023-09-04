@@ -108,7 +108,7 @@ MonoBehaviour:
       type: 3}
     WonRounds: {fileID: 21300000, guid: 68686dd7fc69c8d45aaffddfedd2614a, type: 3}
     LostRounds: {fileID: 21300000, guid: 04fbf82e88e5aec46a19cbdd69c36c66, type: 3}
-    VisibleImages: 1
+    VisibleImages: 0
   player1GUI:
     name: {fileID: 11400024}
     portrait: {fileID: 11424808}

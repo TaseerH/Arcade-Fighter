@@ -94,7 +94,15 @@ public class DefaultBattleGUI : BattleGUI{
 
 	private void Start()
 	{
-		currentLevel.text = $"Current level: {PlayerPrefs.GetInt("selectedLevel")}";
+		if(PlayerPrefs.GetInt("selectedLevel") >= 20)
+        {
+			currentLevel.text = $"Current level: {PlayerPrefs.GetInt("selectedLevel") - 20}";
+
+		} else
+        {
+			currentLevel.text = $"Level: {PlayerPrefs.GetInt("selectedLevel")}";
+
+		}
 
 		health = PlayerPrefs.GetInt("Health");
 		Debug.Log("Current Life Points are " + UFE.GetPlayer1ControlsScript().myInfo.lifePoints);
