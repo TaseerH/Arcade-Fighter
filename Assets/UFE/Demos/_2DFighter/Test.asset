@@ -194,7 +194,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 16
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 05000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -1606,8 +1606,7 @@ MonoBehaviour:
     cInputDeadZone: 0.001
     cInputSkin: {fileID: 0}
     controlFreakPrefab: {fileID: 0}
-    controlFreak2Prefab: {fileID: 11467906, guid: 3b691fd3550ba074aa196ddda13fab95,
-      type: 3}
+    controlFreak2Prefab: {fileID: 0}
     controlFreakDeadZone: 0.5
     forceDigitalInput: 0
     confirmButton: 20
@@ -1697,6 +1696,26 @@ MonoBehaviour:
     stagePath: 
     screenshot: {fileID: 2800000, guid: a5277248cd5bdc443a476e97e7501431, type: 3}
     prefab: {fileID: 3039990473577390287, guid: 31cad3c9db2022d4aac441ccd110024c,
+      type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    _groundFriction:
+      _serializedValue: 429496729600
+    _leftBoundary:
+      _serializedValue: -163208757248
+    _rightBoundary:
+      _serializedValue: 163208757248
+    position:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+  - stageName: Factory
+    stageLoadingMethod: 0
+    stagePath: 
+    screenshot: {fileID: 2800000, guid: 752e3d770d2319443952987292318486, type: 3}
+    prefab: {fileID: 3018831824277592154, guid: 163246e7ac2030c4e9785effa0f65818,
       type: 3}
     music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
     _groundFriction:
