@@ -24,11 +24,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d6dc227d62e62a40af291dbbd4c5276, type: 2}
   - {fileID: 11400000, guid: 54057043117984643925ed339c232c0d, type: 2}
   selectedStage:
-    stageName: Japanese Temple
+    stageName: Helicon
     stageLoadingMethod: 0
     stagePath: 
     screenshot: {fileID: 2800000, guid: a5277248cd5bdc443a476e97e7501431, type: 3}
-    prefab: {fileID: 3039990473577390287, guid: 31cad3c9db2022d4aac441ccd110024c,
+    prefab: {fileID: 9132732002647135111, guid: b1fe04846c41e174497585d262cc0132,
       type: 3}
     music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
     _groundFriction:
@@ -164,7 +164,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 10
-          possibleStagesIndexes: 03000000
+          possibleStagesIndexes: 01000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -174,7 +174,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 8
-          possibleStagesIndexes: 04000000
+          possibleStagesIndexes: 02000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -184,7 +184,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 13
-          possibleStagesIndexes: 00000000
+          possibleStagesIndexes: 03000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -194,7 +194,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 16
-          possibleStagesIndexes: 05000000
+          possibleStagesIndexes: 04000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -204,7 +204,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 15
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 05000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -214,7 +214,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 17
-          possibleStagesIndexes: 02000000
+          possibleStagesIndexes: 06000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -224,7 +224,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 7
-          possibleStagesIndexes: 00000000
+          possibleStagesIndexes: 07000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -638,8 +638,8 @@ MonoBehaviour:
     selectedTeamMode: 0
     skipLoadingScreen: 1
   cameraOptions:
-    initialDistance: {x: 0, y: 12, z: -80}
-    initialRotation: {x: 8, y: 0, z: 0}
+    initialDistance: {x: 0, y: 15, z: -100}
+    initialRotation: {x: 10, y: 0, z: 0}
     enableLookAt: 1
     dollyAngle: 0
     distance3d: 0
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   player2_Inputs:
   - inputType: 0
     inputButtonName: P2KeyboardHorizontal
-    engineRelatedButton: 1
+    engineRelatedButton: 0
     joystickAxisName: P2JoystickHorizontal
     cInputPositiveKeyName: P2Right
     cInputPositiveDefaultKey: RightArrow
@@ -1716,6 +1716,46 @@ MonoBehaviour:
     stagePath: 
     screenshot: {fileID: 2800000, guid: 752e3d770d2319443952987292318486, type: 3}
     prefab: {fileID: 3018831824277592154, guid: 163246e7ac2030c4e9785effa0f65818,
+      type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    _groundFriction:
+      _serializedValue: 429496729600
+    _leftBoundary:
+      _serializedValue: -163208757248
+    _rightBoundary:
+      _serializedValue: 163208757248
+    position:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+  - stageName: Desert Map
+    stageLoadingMethod: 0
+    stagePath: 
+    screenshot: {fileID: 2800000, guid: 752e3d770d2319443952987292318486, type: 3}
+    prefab: {fileID: 1802822278330655250, guid: a6411e881824cc24caa8614700581fb8,
+      type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    _groundFriction:
+      _serializedValue: 429496729600
+    _leftBoundary:
+      _serializedValue: -163208757248
+    _rightBoundary:
+      _serializedValue: 163208757248
+    position:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+  - stageName: Shipping Dock
+    stageLoadingMethod: 0
+    stagePath: 
+    screenshot: {fileID: 2800000, guid: 752e3d770d2319443952987292318486, type: 3}
+    prefab: {fileID: 6127422793256233395, guid: 9695021d1a1e495428c34f75a459058a,
       type: 3}
     music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
     _groundFriction:
