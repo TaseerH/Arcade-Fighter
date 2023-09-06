@@ -15794,12 +15794,12 @@ MonoBehaviour:
     basicMovesToggle: 0
     statesToggle: 1
   moveClassification:
-    attackType: 2
-    hitType: 0
-    startupSpeed: 4
+    attackType: 1
+    hitType: 3
+    startupSpeed: 1
     recoverySpeed: 1
     hitConfirmType: 0
-    preferableDistance: 3
+    preferableDistance: 2
     gaugeUsage: 3
     anyAttackType: 1
     anyHitType: 1
@@ -16517,11 +16517,11 @@ MonoBehaviour:
         _serializedValue: 0
     position:
       x:
-        _serializedValue: -936478272
+        _serializedValue: -3632983040
       y:
-        _serializedValue: 16946479104
+        _serializedValue: 17226113024
       z:
-        _serializedValue: -1405567232
+        _serializedValue: -1202589952
   lockOnTargets: []
   switchCharacterOptions: []
   invincibleBodyParts:
