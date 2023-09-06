@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   version: 2
-  player1Character: {fileID: 11400000, guid: c204c555774eb2f4b9d4d5fbb758761b, type: 2}
-  player2Character: {fileID: 11400000, guid: 38e76c1766554fa4e82227e59722cb3c, type: 2}
+  player1Character: {fileID: 0}
+  player2Character: {fileID: 0}
   player1Team:
   - {fileID: 11400000, guid: 573f29652f969dd429ee24d097b56bc0, type: 2}
   - {fileID: 11400000, guid: 5d6dc227d62e62a40af291dbbd4c5276, type: 2}
@@ -24,19 +24,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d6dc227d62e62a40af291dbbd4c5276, type: 2}
   - {fileID: 11400000, guid: 54057043117984643925ed339c232c0d, type: 2}
   selectedStage:
-    stageName: Kung
+    stageName: Japanese Temple
     stageLoadingMethod: 0
     stagePath: 
-    screenshot: {fileID: 2800000, guid: 8b65ee547a225914da7255c72477c87c, type: 3}
-    prefab: {fileID: 2257122650570177812, guid: 63ea5c54b4cc90d4eb5b5ebbead7566d,
+    screenshot: {fileID: 2800000, guid: a5277248cd5bdc443a476e97e7501431, type: 3}
+    prefab: {fileID: 3039990473577390287, guid: 31cad3c9db2022d4aac441ccd110024c,
       type: 3}
-    music: {fileID: 8300000, guid: f677a794af65dfe46917f53cc9810eec, type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:
-      _serializedValue: -158913789952
+      _serializedValue: -163208757248
     _rightBoundary:
-      _serializedValue: 158913789952
+      _serializedValue: 163208757248
     position:
       x:
         _serializedValue: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 10
-          possibleStagesIndexes: 0100000002000000
+          possibleStagesIndexes: 03000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -174,7 +174,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 8
-          possibleStagesIndexes: 0000000001000000
+          possibleStagesIndexes: 04000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -184,7 +184,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 13
-          possibleStagesIndexes: 000000000100000002000000
+          possibleStagesIndexes: 00000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -615,7 +615,7 @@ MonoBehaviour:
   deploymentOptions:
     deploymentType: 0
     activeCharacters:
-    - {fileID: 11400000, guid: c204c555774eb2f4b9d4d5fbb758761b, type: 2}
+    - {fileID: 11400000, guid: b8e1fa666d3d95441b958463415f3330, type: 2}
     - {fileID: 11400000, guid: f67c4d57b3d97f040ac77eb3d894ba25, type: 2}
     - {fileID: 11400000, guid: d6338f103bbb0da46ba6acf3b027f17a, type: 2}
     - {fileID: 11400000, guid: ac6ffbd93fffdbb47a2a75f1f84ecd37, type: 2}
@@ -638,8 +638,8 @@ MonoBehaviour:
     selectedTeamMode: 0
     skipLoadingScreen: 1
   cameraOptions:
-    initialDistance: {x: 0, y: 15, z: -53}
-    initialRotation: {x: 7, y: 0, z: 0}
+    initialDistance: {x: 0, y: 12, z: -80}
+    initialRotation: {x: 8, y: 0, z: 0}
     enableLookAt: 1
     dollyAngle: 0
     distance3d: 0
@@ -647,9 +647,9 @@ MonoBehaviour:
     stabilizeDolly: 1
     enableZoom: 1
     followCharacters: 0
-    initialFieldOfView: 16
+    initialFieldOfView: 15
     verticalPriority: 2
-    verticalThreshold: 5
+    verticalThreshold: 15
     movementSpeed: 12
     minZoom: 40
     maxZoom: 60
@@ -1231,7 +1231,7 @@ MonoBehaviour:
     inputViewerIcon6: {fileID: 2800000, guid: 90523496d8897124e989ad256f109d27, type: 3}
   - inputType: 1
     inputButtonName: P1KeyboardVertical
-    engineRelatedButton: 3
+    engineRelatedButton: 2
     joystickAxisName: P1JoystickVertical
     cInputPositiveKeyName: P1Up
     cInputPositiveDefaultKey: W
@@ -1472,7 +1472,7 @@ MonoBehaviour:
     inputViewerIcon6: {fileID: 2800000, guid: 90523496d8897124e989ad256f109d27, type: 3}
   - inputType: 1
     inputButtonName: P2KeyboardVertical
-    engineRelatedButton: 3
+    engineRelatedButton: 2
     joystickAxisName: P2JoystickVertical
     cInputPositiveKeyName: P2Up
     cInputPositiveDefaultKey: UpArrow
@@ -1613,7 +1613,7 @@ MonoBehaviour:
     confirmButton: 20
     cancelButton: 20
   stages:
-  - stageName: Kung
+  - stageName: Kung Fu Temple
     stageLoadingMethod: 0
     stagePath: 
     screenshot: {fileID: 2800000, guid: 8b65ee547a225914da7255c72477c87c, type: 3}
@@ -1633,18 +1633,19 @@ MonoBehaviour:
         _serializedValue: 0
       z:
         _serializedValue: 0
-  - stageName: Training
+  - stageName: Fight Club
     stageLoadingMethod: 0
     stagePath: 
-    screenshot: {fileID: 2800000, guid: 08a565ac17d3e904d8d5f53e183b64d2, type: 3}
-    prefab: {fileID: 100000, guid: 064338a39a43ad647989c96c321658a2, type: 3}
-    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    screenshot: {fileID: 2800000, guid: 92a832fd630c98f4f967ab3a6a913ef7, type: 3}
+    prefab: {fileID: 6172905896920261634, guid: 4c32cb7d74e4ffc4ab7a1511da2d5b7d,
+      type: 3}
+    music: {fileID: 8300000, guid: 641189ac87f861f41bfd4a406b0d3294, type: 3}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:
-      _serializedValue: -158913789952
+      _serializedValue: -163208757248
     _rightBoundary:
-      _serializedValue: 158913789952
+      _serializedValue: 163208757248
     position:
       x:
         _serializedValue: 0
@@ -1652,19 +1653,58 @@ MonoBehaviour:
         _serializedValue: 0
       z:
         _serializedValue: 0
-  - stageName: Space
+  - stageName: Gym
     stageLoadingMethod: 0
     stagePath: 
-    screenshot: {fileID: 2800000, guid: 55e457740fe60405dac77af143e1a867, type: 3}
-    prefab: {fileID: 1600292898635669906, guid: c92c8143f39565c48925320cf53b5e8b,
+    screenshot: {fileID: 2800000, guid: b9fa91e94fa9fd74d97e8c7c724aedfc, type: 3}
+    prefab: {fileID: 672018895331645852, guid: fa727079faa81c149985b5f2f11f5704, type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    _groundFriction:
+      _serializedValue: 429496729600
+    _leftBoundary:
+      _serializedValue: -163208757248
+    _rightBoundary:
+      _serializedValue: 163208757248
+    position:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+  - stageName: Helicon
+    stageLoadingMethod: 0
+    stagePath: 
+    screenshot: {fileID: 2800000, guid: a5277248cd5bdc443a476e97e7501431, type: 3}
+    prefab: {fileID: 9132732002647135111, guid: b1fe04846c41e174497585d262cc0132,
       type: 3}
     music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:
-      _serializedValue: -158913789952
+      _serializedValue: -163208757248
     _rightBoundary:
-      _serializedValue: 158913789952
+      _serializedValue: 163208757248
+    position:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+  - stageName: Japanese Temple
+    stageLoadingMethod: 0
+    stagePath: 
+    screenshot: {fileID: 2800000, guid: a5277248cd5bdc443a476e97e7501431, type: 3}
+    prefab: {fileID: 3039990473577390287, guid: 31cad3c9db2022d4aac441ccd110024c,
+      type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    _groundFriction:
+      _serializedValue: 429496729600
+    _leftBoundary:
+      _serializedValue: -163208757248
+    _rightBoundary:
+      _serializedValue: 163208757248
     position:
       x:
         _serializedValue: 0
