@@ -27,6 +27,9 @@ public class LevelSelectionScript : MonoBehaviour
 
     private int allLevelsUnlock;
 
+
+    public GameObject Store;
+
     private void Awake()
     {
         
@@ -154,4 +157,11 @@ public class LevelSelectionScript : MonoBehaviour
     {
         FailedMessage.SetActive(false);
     }
+
+
+    public void storeActivate()
+    {
+        Store.SetActive(true);
+    }
+
 }

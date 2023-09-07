@@ -69,6 +69,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        
+        
+        
+        
+
         if (PlayerPrefs.GetInt("freshcoin") == 0)
         {
             PlayerPrefs.SetInt("coin", 500);
@@ -83,7 +88,27 @@ public class GameManager : MonoBehaviour
             acceptPrivacyPolicy();
         }
 
-            knockoutLevels();
+
+        if (PlayerPrefs.GetInt("firstTimeKnock") == 1)
+        {
+            LoadingMainMenuScreen.SetActive(false);
+            
+            StoryModeScreen();
+            PlayerPrefs.SetInt("firstTimeKnock", 2);
+            Characters.SetActive(false);
+        }
+
+        if(PlayerPrefs.GetInt("backFromLevelSelection") == 1)
+        {
+            PlayerPrefs.SetInt("backFromLevelSelection", 0);
+            LoadingMainMenuScreen.SetActive(false);
+            Characters.SetActive(true);
+            BackButtonStoryModeScreen();
+            
+        }
+
+
+        knockoutLevels();
        
 
         //Debug.Log(health.text + character.text);
@@ -150,6 +175,7 @@ public class GameManager : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        PlayerPrefs.SetInt("backFromLevelSelection", 1);
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 

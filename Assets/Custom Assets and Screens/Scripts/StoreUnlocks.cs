@@ -30,6 +30,13 @@ public class StoreUnlocks : MonoBehaviour
 
     public GameManager manager;
 
+    public TMP_Text score;
+
+    private void LateUpdate()
+    {
+        score.text = PlayerPrefs.GetInt("coin").ToString();
+    }
+
     private void Start()
     {
         CoinPacks();
@@ -135,4 +142,10 @@ public class StoreUnlocks : MonoBehaviour
     {
         purchaseFailure.SetActive(false);
     }
+
+    public void disableSelf()
+    {
+        this.gameObject.SetActive(false);
+    }
+
 }

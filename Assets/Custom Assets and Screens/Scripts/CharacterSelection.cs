@@ -22,6 +22,9 @@ public class CharacterSelection : MonoBehaviour
     public Button Buy = null;
     public TMP_Text buyText = null;
 
+
+    public GameObject gameStore;
+
     private void FixedUpdate()
     {
         Currency.SetText(PlayerPrefs.GetInt("coin").ToString());
@@ -229,5 +232,17 @@ public class CharacterSelection : MonoBehaviour
         PlayerPrefs.SetInt("allCharactersUnlocked", 0);
         PlayerPrefs.SetInt("allLevelsUnlocked", 0);
         PlayerPrefs.SetInt("Health", 0);
+
+        PlayerPrefs.SetInt("healthinc", 0);
+        PlayerPrefs.SetInt("staminc", 0);
+
+
     }
+
+
+    public void store()
+    {
+        gameStore.SetActive(true);
+    }
+
 }
