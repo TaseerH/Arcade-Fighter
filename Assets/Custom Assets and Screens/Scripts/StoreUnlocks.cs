@@ -34,7 +34,7 @@ public class StoreUnlocks : MonoBehaviour
 
     private void LateUpdate()
     {
-        score.text = PlayerPrefs.GetInt("coin").ToString();
+        score.text = PlayerPrefs.GetInt("coin").ToString("N0");
     }
 
     private void Start()

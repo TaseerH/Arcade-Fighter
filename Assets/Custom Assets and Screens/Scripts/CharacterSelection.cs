@@ -27,7 +27,7 @@ public class CharacterSelection : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Currency.SetText(PlayerPrefs.GetInt("coin").ToString());
+        Currency.SetText(PlayerPrefs.GetInt("coin").ToString("N0"));
     
     }
 
@@ -96,7 +96,7 @@ public class CharacterSelection : MonoBehaviour
         {
             Play.gameObject.SetActive(false);
             Buy.gameObject.SetActive(true);
-            buyText.text = $"Buy For {PlayerPrefs.GetInt($"characterprice{selectedCharacter}")}";
+            buyText.text = $"Buy For {PlayerPrefs.GetInt($"characterprice{selectedCharacter}").ToString("N0")}";
         } else
         {
             Play.gameObject.SetActive(true);

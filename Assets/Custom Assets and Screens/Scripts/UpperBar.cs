@@ -11,7 +11,7 @@ public class UpperBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coin.text = PlayerPrefs.GetInt("coin").ToString();
+        coin.text = PlayerPrefs.GetInt("coin").ToString("N0");
     }
 
     public void CharacterSelection()

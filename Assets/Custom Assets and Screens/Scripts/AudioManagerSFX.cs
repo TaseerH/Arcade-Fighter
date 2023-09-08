@@ -35,14 +35,6 @@ public class AudioManagerSFX : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        int s = SceneManager.GetActiveScene().buildIndex;
-        if ( s== 2)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     private void Start()
     {

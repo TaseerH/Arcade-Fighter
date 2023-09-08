@@ -3900,7 +3900,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &673652362
@@ -14407,6 +14407,11 @@ PrefabInstance:
       value: TextureStoryModeOpeningScreen
       objectReference: {fileID: 0}
     - target: {fileID: 2083991048971041865, guid: a1c357762dab50d46a7d857f9bec52d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083991048971041867, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
       propertyPath: m_IsActive
       value: 0

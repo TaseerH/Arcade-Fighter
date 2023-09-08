@@ -1215,7 +1215,7 @@ MonoBehaviour:
   player1_Inputs:
   - inputType: 0
     inputButtonName: P1KeyboardHorizontal
-    engineRelatedButton: 1
+    engineRelatedButton: 0
     joystickAxisName: P1JoystickHorizontal
     cInputPositiveKeyName: P1Right
     cInputPositiveDefaultKey: D
@@ -1777,7 +1777,7 @@ MonoBehaviour:
     screenshot: {fileID: 2800000, guid: a06004bdb0aa447299d7175f60ed249b, type: 3}
     prefab: {fileID: 2832105442099208692, guid: 3bdb7209cdb12124d9c6dd79e9fbac18,
       type: 3}
-    music: {fileID: 8300000, guid: 5ca855c4489b41e43a1ff59e60c49773, type: 3}
+    music: {fileID: 0}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:

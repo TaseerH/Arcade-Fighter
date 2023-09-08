@@ -36,16 +36,19 @@ public class GameManager : MonoBehaviour
     public bool knockOut = false;
     private void Update()
     {
+        for (int i = 0; i < Currency.Length; i++)
+        {
+            Currency[i].SetText(PlayerPrefs.GetInt("coin").ToString("N0"));
+            Debug.Log("Coins formatted are: " + PlayerPrefs.GetInt("coin").ToString("N0"));
+        }
 
-        if (Currency == null || PlayButtons == null || StoryModeCanvas == null || knockOutMode == null || reviewPanel == null || privacyPolicyMain == null)
+
+        if (Currency == null || PlayButtons == null || StoryModeCanvas == null || knockOutMode == null || reviewPanel == null || privacyPolicyMain == null || LoadingMainMenuScreen == null)
         {
             return;
         }
 
-        for (int i =0; i< Currency.Length; i++)
-        {
-            Currency[i].SetText(PlayerPrefs.GetInt("coin").ToString());
-        }
+        
         
 
         if (PlayerPrefs.GetInt("Health") >= 1500)
