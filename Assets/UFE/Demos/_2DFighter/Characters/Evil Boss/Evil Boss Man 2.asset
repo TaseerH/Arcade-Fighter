@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Evil Boss Man 2
   m_EditorClassIdentifier: 
   gameplayType: 0
-  profilePictureSmall: {fileID: 2800000, guid: d093f0a980913fc4fa9d87cb015033a9, type: 3}
-  profilePictureBig: {fileID: 2800000, guid: d093f0a980913fc4fa9d87cb015033a9, type: 3}
+  profilePictureSmall: {fileID: 2800000, guid: e696c2fe0f3eb71448ab9bd8c34a49cb, type: 3}
+  profilePictureBig: {fileID: 2800000, guid: 45792246363ccd44e9938496982a1a32, type: 3}
   characterName: Nacho
   gender: 0
   characterDescription: 

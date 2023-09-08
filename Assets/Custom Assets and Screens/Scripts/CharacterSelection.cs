@@ -44,7 +44,7 @@ public class CharacterSelection : MonoBehaviour
         
 
         //Debug.Log($"The Letter J is {j}");
-        if (PlayerPrefs.GetInt("freshinstall") == 0 || PlayerPrefs.GetInt("allCharactersUnlocked") == 0)
+        if (PlayerPrefs.GetInt("freshinstall") == 0 && PlayerPrefs.GetInt("allCharactersUnlocked") == 0)
         {
             for (int i = 0; i < characters.Length; i++)
             {
@@ -71,7 +71,7 @@ public class CharacterSelection : MonoBehaviour
             PlayerPrefs.SetInt($"characterprice{6}", 350000);
 
             PlayerPrefs.SetInt("playerHealth", 1);
-            PlayerPrefs.SetInt("playerStamina", 0);
+            PlayerPrefs.SetInt("playerStamina", 1);
         }
 
         PlayerPrefs.SetInt("freshinstall", 1);

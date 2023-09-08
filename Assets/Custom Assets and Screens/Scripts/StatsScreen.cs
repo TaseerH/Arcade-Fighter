@@ -23,8 +23,6 @@ public class StatsScreen : MonoBehaviour
     void Start()
     {
         StatsSetup();
-        healthPrice.text = $"{1000 + PlayerPrefs.GetInt("healthinc")}";
-        staminaPrice.text = $"{1000 + PlayerPrefs.GetInt("staminc")}";
     }
 
     public void StorePage()
@@ -35,12 +33,17 @@ public class StatsScreen : MonoBehaviour
 
     private void StatsSetup()
     {
+
+        Debug.Log("Stamina is: " + PlayerPrefs.GetInt("playerStamina"));
+
+
+
         healthPrice.text = $"{1000 + PlayerPrefs.GetInt("healthinc")}";
         staminaPrice.text = $"{1000 + PlayerPrefs.GetInt("staminc")}";
         playerHealth.text = $"{(PlayerPrefs.GetInt("Health") / 100) + (UFE.config.player1Character.lifePoints / 100)}";
         playerStamina.text = $"{PlayerPrefs.GetInt("playerStamina") + (UFE.config.player1Character.maxGaugePoints / 100) + 5}";
         
-        if (PlayerPrefs.GetInt("selectedLevel") >= 20)
+        if (PlayerPrefs.GetInt("selectedLevel") > 20)
         {
             enemyStamina.text = $"{UFE.config.player2Character.maxGaugePoints / 100 + PlayerPrefs.GetInt("selectedLevel") - 10}";
             enemyHealth.text = $"{UFE.config.player2Character.lifePoints / 100 + 10}";
@@ -67,7 +70,7 @@ public class StatsScreen : MonoBehaviour
 
     public void BuyStamina()
     { 
-        if (PlayerPrefs.GetInt("coin") >= (1000 + PlayerPrefs.GetInt("staminc"))&& PlayerPrefs.GetInt("playerStamina") <= 10)
+        if (PlayerPrefs.GetInt("coin") >= (1000 + PlayerPrefs.GetInt("staminc")) && PlayerPrefs.GetInt("playerStamina") <= 10)
         {
             
             PlayerPrefs.SetInt("playerStamina", PlayerPrefs.GetInt("playerStamina") + 1);
