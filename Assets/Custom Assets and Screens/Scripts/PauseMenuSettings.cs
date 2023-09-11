@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class PauseMenuSettings : MonoBehaviour
 {
+
+    private void OnEnable()
+    {
+        
+        AdsManager.Instance.ShowBannerRectangle();
+    }
+
+    private void OnDisable()
+    {
+        AdsManager.Instance.HideAdmobBannerRectangle();
+    }
+
     public void SoundOn()
     {
         PlayerPrefs.SetInt("sound", 1);

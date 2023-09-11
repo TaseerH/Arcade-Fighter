@@ -194,7 +194,10 @@ public class GameManager : MonoBehaviour
     public void selectLevel(int level)
     {
         PlayerPrefs.SetInt("selectedLevel", level);
+        
         SceneManager.LoadScene(1, LoadSceneMode.Single);
+
+        
     }
 
     public void BackToMainMenu()
@@ -209,6 +212,29 @@ public class GameManager : MonoBehaviour
     }
 
     public void addwatch()
+    {
+        AdsManager.Instance.ShowAdmobRewarded(0);
+        //adwatchSuccess();
+    }
+
+    private void OnEnable()
+    {
+        AdsManager.OnRewardFreeCoins += AdsManager_OnRewardFreeCoins;
+        AdsManager.OnRewardFreeCoinsFailed += AdsManager_OnRewardFreeCoinsFailed;
+    }
+
+    private void AdsManager_OnRewardFreeCoinsFailed()
+    {
+        adwatchFail();
+    }
+
+    private void OnDisable()
+    {
+        AdsManager.OnRewardFreeCoins -= AdsManager_OnRewardFreeCoins;
+        AdsManager.OnRewardFreeCoinsFailed -= AdsManager_OnRewardFreeCoinsFailed;
+    }
+
+    private void AdsManager_OnRewardFreeCoins()
     {
         adwatchSuccess();
     }

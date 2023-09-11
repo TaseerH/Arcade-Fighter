@@ -20,6 +20,9 @@ public class loadingMainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        //AdsManager.Instance.ShowBannerRectangle();
+
         characters.SetActive(false);
         particles[0].SetActive(false);
         particles[1].SetActive(false);

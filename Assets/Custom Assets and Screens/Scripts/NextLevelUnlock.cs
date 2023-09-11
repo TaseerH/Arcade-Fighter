@@ -15,6 +15,7 @@ public class NextLevelUnlock : MonoBehaviour
     public GameObject NextButton;
 
     public GameObject rewardSuccess;
+    public GameObject rewardFail;
     public TMP_Text successText;
     public Text storyComplete;
 
@@ -24,6 +25,10 @@ public class NextLevelUnlock : MonoBehaviour
 
     private void OnEnable()
     {
+        //AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.OnRewardDoubleCoins += AdsManager_OnRewardDoubleCoins;
+        AdsManager.OnRewardFreeCoinsFailed += AdsManager_OnRewardFreeCoinsFailed;
+
 
         if (PlayerPrefs.GetInt("selectedLevel") == 20)
         {
@@ -66,11 +71,28 @@ public class NextLevelUnlock : MonoBehaviour
 
     }
 
+    private void AdsManager_OnRewardFreeCoinsFailed()
+    {
+        videoRewardUnsuccessful();
+    }
+
+    private void AdsManager_OnRewardDoubleCoins()
+    {
+        callRewardAddition();
+    }
+
     public void rewardAddition()
+    {
+        AdsManager.Instance.ShowAdmobRewarded(1);
+    }
+
+
+    public void callRewardAddition()
     {
         rewardSuccess.gameObject.SetActive(true);
         successText.text = "Congratulations you 2X'd your reward";
     }
+
 
     public void VideoRewardSuccess()
     {
@@ -82,6 +104,17 @@ public class NextLevelUnlock : MonoBehaviour
 
         rewardSuccess.gameObject.SetActive(false);
 
+    }
+
+    public void videoRewardUnsuccessful()
+    {
+        rewardSuccess.gameObject.SetActive(false);
+        rewardFail.gameObject.SetActive(true);
+    }
+
+    public void rewardFailOk()
+    {
+        rewardFail.gameObject.SetActive(false);
     }
 
     public void knockOutUnlocked()

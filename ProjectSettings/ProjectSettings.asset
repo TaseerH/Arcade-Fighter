@@ -50,7 +50,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 0
+  m_ActiveColorSpace: 1
   m_MTRendering: 1
   mipStripping: 0
   numberOfMipsStripped: 0
@@ -867,13 +867,16 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Analytics: 0
-    Build: 1
+    Build: 0
     Collab: 0
     ErrorHub: 0
+    Game Performance: 0
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
     Unity_Ads: 0
   luminIcon:
     m_Name: 
@@ -889,11 +892,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 2a2852ae-815f-4cce-8ebe-9aa066b90ec3
+  cloudProjectId: 362fffe3-bd3b-4c45-a4f4-86a687585860
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: UFE 2.5
-  organizationId: taseerh77
+  projectName: Kung Fu Fighting
+  organizationId: securegames2023
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
   playerDataPath: 

@@ -24,8 +24,16 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
 
 
-	#region public override methods
-	public override void OnShow (){
+    #region public override methods
+
+    private void Start()
+    {
+		AdsManager.Instance.HideBanner();
+		AdsManager.Instance.ShowAdmobInterstitial();
+		AdsManager.Instance.ShowBannerRectangle();
+	}
+
+    public override void OnShow (){
 		base.OnShow ();
 		
 		if (this.music != null){
@@ -67,6 +75,7 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
 	private void NextScreen()
     {
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		this.GoToNextScreen();
     }
 

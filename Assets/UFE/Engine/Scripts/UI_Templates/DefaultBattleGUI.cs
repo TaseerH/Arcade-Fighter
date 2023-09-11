@@ -94,6 +94,10 @@ public class DefaultBattleGUI : BattleGUI{
 
 	private void Start()
 	{
+
+		AdsManager.Instance.ShowBanner();
+
+
 		if(PlayerPrefs.GetInt("selectedLevel") > 20)
         {
 			currentLevel.text = $"Current level: {PlayerPrefs.GetInt("selectedLevel") - 20}";
@@ -114,18 +118,23 @@ public class DefaultBattleGUI : BattleGUI{
 
 	public void Pause()
     {
+		AdsManager.Instance.HideBanner();
 		Time.timeScale = 0;
 		panel.gameObject.SetActive(true);
 	}
 
 	public void Resume()
     {
+
+		AdsManager.Instance.ShowBanner();
+
 		Time.timeScale = 1;
 		panel.gameObject.SetActive(false);
     }
 
 	public void MainMenu()
     {
+		AdsManager.Instance.HideBanner();
 		UFE.EndGame(true);
 		Time.timeScale = 1;
 		SceneManager.LoadScene(0, LoadSceneMode.Single);
