@@ -17,6 +17,12 @@ public class StatsScreen : MonoBehaviour
     public TMP_Text healthPrice;
     public TMP_Text staminaPrice;
 
+    public GameObject stamina;
+    public GameObject health;
+    public GameObject fullstamina;
+    public GameObject fullhealth;
+
+
     public GameObject storePage;
 
     // Start is called before the first frame update
@@ -30,6 +36,19 @@ public class StatsScreen : MonoBehaviour
         storePage.SetActive(true);
     }
 
+    private void LateUpdate()
+    {
+        if(PlayerPrefs.GetInt("Health") > 1500)
+        {
+            health.SetActive(false);
+            fullhealth.SetActive(true);
+        }
+        if(PlayerPrefs.GetInt("playerStamina") > 10)
+        {
+            stamina.SetActive(false);
+            fullstamina.SetActive(true);
+        }
+    }
 
     private void StatsSetup()
     {

@@ -44,16 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b7e2d0258e1ab4b906de81c3bdb9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 5ca855c4489b41e43a1ff59e60c49773, type: 3}
-    Volume: 0.3
-    Pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Theme2
-    clip: {fileID: 8300000, guid: f8aa3fe140181db42853c56aa0c92209, type: 3}
-    Volume: 0.2
-    Pitch: 1
-    loop: 1
-    source: {fileID: 0}
+  sounds: []

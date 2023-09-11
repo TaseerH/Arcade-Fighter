@@ -15,11 +15,14 @@ public class loadingMainMenu : MonoBehaviour
     private bool isSliderFilled = false;
 
     public GameObject characters;
+    public GameObject[] particles;
 
     // Start is called before the first frame update
     void Start()
     {
         characters.SetActive(false);
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +51,9 @@ public class loadingMainMenu : MonoBehaviour
     {
         //MainMenu.SetActive(true);
         characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
         this.gameObject.SetActive(false);
     }
 }

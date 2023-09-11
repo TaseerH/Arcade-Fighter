@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public GameObject miniPrivacy = null;
 
     public TMP_Text[] Currency = null;
+
+    public GameObject[] particles = null;
+
+
     public GameObject PlayButtons = null;
     public GameObject Characters = null;
     public GameObject StoryModeCanvas = null;
@@ -39,7 +43,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < Currency.Length; i++)
         {
             Currency[i].SetText(PlayerPrefs.GetInt("coin").ToString("N0"));
-            Debug.Log("Coins formatted are: " + PlayerPrefs.GetInt("coin").ToString("N0"));
+            //Debug.Log("Coins formatted are: " + PlayerPrefs.GetInt("coin").ToString("N0"));
         }
 
 
@@ -72,10 +76,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+
         
-        
-        
-        
+
+
 
         if (PlayerPrefs.GetInt("freshcoin") == 0)
         {
@@ -99,17 +103,26 @@ public class GameManager : MonoBehaviour
             StoryModeScreen();
             PlayerPrefs.SetInt("firstTimeKnock", 2);
             Characters.SetActive(false);
+
+            particles[0].SetActive(false);
+            particles[1].SetActive(false);
         }
 
-        if(PlayerPrefs.GetInt("backFromLevelSelection") == 1)
+
+        if (PlayerPrefs.GetInt("backFromLevelSelection") == 1)
         {
+
+            acceptPrivacyPolicy();
+
             PlayerPrefs.SetInt("backFromLevelSelection", 0);
             LoadingMainMenuScreen.SetActive(false);
             Characters.SetActive(true);
-            BackButtonStoryModeScreen();
-            
-        }
 
+            particles[0].SetActive(true);
+            particles[1].SetActive(true);
+            BackButtonStoryModeScreen();
+
+        }
 
         knockoutLevels();
        
@@ -152,8 +165,13 @@ public class GameManager : MonoBehaviour
 
     public void MainPrivacyMenu()
     {
-        privacyPolicyMain.SetActive(true);
+
         Characters.SetActive(false);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
+        privacyPolicyMain.SetActive(true);
+        
     }
 
     public void acceptPrivacyPolicy()
@@ -167,6 +185,9 @@ public class GameManager : MonoBehaviour
     public void readMore()
     {
         Characters.SetActive(false);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
         Application.OpenURL("https://play.google.com/store/apps/dev?id=8542001137219996574&hl=en&gl=US");
     }
 
@@ -196,18 +217,27 @@ public class GameManager : MonoBehaviour
     {
         adWatchPanelsuccess.SetActive(true);
         Characters.SetActive(false);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
     }
 
     public void adwatchFail()
     {
         adWatchPanelfail.SetActive(true);
         Characters.SetActive(false);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
     }
 
     public void adFail()
     {
         adWatchPanelfail.SetActive(false);
         Characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
     }
 
     public void BuyCoin()
@@ -215,6 +245,9 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + 5000);
         adWatchPanelsuccess.SetActive(false);
         Characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
         PlayerPrefs.SetInt("freshcoin", 1);
         //PlayerPrefs.SetInt("freshinstall", 1);
 ;    }
@@ -235,6 +268,9 @@ public class GameManager : MonoBehaviour
     public void StoryModeScreen()
     {
         PlayButtons.SetActive(false);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
         Characters.SetActive(false);
         StoryModeCanvas.SetActive(true);
     }
@@ -243,6 +279,9 @@ public class GameManager : MonoBehaviour
     {
         PlayButtons.SetActive(true);
         Characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
         StoryModeCanvas.SetActive(false);
     }
 
@@ -250,29 +289,46 @@ public class GameManager : MonoBehaviour
     {
         storePage.SetActive(false);
         Characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
     }
 
     public void StorePage()
     {
         storePage.SetActive(true);
         Characters.SetActive(false);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
     }
 
     public void BackButtonSettingsScreen()
     {
         Settings.SetActive(false);
         Characters.SetActive(true);
+
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
     }
 
     public void SettingsPage()
     {
         Settings.SetActive(true);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
+
         Characters.SetActive(false);
     }
 
     public void QuitPanelActive()
     {
         QuitPanel.SetActive(true);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
         Characters.SetActive(false);
     }
 
@@ -280,6 +336,9 @@ public class GameManager : MonoBehaviour
     {
         QuitPanel.SetActive(false);
         Characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
     }
 
     public void quit()
@@ -296,12 +355,19 @@ public class GameManager : MonoBehaviour
     {
         reviewPanel.SetActive(true);
         Characters.SetActive(false);
+
+        particles[0].SetActive(false);
+        particles[1].SetActive(false);
+
     }
 
     public void closereview()
     {
         reviewPanel.SetActive(false);
         Characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
     }
 
     public void fiveStars()
@@ -309,6 +375,9 @@ public class GameManager : MonoBehaviour
         Application.OpenURL("https://play.google.com/store/apps/details?id=com.colossi.survival.samurai");
         reviewPanel.SetActive(false);
         Characters.SetActive(true);
+
+        particles[0].SetActive(true);
+        particles[1].SetActive(true);
     }
 
     public void BuyHealth()
