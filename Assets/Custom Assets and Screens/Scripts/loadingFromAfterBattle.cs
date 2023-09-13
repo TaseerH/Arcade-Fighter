@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class loadingMainMenu : MonoBehaviour
+public class loadingFromAfterBattle : MonoBehaviour
 {
+
 
     //public GameObject MainMenu;
     public Slider slider;
@@ -14,27 +15,15 @@ public class loadingMainMenu : MonoBehaviour
     private float currentTime = 0f;
     private bool isSliderFilled = false;
 
-    public GameObject characters = null;
-    public GameObject[] particles = null;
-    //public bool nextbtnload;
-    //public StoryModeTextureScreen next;
-
+    public bool nextbtnload;
+    public StoryModeTextureScreen next;
 
     private void OnEnable()
     {
         AdsManager.Instance.ShowBannerRectangle();
-        //AdsManager.Instance.ShowAdmobInterstitial();
+        AdsManager.Instance.ShowAdmobInterstitial();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-        
-        characters.SetActive(false);
-        particles[0].SetActive(false);
-        particles[1].SetActive(false);
-    }
 
     // Update is called once per frame
     void Update()
@@ -60,18 +49,18 @@ public class loadingMainMenu : MonoBehaviour
 
     private void NextScreen()
     {
-        AdsManager.Instance.HideAdmobBannerRectangle(); 
-        //MainMenu.SetActive(true);
-        //if(!nextbtnload)
-        //{
-            characters.SetActive(true);
+        AdsManager.Instance.HideAdmobBannerRectangle();
 
-            particles[0].SetActive(true);
-            particles[1].SetActive(true);
-            
-       // }
         this.gameObject.SetActive(false);
-        //next.GoToNextScreen();
+        //MainMenu.SetActive(true);
+        if (nextbtnload)
+        {
+            next.GoToNextScreen();
+        } else
+        {
+            UFE.RestartMatch();
+        }
+        
 
     }
 }

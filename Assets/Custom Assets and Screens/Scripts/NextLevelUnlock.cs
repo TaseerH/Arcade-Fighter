@@ -60,13 +60,22 @@ public class NextLevelUnlock : MonoBehaviour
 
         coinReward.text = $"Rewarded {reward} Coins";
 
+
+        Debug.Log("Current Knockout mode status: " + PlayerPrefs.GetInt("firstTimeKnock"));
+
         if (PlayerPrefs.GetInt("selectedLevel") == 5 && PlayerPrefs.GetInt("firstTimeKnock") == 0)
         {
+
+            Debug.Log("In Unlock KnockOut Conditional");
+
+            AdsManager.Instance.HideAdmobBannerRectangle();
+
             PlayerPrefs.SetInt("KnockOut_Unlock", 1);
 
             int currentLevel = PlayerPrefs.GetInt("selectedLevel");
             PlayerPrefs.SetInt($"level{currentLevel}", 1);
-
+            //AdsManager.Instance.HideAdmobBannerRectangle();
+            //AdsManager.Instance.HideAllAds();
             knockUnlock.SetActive(true);
         }
 
@@ -91,7 +100,7 @@ public class NextLevelUnlock : MonoBehaviour
     public void callRewardAddition()
     {
         AdsManager.Instance.HideAllAds();
-        rewardSuccess.gameObject.SetActive(true);
+        rewardSuccess.SetActive(true);
         successText.text = "Congratulations you 2X'd your reward";
     }
 
@@ -105,7 +114,7 @@ public class NextLevelUnlock : MonoBehaviour
 
         coinReward.text = $"Rewarded {reward} Coins";
 
-        rewardSuccess.gameObject.SetActive(false);
+        rewardSuccess.SetActive(false);
 
         AdsManager.Instance.ShowBannerRectangle();
 
@@ -115,18 +124,22 @@ public class NextLevelUnlock : MonoBehaviour
     {
         AdsManager.Instance.HideAllAds();
         
-        rewardSuccess.gameObject.SetActive(false);
-        rewardFail.gameObject.SetActive(true);
+        rewardSuccess.SetActive(false);
+        rewardFail.SetActive(true);
     }
 
     public void rewardFailOk()
     {
         AdsManager.Instance.ShowBannerRectangle();
-        rewardFail.gameObject.SetActive(false);
+        rewardFail.SetActive(false);
     }
 
     public void knockOutUnlocked()
     {
+
+        //AdsManager.Instance.HideAdmobBannerRectangle();
+        //AdsManager.Instance.HideAllAds();
+        
         Debug.Log("Coins before going to knockout" + PlayerPrefs.GetInt("coin"));
         UFE.EndGame(true);
         PlayerPrefs.SetInt("firstTimeKnock", PlayerPrefs.GetInt("firstTimeKnock") + 1);

@@ -36,11 +36,11 @@ public class AudioManagerSFX : MonoBehaviour
     }
 
 
-    private void Start()
+    private void LateUpdate()
     {
         toggle();
-        Play("Theme");Play("Theme2");
     }
+
 
     public void Play( string name)
     {
@@ -63,13 +63,13 @@ public class AudioManagerSFX : MonoBehaviour
 
         foreach(Sound s in sounds)
         {
-            if (PlayerPrefs.GetInt("sound") == 1)
+            if (PlayerPrefs.GetInt("sound") == 0)
             {
-                s.source.mute = false;
+                s.source.mute = true;
             }
             else
             {
-                s.source.mute = true;
+                s.source.mute = false;
             }
         }
     }

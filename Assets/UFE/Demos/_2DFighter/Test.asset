@@ -24,13 +24,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d6dc227d62e62a40af291dbbd4c5276, type: 2}
   - {fileID: 11400000, guid: 54057043117984643925ed339c232c0d, type: 2}
   selectedStage:
-    stageName: Water Map
+    stageName: Gym
     stageLoadingMethod: 0
     stagePath: 
-    screenshot: {fileID: 2800000, guid: a06004bdb0aa447299d7175f60ed249b, type: 3}
-    prefab: {fileID: 2832105442099208692, guid: 3bdb7209cdb12124d9c6dd79e9fbac18,
-      type: 3}
-    music: {fileID: 0}
+    screenshot: {fileID: 2800000, guid: b9fa91e94fa9fd74d97e8c7c724aedfc, type: 3}
+    prefab: {fileID: 672018895331645852, guid: fa727079faa81c149985b5f2f11f5704, type: 3}
+    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:
@@ -164,7 +163,7 @@ MonoBehaviour:
           conversationAfterBattle: {fileID: 11400004, guid: d9ebcacaabc5e44bba98188d32b0a703,
             type: 3}
           opponentCharacterIndex: 10
-          possibleStagesIndexes: 01000000
+          possibleStagesIndexes: 03000000
         showOpponentsInEditor: 1
       - maxFights: 4
         mode: 2
@@ -615,7 +614,7 @@ MonoBehaviour:
   deploymentOptions:
     deploymentType: 0
     activeCharacters:
-    - {fileID: 11400000, guid: b8e1fa666d3d95441b958463415f3330, type: 2}
+    - {fileID: 11400000, guid: 4fe2658a49448ff4aab20cb5895e134c, type: 2}
     - {fileID: 11400000, guid: f67c4d57b3d97f040ac77eb3d894ba25, type: 2}
     - {fileID: 11400000, guid: d6338f103bbb0da46ba6acf3b027f17a, type: 2}
     - {fileID: 11400000, guid: ac6ffbd93fffdbb47a2a75f1f84ecd37, type: 2}
@@ -638,8 +637,8 @@ MonoBehaviour:
     selectedTeamMode: 0
     skipLoadingScreen: 1
   cameraOptions:
-    initialDistance: {x: 0, y: 25, z: -55}
-    initialRotation: {x: 20, y: 0, z: 0}
+    initialDistance: {x: 0, y: 5, z: -65}
+    initialRotation: {x: 0, y: 0, z: 0}
     enableLookAt: 1
     dollyAngle: 0
     distance3d: 0
@@ -647,7 +646,7 @@ MonoBehaviour:
     stabilizeDolly: 1
     enableZoom: 1
     followCharacters: 0
-    initialFieldOfView: 13
+    initialFieldOfView: 14
     verticalPriority: 2
     verticalThreshold: 15
     movementSpeed: 12
@@ -1215,7 +1214,7 @@ MonoBehaviour:
   player1_Inputs:
   - inputType: 0
     inputButtonName: P1KeyboardHorizontal
-    engineRelatedButton: 0
+    engineRelatedButton: 1
     joystickAxisName: P1JoystickHorizontal
     cInputPositiveKeyName: P1Right
     cInputPositiveDefaultKey: D
@@ -1456,7 +1455,7 @@ MonoBehaviour:
   player2_Inputs:
   - inputType: 0
     inputButtonName: P2KeyboardHorizontal
-    engineRelatedButton: 1
+    engineRelatedButton: 0
     joystickAxisName: P2JoystickHorizontal
     cInputPositiveKeyName: P2Right
     cInputPositiveDefaultKey: RightArrow
@@ -1472,7 +1471,7 @@ MonoBehaviour:
     inputViewerIcon6: {fileID: 2800000, guid: 90523496d8897124e989ad256f109d27, type: 3}
   - inputType: 1
     inputButtonName: P2KeyboardVertical
-    engineRelatedButton: 3
+    engineRelatedButton: 2
     joystickAxisName: P2JoystickVertical
     cInputPositiveKeyName: P2Up
     cInputPositiveDefaultKey: UpArrow

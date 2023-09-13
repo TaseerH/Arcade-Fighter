@@ -105,7 +105,7 @@ public class DefaultBattleGUI : BattleGUI{
 
 		if(PlayerPrefs.GetInt("selectedLevel") > 20)
         {
-			currentLevel.text = $"Current level: {PlayerPrefs.GetInt("selectedLevel") - 20}";
+			currentLevel.text = $"Level: {PlayerPrefs.GetInt("selectedLevel") - 20}";
 
 		} else
         {

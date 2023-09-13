@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8773310878336301298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3d12ec8b49c4843ad6ef712a625197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageCamFarClipPlane: 1e+9
-  stageCamInitialDistance: {x: 0, y: 25, z: -55}
-  stageCamInitialRotation: {x: 16, y: 0, z: 0}
+  stageCamFarClipPlane: 10000
+  stageCamInitialDistance: {x: 0, y: 9.4, z: -56}
+  stageCamInitialRotation: {x: 0, y: 0, z: 0}
   stageCamEnableLookAt: 1
-  stageCamFieldOfView: 13
+  stageCamFieldOfView: 14
   stageCamEnableZoom: 1
   stageCamMinimumZoom: 40
   stageCamMaximumZoom: 60

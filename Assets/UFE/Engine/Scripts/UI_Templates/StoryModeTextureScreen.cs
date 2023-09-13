@@ -22,8 +22,8 @@ public class StoryModeTextureScreen : StoryModeScreen {
 	private float currentTime = 0f;
 	private bool isSliderFilled = false;
 
-
-
+	public GameObject loadingAfterBattle;
+	public loadingFromAfterBattle screenLoad;
     #region public override methods
 
     private void Start()
@@ -85,17 +85,21 @@ public class StoryModeTextureScreen : StoryModeScreen {
 		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
 		PlayerPrefs.SetInt($"level{currentLevel}", 1);
 		PlayerPrefs.SetInt("selectedLevel", currentLevel + 1);
-
-
-		this.GoToNextScreen();
+		AdsManager.Instance.ShowAdmobInterstitial();
+		screenLoad.nextbtnload = true;
+		loadingAfterBattle.SetActive(true);
+		//this.GoToNextScreen();
     }
 
 	public void restart()
 	{
 		AdsManager.Instance.HideAdmobBannerRectangle();
+		AdsManager.Instance.HideAllAds();
 		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
 		PlayerPrefs.SetInt($"level{currentLevel}", 1);
-		UFE.RestartMatch();
+		screenLoad.nextbtnload = false;
+		loadingAfterBattle.SetActive(true);
+		//UFE.RestartMatch();
 	}
 
 

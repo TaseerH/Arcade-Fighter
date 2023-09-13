@@ -33,13 +33,14 @@ public class AudioManagerMusic : MonoBehaviour
 
             s.source.loop = s.loop;
         }
+
+        Play("Theme");
+
     }
 
-
-    private void Start()
+    private void LateUpdate()
     {
         toggle();
-        Play("Theme");Play("Theme2");
     }
 
     public void Play( string name)
@@ -62,13 +63,13 @@ public class AudioManagerMusic : MonoBehaviour
     {
         foreach(Sound s in sounds)
         {
-            if (PlayerPrefs.GetInt("music") == 1)
+            if (PlayerPrefs.GetInt("music") == 0)
             {
-                s.source.mute = false;
+                s.source.mute = true;
             }
             else
             {
-                s.source.mute = true;
+                s.source.mute = false;
             }
         }
     }

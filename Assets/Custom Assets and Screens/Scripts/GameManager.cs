@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     public Sprite knockOff = null;
 
     public bool knockOut = false;
+
+    private bool storyon = false;
+
     private void Update()
     {
         for (int i = 0; i < Currency.Length; i++)
@@ -90,6 +93,8 @@ public class GameManager : MonoBehaviour
         {
             //PlayerPrefs.SetInt("coin", 500);
             PlayerPrefs.SetInt("KnockOut_Unlock", 0);
+            PlayerPrefs.SetInt("music", 1);
+            PlayerPrefs.SetInt("sound", 1);
             MainPrivacyMenu();
         } else {
             acceptPrivacyPolicy();
@@ -111,15 +116,17 @@ public class GameManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt("backFromLevelSelection") == 1)
         {
-
+            
             acceptPrivacyPolicy();
 
             PlayerPrefs.SetInt("backFromLevelSelection", 0);
             LoadingMainMenuScreen.SetActive(false);
+            
             Characters.SetActive(false);
 
             particles[0].SetActive(false);
             particles[1].SetActive(false);
+            AdsManager.Instance.HideAllAds();
             //BackButtonStoryModeScreen();
             StoryModeScreen();
 
@@ -297,7 +304,7 @@ public class GameManager : MonoBehaviour
     public void StoryModeScreen()
     {
         PlayButtons.SetActive(false);
-
+        storyon = true;
         particles[0].SetActive(false);
         particles[1].SetActive(false);
         Characters.SetActive(false);
@@ -308,7 +315,7 @@ public class GameManager : MonoBehaviour
     {
         PlayButtons.SetActive(true);
         Characters.SetActive(true);
-
+        storyon = false;
         particles[0].SetActive(true);
         particles[1].SetActive(true);
         StoryModeCanvas.SetActive(false);
@@ -317,10 +324,16 @@ public class GameManager : MonoBehaviour
     public void BackButtonStoreScreen()
     {
         storePage.SetActive(false);
-        Characters.SetActive(true);
 
-        particles[0].SetActive(true);
-        particles[1].SetActive(true);
+
+        if (!storyon)
+        {
+            Characters.SetActive(true);
+
+            particles[0].SetActive(true);
+            particles[1].SetActive(true);
+        }
+        
     }
 
     public void StorePage()

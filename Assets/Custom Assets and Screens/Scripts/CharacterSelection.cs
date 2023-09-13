@@ -236,7 +236,8 @@ public class CharacterSelection : MonoBehaviour
         PlayerPrefs.SetInt("healthinc", 0);
         PlayerPrefs.SetInt("staminc", 0);
 
-
+        PlayerPrefs.SetInt("sound", 1);
+        PlayerPrefs.SetInt("music", 1);
     }
 
 
