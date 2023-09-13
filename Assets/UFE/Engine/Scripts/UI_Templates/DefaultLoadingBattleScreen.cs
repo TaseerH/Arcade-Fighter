@@ -17,10 +17,19 @@ public class DefaultLoadingBattleScreen : LoadingBattleScreen{
 	public Image portraitPlayer2;
 	public Image screenshotStage;
     public bool stopPreviousSoundEffectsOnLoad = false;
-	#endregion
-	
-	#region public override methods
-	public override void OnShow (){
+    #endregion
+
+    #region public override methods
+
+
+
+    private void Start()
+    {
+		//AdsManager.Instance.HideAllAds();
+		//AdsManager.Instance.ShowAdmobInterstitial();
+    }
+
+    public override void OnShow (){
 		base.OnShow ();
 
 		if (this.music != null){

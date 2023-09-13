@@ -92,10 +92,15 @@ public class DefaultBattleGUI : BattleGUI{
 	public int health;
 	private int currentHealth;
 
-	private void Start()
+    private void OnEnable()
+    {
+		AdsManager.Instance.ShowBanner();
+	}
+
+    private void Start()
 	{
 
-		AdsManager.Instance.ShowBanner();
+		
 
 
 		if(PlayerPrefs.GetInt("selectedLevel") > 20)
@@ -135,6 +140,7 @@ public class DefaultBattleGUI : BattleGUI{
 	public void MainMenu()
     {
 		AdsManager.Instance.HideBanner();
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		UFE.EndGame(true);
 		Time.timeScale = 1;
 		SceneManager.LoadScene(0, LoadSceneMode.Single);
@@ -142,6 +148,7 @@ public class DefaultBattleGUI : BattleGUI{
 
 	public void restart()
     {
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		panel.gameObject.SetActive(false);
 		UFE.RestartMatch();
     }

@@ -22,7 +22,7 @@ public class loadingMainMenu : MonoBehaviour
     {
 
         //AdsManager.Instance.ShowBannerRectangle();
-
+        AdsManager.Instance.ShowAdmobInterstitial();
         characters.SetActive(false);
         particles[0].SetActive(false);
         particles[1].SetActive(false);

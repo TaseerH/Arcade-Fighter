@@ -25,7 +25,8 @@ public class NextLevelUnlock : MonoBehaviour
 
     private void OnEnable()
     {
-        //AdsManager.Instance.HideAdmobBannerRectangle();
+
+        AdsManager.Instance.HideBanner();//AdsManager.Instance.HideAdmobBannerRectangle();
         AdsManager.OnRewardDoubleCoins += AdsManager_OnRewardDoubleCoins;
         AdsManager.OnRewardFreeCoinsFailed += AdsManager_OnRewardFreeCoinsFailed;
 
@@ -89,6 +90,7 @@ public class NextLevelUnlock : MonoBehaviour
 
     public void callRewardAddition()
     {
+        AdsManager.Instance.HideAllAds();
         rewardSuccess.gameObject.SetActive(true);
         successText.text = "Congratulations you 2X'd your reward";
     }
@@ -96,6 +98,7 @@ public class NextLevelUnlock : MonoBehaviour
 
     public void VideoRewardSuccess()
     {
+        
         reward *= 2;
 
         PlayerPrefs.SetInt("coin", currentCoins + reward);
@@ -104,16 +107,21 @@ public class NextLevelUnlock : MonoBehaviour
 
         rewardSuccess.gameObject.SetActive(false);
 
+        AdsManager.Instance.ShowBannerRectangle();
+
     }
 
     public void videoRewardUnsuccessful()
     {
+        AdsManager.Instance.HideAllAds();
+        
         rewardSuccess.gameObject.SetActive(false);
         rewardFail.gameObject.SetActive(true);
     }
 
     public void rewardFailOk()
     {
+        AdsManager.Instance.ShowBannerRectangle();
         rewardFail.gameObject.SetActive(false);
     }
 

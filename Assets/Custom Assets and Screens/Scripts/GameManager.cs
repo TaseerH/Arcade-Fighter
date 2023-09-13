@@ -116,11 +116,12 @@ public class GameManager : MonoBehaviour
 
             PlayerPrefs.SetInt("backFromLevelSelection", 0);
             LoadingMainMenuScreen.SetActive(false);
-            Characters.SetActive(true);
+            Characters.SetActive(false);
 
-            particles[0].SetActive(true);
-            particles[1].SetActive(true);
-            BackButtonStoryModeScreen();
+            particles[0].SetActive(false);
+            particles[1].SetActive(false);
+            //BackButtonStoryModeScreen();
+            StoryModeScreen();
 
         }
 
@@ -137,6 +138,8 @@ public class GameManager : MonoBehaviour
 
 
     }
+
+    
 
     private void knockoutLevels()
     {
@@ -188,7 +191,7 @@ public class GameManager : MonoBehaviour
 
         particles[0].SetActive(false);
         particles[1].SetActive(false);
-        Application.OpenURL("https://play.google.com/store/apps/dev?id=8542001137219996574&hl=en&gl=US");
+        Application.OpenURL("https://nexthopestudios.com/privacy-policy/");
     }
 
     public void selectLevel(int level)
@@ -374,7 +377,12 @@ public class GameManager : MonoBehaviour
 
     public void moreGames()
     {
-        Application.OpenURL("https://play.google.com/store/games");
+        Application.OpenURL("https://play.google.com/store/apps/dev?id=8542001137219996574");
+    }
+
+    public void openGame()
+    {
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.nexthope.police.car.games.mega.stunt.ramp.racing");
     }
 
     public void giveReview()
@@ -398,7 +406,7 @@ public class GameManager : MonoBehaviour
 
     public void fiveStars()
     {
-        Application.OpenURL("https://play.google.com/store/apps/details?id=com.colossi.survival.samurai");
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.nexthope.kungfu.gym.fighting.game");
         reviewPanel.SetActive(false);
         Characters.SetActive(true);
 

@@ -161,7 +161,7 @@ namespace UFE3D
         Kick1ComboStage currentKick1ComboStage = Kick1ComboStage.LightKick;
         Punch2ComboStage currentPunch2ComboStage = Punch2ComboStage.LightPunch2;
         Kick2ComboStage currentKick2ComboStage = Kick2ComboStage.LightKick2;
-        float comboResetDelay = 1f;
+        float comboResetDelay = 1.2f;
 
         enum Punch1ComboStage : byte
         {

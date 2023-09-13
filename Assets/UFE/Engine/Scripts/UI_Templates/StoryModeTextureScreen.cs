@@ -81,6 +81,7 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
 	public void Nextlevel()
     {
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
 		PlayerPrefs.SetInt($"level{currentLevel}", 1);
 		PlayerPrefs.SetInt("selectedLevel", currentLevel + 1);
@@ -91,6 +92,7 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
 	public void restart()
 	{
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
 		PlayerPrefs.SetInt($"level{currentLevel}", 1);
 		UFE.RestartMatch();
@@ -99,6 +101,7 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
 	public void GoToMainMenu()
     {
+		AdsManager.Instance.HideAllAds();
 		UFE.EndGame(true);
 		
 		SceneManager.LoadScene(0, LoadSceneMode.Single);
