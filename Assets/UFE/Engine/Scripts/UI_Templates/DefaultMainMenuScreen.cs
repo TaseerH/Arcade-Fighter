@@ -74,6 +74,7 @@ public class DefaultMainMenuScreen : MainMenuScreen
 		UFE.StartStoryMode();
 		int loadLevelNumber = PlayerPrefs.GetInt("selectedLevel") - 1;
 		Debug.Log("Level Being Loaded is = " + loadLevelNumber);
+		
 		UFE._StartStoryModeBattle( loadLevelNumber, 0.5f);
 	}
 

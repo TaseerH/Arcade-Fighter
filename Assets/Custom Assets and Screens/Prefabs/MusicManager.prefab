@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752274912422991336}
-  - component: {fileID: 1752274912422991337}
+  - component: {fileID: 1768042590}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1752274912422991337
+--- !u!114 &1768042590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,19 +41,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752274912422991350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b7e2d0258e1ab4b906de81c3bdb9f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cf7229275e93764f80b37c87e0dd235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 5ca855c4489b41e43a1ff59e60c49773, type: 3}
     Volume: 0.3
-    Pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Theme2
-    clip: {fileID: 8300000, guid: f8aa3fe140181db42853c56aa0c92209, type: 3}
-    Volume: 0.1
     Pitch: 1
     loop: 1
     source: {fileID: 0}

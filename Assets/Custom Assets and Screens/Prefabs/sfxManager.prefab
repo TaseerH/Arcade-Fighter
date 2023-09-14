@@ -44,4 +44,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b7e2d0258e1ab4b906de81c3bdb9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Click
+    clip: {fileID: 8300000, guid: b5cf3c04cd9014344bb9f7864545dff6, type: 3}
+    Volume: 1
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pick
+    clip: {fileID: 8300000, guid: 4f27fd126e80e144c91da068ef337249, type: 3}
+    Volume: 1
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Click2
+    clip: {fileID: 8300000, guid: 52ac22071b5c8474fa0a124f715cf7dc, type: 3}
+    Volume: 1
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 29ba36faf4fe03c4c9776621451fab38, type: 3}
+    Volume: 1
+    Pitch: 1
+    loop: 0
+    source: {fileID: 0}

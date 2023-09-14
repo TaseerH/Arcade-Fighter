@@ -12,16 +12,7 @@ public class AudioManagerSFX : MonoBehaviour
 
     void Awake()
     {
-        if(instace == null)
-        {
-            instace = this;
-        } else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        DontDestroyOnLoad(gameObject);
+        
 
         foreach(Sound s in sounds)
         {
@@ -32,6 +23,10 @@ public class AudioManagerSFX : MonoBehaviour
             s.source.pitch = s.Pitch;
 
             s.source.loop = s.loop;
+
+            //s.source.outputAudioMixerGroup ;
+
+            //s.source.playOnAwake = false;
         }
     }
 
@@ -52,7 +47,7 @@ public class AudioManagerSFX : MonoBehaviour
             return;
         }
 
-
+        //Debug.Log("Playing Sound " + s.source.clip);
         s.source.Play();
 
         
