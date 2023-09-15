@@ -1392,7 +1392,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 127976694}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: miniPrivacyOpen
+        m_MethodName: readMore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15373,6 +15373,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -32.200073
       objectReference: {fileID: 0}
+    - target: {fileID: 1600308555030662786, guid: a1c357762dab50d46a7d857f9bec52d7,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 675
+      objectReference: {fileID: 0}
     - target: {fileID: 2083991048959784681, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -15501,7 +15506,17 @@ PrefabInstance:
     - target: {fileID: 2083991048971041865, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285283769833307114, guid: a1c357762dab50d46a7d857f9bec52d7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285283769833307114, guid: a1c357762dab50d46a7d857f9bec52d7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 3818445198679414577, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
@@ -15536,7 +15551,7 @@ PrefabInstance:
     - target: {fileID: 9204823066891750170, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 943
+      value: 880.41
       objectReference: {fileID: 0}
     - target: {fileID: 9204823066891750170, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
@@ -15546,7 +15561,7 @@ PrefabInstance:
     - target: {fileID: 9204823066891750170, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 471.5
+      value: 440.20996
       objectReference: {fileID: 0}
     - target: {fileID: 9204823066891750170, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}

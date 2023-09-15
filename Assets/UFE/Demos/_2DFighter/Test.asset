@@ -614,7 +614,7 @@ MonoBehaviour:
   deploymentOptions:
     deploymentType: 0
     activeCharacters:
-    - {fileID: 11400000, guid: 4fe2658a49448ff4aab20cb5895e134c, type: 2}
+    - {fileID: 11400000, guid: 9ab2b73ee40beaf4bb6f7692eae9961f, type: 2}
     - {fileID: 11400000, guid: f67c4d57b3d97f040ac77eb3d894ba25, type: 2}
     - {fileID: 11400000, guid: d6338f103bbb0da46ba6acf3b027f17a, type: 2}
     - {fileID: 11400000, guid: ac6ffbd93fffdbb47a2a75f1f84ecd37, type: 2}
@@ -637,7 +637,7 @@ MonoBehaviour:
     selectedTeamMode: 0
     skipLoadingScreen: 1
   cameraOptions:
-    initialDistance: {x: 0, y: 5, z: -65}
+    initialDistance: {x: 0, y: 9.4, z: -56}
     initialRotation: {x: 0, y: 0, z: 0}
     enableLookAt: 1
     dollyAngle: 0
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   player2_Inputs:
   - inputType: 0
     inputButtonName: P2KeyboardHorizontal
-    engineRelatedButton: 0
+    engineRelatedButton: 1
     joystickAxisName: P2JoystickHorizontal
     cInputPositiveKeyName: P2Right
     cInputPositiveDefaultKey: RightArrow

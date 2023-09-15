@@ -140,7 +140,16 @@ public class CharacterSelection : MonoBehaviour
         //globalConfigFile.deploymentOptions.activeCharacters[1] = P2SelectedChar;
         globalConfigFile.deploymentOptions.AIControlled[0] = false;
         //globalConfigFile.deploymentOptions.AIControlled[1] = true;
+        if(PlayerPrefs.GetInt("selectedLevel") <= 20)
+        {
+            globalConfigFile.roundOptions.totalRounds = 3;
 
+        }
+        if(PlayerPrefs.GetInt("selectedLevel") > 20)
+        {
+            globalConfigFile.roundOptions.totalRounds = 1;
+
+        }
         //Debug.Log("Selected Stage is " + selectedStage);
 
         for (int i = 0; i < globalConfigFile.stages.Length; i++)

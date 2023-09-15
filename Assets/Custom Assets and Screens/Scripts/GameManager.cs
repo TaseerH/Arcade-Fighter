@@ -107,11 +107,16 @@ public class GameManager : MonoBehaviour
             LoadingMainMenuScreen.SetActive(false);
             
             StoryModeScreen();
+
+
             PlayerPrefs.SetInt("firstTimeKnock", 2);
             Characters.SetActive(false);
 
             particles[0].SetActive(false);
             particles[1].SetActive(false);
+
+            AdsManager.Instance.HideAdmobBannerRectangle();
+
         }
 
 

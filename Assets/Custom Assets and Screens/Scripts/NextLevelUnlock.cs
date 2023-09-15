@@ -56,6 +56,12 @@ public class NextLevelUnlock : MonoBehaviour
         {
             reward = 1000;
         }
+
+        if(PlayerPrefs.GetInt($"level{currentLevel1}") == 21)
+        {
+            reward = 5000;
+        }
+
         PlayerPrefs.SetInt("coin", currentCoins + reward);
 
         coinReward.text = $"Rewarded {reward} Coins";
