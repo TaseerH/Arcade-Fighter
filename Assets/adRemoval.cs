@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class adRemoval : MonoBehaviour
 {
-    private void OnEnable()
+    private void Start()
     {
         AdsManager.Instance.HideAdmobBannerRectangle();
         AdsManager.Instance.HideBanner();
-        AdsManager.Instance.HideAllAds();
+        
     }
 }

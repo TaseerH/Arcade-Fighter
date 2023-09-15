@@ -80,8 +80,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
 
-        
 
+        AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideBanner();
 
 
         if (PlayerPrefs.GetInt("freshcoin") == 0)
