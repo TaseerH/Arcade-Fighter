@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageCamFarClipPlane: 10000
-  stageCamInitialDistance: {x: 0, y: 9.4, z: -56}
+  stageCamInitialDistance: {x: 0, y: 9.6, z: -60}
   stageCamInitialRotation: {x: 0, y: 0, z: 0}
   stageCamEnableLookAt: 1
   stageCamFieldOfView: 14

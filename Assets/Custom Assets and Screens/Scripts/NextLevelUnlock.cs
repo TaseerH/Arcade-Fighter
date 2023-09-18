@@ -22,9 +22,16 @@ public class NextLevelUnlock : MonoBehaviour
 
     public GameObject knockUnlock;
 
+    public GameObject unlockAllPanel;
+    public GameObject unlockAllCharactersPanel;
+    public GameObject rateUsPanel;
+    public GameObject removeAdsPanel;
 
-    private void OnEnable()
+
+    private void Start()
     {
+
+        
 
         AdsManager.Instance.HideBanner();//AdsManager.Instance.HideAdmobBannerRectangle();
         AdsManager.OnRewardDoubleCoins += AdsManager_OnRewardDoubleCoins;
@@ -37,11 +44,6 @@ public class NextLevelUnlock : MonoBehaviour
             btn.interactable = false;
             storyComplete.text = "Congrats! You have completed the story!";
         }
-
-
-        
-
-
 
 
         currentCoins = PlayerPrefs.GetInt("coin");
@@ -89,6 +91,61 @@ public class NextLevelUnlock : MonoBehaviour
             knockUnlock.SetActive(true);
         }
 
+        switch (PlayerPrefs.GetInt("selectedLevel"))
+        {
+            case 2:
+                unlockAllPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 4:
+                rateUsPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 6:
+                unlockAllPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 9:
+                unlockAllCharactersPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 12:
+                removeAdsPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 15:
+                unlockAllPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 18:
+                unlockAllPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 22:
+                unlockAllPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 24:
+                rateUsPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 26:
+                unlockAllPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+            case 29:
+                unlockAllCharactersPanel.SetActive(true);
+                AdsManager.Instance.HideAdmobBannerRectangle();
+                break;
+
+        }
+
+
+    }
+
+    public void showAdRect()
+    {
+        AdsManager.Instance.ShowBannerRectangle();
     }
 
     private void AdsManager_OnRewardFreeCoinsFailed()
@@ -154,6 +211,33 @@ public class NextLevelUnlock : MonoBehaviour
         UFE.EndGame(true);
         PlayerPrefs.SetInt("firstTimeKnock", PlayerPrefs.GetInt("firstTimeKnock") + 1);
         SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
+    public void unlockAllbtn()
+    {
+        
+            //purchaseSuccess.SetActive(true);
+            PlayerPrefs.SetInt("allCharactersUnlocked", 1);
+            PlayerPrefs.SetInt("allLevelsUnlocked", 1);
+            PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+            //manager.knockout();
+       
+    }
+
+
+    public void removeAds()
+    {
+        Debug.Log("Removed Ads");
+    }
+
+    public void unlockAllCharacters()
+    {
+        PlayerPrefs.SetInt("allCharactersUnlocked", 1);
+    }
+
+    public void rateUsBtn()
+    {
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.nexthope.kungfu.gym.fighting.game");
     }
 
 }

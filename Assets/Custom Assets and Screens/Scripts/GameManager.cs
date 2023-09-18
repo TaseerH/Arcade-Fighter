@@ -309,6 +309,10 @@ public class GameManager : MonoBehaviour
 
     public void StoryModeScreen()
     {
+
+        AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideBanner();
+        
         PlayButtons.SetActive(false);
         storyon = true;
         particles[0].SetActive(false);

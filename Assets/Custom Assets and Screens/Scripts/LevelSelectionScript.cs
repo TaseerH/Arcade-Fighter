@@ -25,6 +25,7 @@ public class LevelSelectionScript : MonoBehaviour
     public GameObject Story;
     public GameObject Knockout;
 
+    public GameObject allLevelsUnlockBtn;
     private int allLevelsUnlock;
 
 
@@ -81,6 +82,12 @@ public class LevelSelectionScript : MonoBehaviour
     private void LateUpdate()
     {
         levelSystem();
+
+        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            allLevelsUnlockBtn.SetActive(false);
+        }
+
     }
 
     public void levelSystem()

@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &226325926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1173,6 +1173,8 @@ MonoBehaviour:
   - {fileID: 1369383569}
   - {fileID: 1369383568}
   - {fileID: 1369383567}
+  particleEffect1: {fileID: 1811831777}
+  particleEffect2: {fileID: 1205577651}
   adWatchSuccess: {fileID: 1161028302}
   adWatchFailed: {fileID: 1999997092}
   selectedCharacter: 0
@@ -1180,6 +1182,7 @@ MonoBehaviour:
   Buy: {fileID: 644879382}
   buyText: {fileID: 2135360147}
   gameStore: {fileID: 1442295196}
+  allCharactersUnlock: {fileID: 1915212740}
 --- !u!1 &470188268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1894,7 @@ PrefabInstance:
     - target: {fileID: 3602994510596285425, guid: 5c12871555fd222448e5adb33858e0d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 397
+      value: 378
       objectReference: {fileID: 0}
     - target: {fileID: 3602994510596285425, guid: 5c12871555fd222448e5adb33858e0d3,
         type: 3}
@@ -2265,7 +2268,7 @@ PrefabInstance:
     - target: {fileID: 3602994510596285425, guid: 5c12871555fd222448e5adb33858e0d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 397
+      value: 377.99994
       objectReference: {fileID: 0}
     - target: {fileID: 3602994510596285425, guid: 5c12871555fd222448e5adb33858e0d3,
         type: 3}
@@ -2575,6 +2578,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182038689}
   m_CullTransparentMesh: 1
+--- !u!1 &1205577651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3608701810680322159, guid: 5c12871555fd222448e5adb33858e0d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 787888265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1237130375
 GameObject:
   m_ObjectHideFlags: 0
@@ -5864,6 +5873,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1237130381}
     m_Modifications:
+    - target: {fileID: 1635808996318238702, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635808996318238702, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635808996318238702, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 467543005}
+    - target: {fileID: 1635808996318238702, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635808996318238702, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: storeBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635808996318238702, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CharacterSelection, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635808996318238702, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1635808996369002537, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6802,6 +6846,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775567056}
   m_CullTransparentMesh: 1
+--- !u!1 &1811831777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3608701810680322159, guid: 5c12871555fd222448e5adb33858e0d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1022873834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1880687064
 GameObject:
   m_ObjectHideFlags: 0

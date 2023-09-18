@@ -12,6 +12,10 @@ public class CharacterSelection : MonoBehaviour
     public UFE3D.CharacterInfo[] playercharacters;
     public GameObject[] characters;
 
+    public GameObject particleEffect1;
+    public GameObject particleEffect2;
+
+
     public GameObject adWatchSuccess;
     public GameObject adWatchFailed;
 
@@ -25,10 +29,16 @@ public class CharacterSelection : MonoBehaviour
 
     public GameObject gameStore;
 
+    public GameObject allCharactersUnlock;
     private void FixedUpdate()
     {
         Currency.SetText(PlayerPrefs.GetInt("coin").ToString("N0"));
     
+        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            allCharactersUnlock.SetActive(false);
+        }
+
     }
 
     private void Start()
@@ -253,6 +263,16 @@ public class CharacterSelection : MonoBehaviour
     public void store()
     {
         gameStore.SetActive(true);
+
+        particleEffect1.SetActive(false);
+        particleEffect2.SetActive(false);
+
+    }
+
+    public void storeBack()
+    {
+        particleEffect1.SetActive(true);
+        particleEffect2.SetActive(true);
     }
 
 }

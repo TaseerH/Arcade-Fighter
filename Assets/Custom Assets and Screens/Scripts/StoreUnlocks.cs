@@ -13,6 +13,11 @@ public class StoreUnlocks : MonoBehaviour
     public Button packBtn;
     public Button bundleBtn;
 
+    public Button unlockLevelsPack;
+    public Button unlockCharactersPack;
+
+    public Button unlockBundle;
+
     public Sprite coinBtnActiveSprite;
     public Sprite packBtnActiveSprite;
     public Sprite bundlebtnActiveSprite;
@@ -35,6 +40,23 @@ public class StoreUnlocks : MonoBehaviour
     private void LateUpdate()
     {
         score.text = PlayerPrefs.GetInt("coin").ToString("N0");
+
+        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            unlockCharactersPack.interactable = false;
+        }
+        
+        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            unlockLevelsPack.interactable = false;
+        }
+        
+        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1 && PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            unlockBundle.interactable = false;
+        }
+
+
     }
 
     private void Start()
