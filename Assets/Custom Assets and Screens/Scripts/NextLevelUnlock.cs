@@ -227,7 +227,7 @@ public class NextLevelUnlock : MonoBehaviour
 
     public void removeAds()
     {
-        Debug.Log("Removed Ads");
+        PlayerPrefs.SetInt("RemoveAds", 1);
     }
 
     public void unlockAllCharacters()

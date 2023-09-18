@@ -155,6 +155,12 @@ public class StoreUnlocks : MonoBehaviour
         
     }
     
+    public void removeAllAds()
+    {
+        PlayerPrefs.SetInt("RemoveAds", 1);
+        purchaseSuccess.SetActive(true);
+    }
+
     public void CoinPackOkay()
     {
         purchaseSuccess.SetActive(false);

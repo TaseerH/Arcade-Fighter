@@ -940,7 +940,27 @@ PrefabInstance:
     - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
         type: 3}
       propertyPath: TestAds
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
+      propertyPath: myAdmobIntersID
+      value: ca-app-pub-5453965874578277/7697631461
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
+      propertyPath: myAdmobBannerID1
+      value: ca-app-pub-5453965874578277/6576121486
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
+      propertyPath: myAdmobBannerID2
+      value: ca-app-pub-5453965874578277/9010713136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
+      propertyPath: myAdmobRewardedID
+      value: ca-app-pub-5453965874578277/9639638219
       objectReference: {fileID: 0}
     - target: {fileID: 8489376356152494802, guid: 1370879010dc6df41824516067daf2cb,
         type: 3}
@@ -15506,7 +15526,7 @@ PrefabInstance:
     - target: {fileID: 2083991048971041865, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3285283769833307114, guid: a1c357762dab50d46a7d857f9bec52d7,
         type: 3}
