@@ -14,7 +14,8 @@ public class TutorialScript : MonoBehaviour
 
     public GameObject swipeTutorial;
     public GameObject mainBtnTutorial;
-    
+
+    private int joy1 = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,7 @@ public class TutorialScript : MonoBehaviour
     }
     public void mainBtnActivate()
     {
-        if (PlayerPrefs.GetInt("selectedLevel") == 1)
+        if (PlayerPrefs.GetInt("selectedLevel") == 1 && joy1 == 0 )
         {
             swipeTutorial.SetActive(false);
             mainBtn.SetActive(true);
@@ -47,6 +48,7 @@ public class TutorialScript : MonoBehaviour
             thirdBtn.SetActive(false);
             fourthBtn.SetActive(false);
             mainBtnTutorial.SetActive(true);
+            joy1 = 1;
         }
         
     }
