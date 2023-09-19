@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
         {
             //PlayerPrefs.SetInt("coin", 500);
             PlayerPrefs.SetInt("KnockOut_Unlock", 0);
+            PlayerPrefs.SetInt("RemoveAds", 0);
             PlayerPrefs.SetInt("music", 1);
             PlayerPrefs.SetInt("sound", 1);
             MainPrivacyMenu();

@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageCamFarClipPlane: 10000
-  stageCamInitialDistance: {x: 0, y: 11, z: -65}
-  stageCamInitialRotation: {x: 0, y: 0, z: 0}
+  stageCamInitialDistance: {x: 0, y: 14, z: -60}
+  stageCamInitialRotation: {x: 1.51, y: 0, z: 0}
   stageCamEnableLookAt: 1
-  stageCamFieldOfView: 14
+  stageCamFieldOfView: 15
   stageCamEnableZoom: 1
   stageCamMinimumZoom: 40
-  stageCamMaximumZoom: 60
+  stageCamMaximumZoom: 85
   stageCamMaximumPlayerDistance: 18
