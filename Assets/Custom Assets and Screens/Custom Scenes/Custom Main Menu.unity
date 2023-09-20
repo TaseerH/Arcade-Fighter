@@ -15020,6 +15020,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1635808997407136551, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
     - target: {fileID: 1635808997550094754, guid: 3f832e9a67ceaa44a96ba7a7dbf4c91a,
         type: 3}
       propertyPath: m_fontAsset

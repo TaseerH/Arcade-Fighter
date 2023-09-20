@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using GoogleMobileAds.Api.Mediation.AppLovin;
+using GoogleMobileAds.Mediation.LiftoffMonetize.Api;
 
 #if (UNITY_IOS && !UNITY_EDITOR)
 using System.Runtime.InteropServices;
@@ -67,7 +68,19 @@ public class InitializeAdsManager : MonoBehaviour
         
         AppLovin.SetHasUserConsent(true);
         AppLovin.SetDoNotSell(true);
-        AppLovin.SetIsAgeRestrictedUser(true);
+        AppLovin.SetIsAgeRestrictedUser(false);        
+
+#if UNITY_ANDROID
+
+        LiftoffMonetize.UpdateConsentStatus(VungleConsentStatus.OPTED_IN, "1.0.0");
+        LiftoffMonetize.UpdateCCPAStatus(VungleCCPAStatus.OPTED_IN);
+
+#elif UNITY_IOS
+
+        LiftoffMonetize.SetGDPRStatus(true);
+        LiftoffMonetize.SetGDPRMessageVersion("1.0.0");          
+        LiftoffMonetize.SetCCPAStatus(true);
+#endif
 
         adsManager.InitializeAds();
 

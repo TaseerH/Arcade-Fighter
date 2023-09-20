@@ -170,7 +170,7 @@ public class DefaultCharacterSelectionScreen : CharacterSelectionScreen {
 				new UFEScreenExtensions.ActionCallback(this.TryDeselectCharacter)
 
 			);
-			Debug.Log(UFE.GetPlayer1());
+			//Debug.Log(UFE.GetPlayer1());
 		}
 		
 	}

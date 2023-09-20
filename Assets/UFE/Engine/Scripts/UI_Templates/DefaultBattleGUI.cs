@@ -226,7 +226,7 @@ public class DefaultBattleGUI : BattleGUI{
 
 
 			
-			Debug.Log(UFE.GetPlayer1ControlsScript().currentLifePoints);
+			//Debug.Log(UFE.GetPlayer1ControlsScript().currentLifePoints);
 			
 			// Animate life points when it goes down (P1)
 			if (this.player1.targetLife > UFE.GetPlayer1ControlsScript().currentLifePoints){
@@ -321,7 +321,7 @@ public class DefaultBattleGUI : BattleGUI{
 			// Draw the Life Bars and Gauge Meters using the data stored in UFE.config.guiOptions
 			if (this.player1GUI != null && this.player1GUI.lifeBar != null){
 				this.player1GUI.lifeBar.fillAmount = (float)UFE.GetPlayer1ControlsScript().currentLifePoints / (UFE.GetPlayer1ControlsScript().myInfo.lifePoints + health);
-				Debug.Log("Life Bar Ammount " + this.player1GUI.lifeBar.fillAmount + " My Life points " + UFE.GetPlayer1ControlsScript().myInfo.lifePoints + " Added Health " + health);
+				//Debug.Log("Life Bar Ammount " + this.player1GUI.lifeBar.fillAmount + " My Life points " + UFE.GetPlayer1ControlsScript().myInfo.lifePoints + " Added Health " + health);
 			}
 			
 			if (this.player2GUI != null && this.player2GUI.lifeBar != null){
@@ -334,7 +334,7 @@ public class DefaultBattleGUI : BattleGUI{
                     if (this.player1GUI.gauges[i].gameObject.activeInHierarchy)
                     {
                         this.player1GUI.gauges[i].fillAmount = (float)player1.controlsScript.currentGaugesPoints[i] / UFE.config.player1Character.maxGaugePoints;
-						Debug.Log((float)player1.controlsScript.currentGaugesPoints[i]);
+						//Debug.Log((float)player1.controlsScript.currentGaugesPoints[i]);
 						//Special Button Appearance Script Based on 250 gauge points
 						if ((float)player1.controlsScript.currentGaugesPoints[i] >= 250)
 						{

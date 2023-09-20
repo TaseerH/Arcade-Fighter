@@ -245,7 +245,7 @@ namespace UFE3D
             if (btnInput)
             {
                 btn = (ButtonPress)(byte)currentPunch1ComboStage;
-                Debug.Log(btn);
+                //Debug.Log(btn);
                 return;
             }
 
@@ -265,6 +265,7 @@ namespace UFE3D
                 StopAllCoroutines();
                 currentPunch1ComboStage = Punch1ComboStage.LightPunch;
             }
+
         }
 
         private void OnKick1(InputAction.CallbackContext ctx)
@@ -274,7 +275,7 @@ namespace UFE3D
             if (btnInput)
             {
                 btn = (ButtonPress)(byte)currentKick1ComboStage;
-                Debug.Log(btn);
+                //Debug.Log(btn);
                 return;
             }
 
@@ -303,7 +304,7 @@ namespace UFE3D
             if (btnInput)
             {
                 btn = (ButtonPress)(byte)currentPunch2ComboStage;
-                Debug.Log(btn);
+                //Debug.Log(btn);
                 return;
             }
 
@@ -327,7 +328,7 @@ namespace UFE3D
             if (btnInput)
             {
                 btn = (ButtonPress)(byte)currentKick2ComboStage;
-                Debug.Log(btn);
+                //Debug.Log(btn);
                 return;
             }
 

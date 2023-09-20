@@ -192,7 +192,7 @@ QualitySettings:
       type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
-    name: Ultra
+    name: Medium
     pixelLightCount: 4
     shadows: 2
     shadowResolution: 2
@@ -206,12 +206,12 @@ QualitySettings:
     skinWeights: 4
     textureQuality: 0
     anisotropicTextures: 1
-    antiAliasing: 4
+    antiAliasing: 0
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
-    vSyncCount: 1
+    vSyncCount: 0
     lodBias: 2
     maximumLODLevel: 0
     streamingMipmapsActive: 0
@@ -225,10 +225,10 @@ QualitySettings:
     asyncUploadBufferSize: 4
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: dcf16436e0a2ffb4ba3767d3de476b2d,
+    customRenderPipeline: {fileID: 11400000, guid: 3cb97424764a8634f9a3acad644ef2c8,
       type: 2}
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 0
-    Server: 0
-    Standalone: 0
+    Android: 2
+    Server: 2
+    Standalone: 2

@@ -86,7 +86,7 @@ public class LevelSelectionScriptKnockout : MonoBehaviour
         
         for (int i = 0; i < buttons.Length; i++)
         {
-            Debug.Log($"Levels in Level System are {PlayerPrefs.GetInt($"level{i}")}");
+            //Debug.Log($"Levels in Level System are {PlayerPrefs.GetInt($"level{i}")}");
             if (PlayerPrefs.GetInt($"level{i + 21}") == 1)
             {
                 myImageComponent = GameObject.Find($"Knock Level {i + 1}");

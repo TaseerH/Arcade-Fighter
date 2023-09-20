@@ -1195,7 +1195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
       propertyPath: TestAds
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
       propertyPath: myAdmobIntersID

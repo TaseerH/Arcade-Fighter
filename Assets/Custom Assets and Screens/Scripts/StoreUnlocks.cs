@@ -15,6 +15,7 @@ public class StoreUnlocks : MonoBehaviour
 
     public Button unlockLevelsPack;
     public Button unlockCharactersPack;
+    public Button removeAds;
 
     public Button unlockBundle;
 
@@ -37,7 +38,7 @@ public class StoreUnlocks : MonoBehaviour
 
     public TMP_Text score;
 
-    private void LateUpdate()
+    private void Update()
     {
         score.text = PlayerPrefs.GetInt("coin").ToString("N0");
 
@@ -55,8 +56,34 @@ public class StoreUnlocks : MonoBehaviour
         {
             unlockBundle.interactable = false;
         }
+        if(PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            removeAds.interactable = false;
+        }
 
 
+    }
+
+    private void OnEnable()
+    {
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            unlockCharactersPack.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            unlockLevelsPack.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1 && PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            unlockBundle.interactable = false;
+        }
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            removeAds.interactable = false;
+        }
     }
 
     private void Start()
@@ -64,6 +91,26 @@ public class StoreUnlocks : MonoBehaviour
         CoinPacks();
         PlayerPrefs.SetInt("freshcoin", 1);
         //PlayerPrefs.SetInt("freshinstall", 1);
+
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            unlockCharactersPack.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            unlockLevelsPack.interactable = false;
+        }
+
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1 && PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            unlockBundle.interactable = false;
+        }
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            removeAds.interactable = false;
+        }
+
     }
 
     public void BuyHealth()

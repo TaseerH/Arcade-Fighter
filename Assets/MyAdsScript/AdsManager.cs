@@ -63,7 +63,6 @@ public class AdsManager : MonoBehaviour
 
     public static event RewardAdAction OnRewardFreeCoinsFailed;
 
-
     public void InitializeAds()
     {
 
@@ -115,7 +114,7 @@ public class AdsManager : MonoBehaviour
                 if (OnRewardFreeCoins != null) { OnRewardFreeCoins.Invoke(); }
                 break;
             case 1:
-                if(OnRewardDoubleCoins != null)
+                if (OnRewardDoubleCoins != null)
                 {
                     OnRewardDoubleCoins.Invoke();
                 }
@@ -615,9 +614,7 @@ public class AdsManager : MonoBehaviour
         {
             Debug.LogError("Rewarded ad failed to open full screen content " +
                            "with error : " + error);
-
             if (OnRewardFreeCoinsFailed != null) { OnRewardFreeCoinsFailed.Invoke(); }
-
         };
     }
 

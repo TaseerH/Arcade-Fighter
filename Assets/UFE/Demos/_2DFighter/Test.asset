@@ -24,12 +24,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d6dc227d62e62a40af291dbbd4c5276, type: 2}
   - {fileID: 11400000, guid: 54057043117984643925ed339c232c0d, type: 2}
   selectedStage:
-    stageName: Gym
+    stageName: Water Map
     stageLoadingMethod: 0
     stagePath: 
-    screenshot: {fileID: 2800000, guid: b9fa91e94fa9fd74d97e8c7c724aedfc, type: 3}
-    prefab: {fileID: 672018895331645852, guid: fa727079faa81c149985b5f2f11f5704, type: 3}
-    music: {fileID: 8300000, guid: 23d573990eb71984db6595c0ac5ac4c1, type: 3}
+    screenshot: {fileID: 2800000, guid: a06004bdb0aa447299d7175f60ed249b, type: 3}
+    prefab: {fileID: 2832105442099208692, guid: 3bdb7209cdb12124d9c6dd79e9fbac18,
+      type: 3}
+    music: {fileID: 0}
     _groundFriction:
       _serializedValue: 429496729600
     _leftBoundary:
@@ -614,7 +615,7 @@ MonoBehaviour:
   deploymentOptions:
     deploymentType: 0
     activeCharacters:
-    - {fileID: 11400000, guid: 9ab2b73ee40beaf4bb6f7692eae9961f, type: 2}
+    - {fileID: 11400000, guid: b8e1fa666d3d95441b958463415f3330, type: 2}
     - {fileID: 11400000, guid: f67c4d57b3d97f040ac77eb3d894ba25, type: 2}
     - {fileID: 11400000, guid: d6338f103bbb0da46ba6acf3b027f17a, type: 2}
     - {fileID: 11400000, guid: ac6ffbd93fffdbb47a2a75f1f84ecd37, type: 2}
@@ -637,21 +638,21 @@ MonoBehaviour:
     selectedTeamMode: 0
     skipLoadingScreen: 1
   cameraOptions:
-    initialDistance: {x: 0, y: 9.4, z: -56}
-    initialRotation: {x: 0, y: 0, z: 0}
-    enableLookAt: 1
+    initialDistance: {x: 0, y: 4, z: -60}
+    initialRotation: {x: -1, y: 0, z: 0}
+    enableLookAt: 0
     dollyAngle: 0
     distance3d: 0
     height3d: 0
     stabilizeDolly: 1
     enableZoom: 1
     followCharacters: 0
-    initialFieldOfView: 14
+    initialFieldOfView: 15
     verticalPriority: 2
     verticalThreshold: 15
     movementSpeed: 12
     minZoom: 40
-    maxZoom: 60
+    maxZoom: 85
     _maxDistance:
       _serializedValue: 77309411328
     rotationSpeed: 12
@@ -1214,7 +1215,7 @@ MonoBehaviour:
   player1_Inputs:
   - inputType: 0
     inputButtonName: P1KeyboardHorizontal
-    engineRelatedButton: 1
+    engineRelatedButton: 0
     joystickAxisName: P1JoystickHorizontal
     cInputPositiveKeyName: P1Right
     cInputPositiveDefaultKey: D

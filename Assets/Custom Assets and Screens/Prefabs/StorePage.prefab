@@ -2604,6 +2604,7 @@ MonoBehaviour:
   bundleBtn: {fileID: 1635808996552913970}
   unlockLevelsPack: {fileID: 5591921022475706292}
   unlockCharactersPack: {fileID: 8022956088028290365}
+  removeAds: {fileID: 4683143599317389337}
   unlockBundle: {fileID: 1635808997349733154}
   coinBtnActiveSprite: {fileID: 21300000, guid: 86cd8b94451e44f9b881aaa5a1ea905e,
     type: 3}
