@@ -7406,9 +7406,9 @@ MonoBehaviour:
     _totalDrain:
       _serializedValue: 0
     _gaugeRequired:
-      _serializedValue: 42949672960
+      _serializedValue: 0
     _gaugeUsage:
-      _serializedValue: 42949672960
+      _serializedValue: 0
     _gaugeGainOnMiss:
       _serializedValue: 12884901888
     _gaugeGainOnHit:
