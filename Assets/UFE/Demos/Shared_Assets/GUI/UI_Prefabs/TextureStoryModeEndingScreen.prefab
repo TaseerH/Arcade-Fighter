@@ -104,6 +104,8 @@ MonoBehaviour:
   minDelayBeforeSkipping: 0.1
   slider: {fileID: 0}
   fillTime: 7
+  loadingAfterBattle: {fileID: 0}
+  screenLoad: {fileID: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1149,79 +1149,98 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494800, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: TestAds
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: myAdmobIntersID
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: myAdmobBannerID1
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: myAdmobBannerID2
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: myBannerPosition
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: myAdmobRewardedID
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494801, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: myRectBannerPosition
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8489376356152494802, guid: 1370879010dc6df41824516067daf2cb, type: 3}
+    - target: {fileID: 8489376356152494802, guid: 1370879010dc6df41824516067daf2cb,
+        type: 3}
       propertyPath: m_Name
       value: AdsInitialization
       objectReference: {fileID: 0}
