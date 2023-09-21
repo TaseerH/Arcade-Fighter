@@ -6256,6 +6256,17 @@ MonoBehaviour:
   - {fileID: 392723156}
   - {fileID: 1737753090}
   - {fileID: 1240953290}
+  knockButtons:
+  - {fileID: 1793630655}
+  - {fileID: 1238452405}
+  - {fileID: 1451435788}
+  - {fileID: 658050231}
+  - {fileID: 2055263456}
+  - {fileID: 531851355}
+  - {fileID: 2065583391}
+  - {fileID: 1013700311}
+  - {fileID: 248364179}
+  - {fileID: 31656945}
   levelLocked: {fileID: 21300000, guid: 5a7a00e1e6d7b4158ad281bbd66c0799, type: 3}
   activeButton: {fileID: 21300000, guid: d773885f0f12d44bebefe62c665081a9, type: 3}
   unlockedLevelSprite: {fileID: 21300000, guid: d6a4891a3f196461b94c9143fa20e7ee,

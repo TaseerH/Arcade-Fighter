@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.57992166, g: 0.6080321, b: 0.6792453, a: 1}
+  m_SubtractiveShadowColor: {r: 0.7084372, g: 0.72139555, b: 0.754717, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: d07d2172e76d3fa429e80a14d2ae3616, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -15216,6 +15216,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1768042590, guid: fa1aa2eb3682ff44e842f114de89ce3b, type: 3}
+      propertyPath: sounds.Array.data[0].Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1752274912422991336, guid: fa1aa2eb3682ff44e842f114de89ce3b,
         type: 3}
       propertyPath: m_RootOrder

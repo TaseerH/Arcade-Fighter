@@ -31,7 +31,12 @@ public class StoryModeTextureScreen : StoryModeScreen {
 		AdsManager.Instance.HideBanner();
 		AdsManager.Instance.ShowAdmobInterstitial();
 		AdsManager.Instance.ShowBannerRectangle();
-	}
+
+        int currentLevel = PlayerPrefs.GetInt("selectedLevel");
+        PlayerPrefs.SetInt($"level{currentLevel}", 1);
+        PlayerPrefs.SetInt("selectedLevel", currentLevel + 1);
+
+    }
 
     public override void OnShow (){
 		base.OnShow ();
@@ -82,9 +87,6 @@ public class StoryModeTextureScreen : StoryModeScreen {
 	public void Nextlevel()
     {
 		AdsManager.Instance.HideAdmobBannerRectangle();
-		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
-		PlayerPrefs.SetInt($"level{currentLevel}", 1);
-		PlayerPrefs.SetInt("selectedLevel", currentLevel + 1);
 		AdsManager.Instance.ShowAdmobInterstitial();
 		screenLoad.nextbtnload = true;
 		loadingAfterBattle.SetActive(true);
@@ -95,8 +97,6 @@ public class StoryModeTextureScreen : StoryModeScreen {
 	{
 		AdsManager.Instance.HideAdmobBannerRectangle();
 		AdsManager.Instance.HideAllAds();
-		int currentLevel = PlayerPrefs.GetInt("selectedLevel");
-		PlayerPrefs.SetInt($"level{currentLevel}", 1);
 		screenLoad.nextbtnload = false;
 		loadingAfterBattle.SetActive(true);
 		//UFE.RestartMatch();
@@ -105,7 +105,7 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
 	public void GoToMainMenu()
     {
-		AdsManager.Instance.HideAllAds();
+        AdsManager.Instance.HideAllAds();
 		UFE.EndGame(true);
 		
 		SceneManager.LoadScene(0, LoadSceneMode.Single);

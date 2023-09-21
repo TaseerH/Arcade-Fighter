@@ -9,7 +9,7 @@ public class LevelSelectionScriptKnockout : MonoBehaviour
 {
 
     public Button[] buttons;
-
+    public Button[] knockButtons;
     public Sprite levelLocked;
     public Sprite activeButton;
     public Sprite unlockedLevelSprite;
@@ -92,6 +92,7 @@ public class LevelSelectionScriptKnockout : MonoBehaviour
                 myImageComponent = GameObject.Find($"Knock Level {i + 1}");
                 //Debug.Log("Loop 1" + myImageComponent);
                 buttons[i].interactable = true;
+                knockButtons[i].interactable = true;
                 button_text = myImageComponent.GetComponentInChildren<TMP_Text>();
                 button_text.text = $"VICTORY";
 
@@ -103,7 +104,7 @@ public class LevelSelectionScriptKnockout : MonoBehaviour
 
 
             }
-            else if (PlayerPrefs.GetInt($"level{i +21 }") == 0)
+            if (PlayerPrefs.GetInt($"level{i +21 }") == 0)
             {
 
                 if (PlayerPrefs.GetInt($"level{i + 21 - 1}") == 1)
@@ -123,6 +124,7 @@ public class LevelSelectionScriptKnockout : MonoBehaviour
                 button_text = myImageComponent.GetComponentInChildren<TMP_Text>();
                 button_text.text = "<sprite=1> LOCKED";
                 buttons[i].interactable = false;
+                knockButtons[i].interactable = false;
                 image.sprite = levelLocked;
             }
         }
