@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3d12ec8b49c4843ad6ef712a625197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageCamFarClipPlane: 100000
+  stageCamFarClipPlane: 1000000
   stageCamInitialDistance: {x: 0, y: 5, z: -60}
   stageCamInitialRotation: {x: 1, y: 0, z: 0}
   stageCamEnableLookAt: 0

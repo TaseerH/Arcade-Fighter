@@ -2021,7 +2021,7 @@ MonoBehaviour:
     onStrike: 1
     onBlock: 1
     onParry: 0
-    activeFramesBegins: 12
+    activeFramesBegins: 0
     activeFramesEnds: 12
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}

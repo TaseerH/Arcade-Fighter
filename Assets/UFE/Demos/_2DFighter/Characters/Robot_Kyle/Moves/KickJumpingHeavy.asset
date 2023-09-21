@@ -4472,7 +4472,7 @@ MonoBehaviour:
     onStrike: 1
     onBlock: 1
     onParry: 1
-    activeFramesBegins: 26
+    activeFramesBegins: 16
     activeFramesEnds: 29
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}
@@ -4486,7 +4486,7 @@ MonoBehaviour:
     ignoreInputs: 0
     ignorePlayerConditions: 0
     ignoreGauge: 0
-    nextMoveStartupFrame: 1
+    nextMoveStartupFrame: 2
     linkableMoves:
     - {fileID: 11400000, guid: 50091ccf7790fc041b1348f8f47f9056, type: 2}
     linkableMovesToggle: 1

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "120087840082",
+    "project_id": "kung-fu-gym-fighting-games",
+    "storage_bucket": "kung-fu-gym-fighting-games.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120087840082:android:98cb3f8ee8ed201b7d668b",
+        "android_client_info": {
+          "package_name": "com.nexthope.kungfu.gym.fighting.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC94b1pHBMNoaf6VQoWOJhvHu1u1Ul7eXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

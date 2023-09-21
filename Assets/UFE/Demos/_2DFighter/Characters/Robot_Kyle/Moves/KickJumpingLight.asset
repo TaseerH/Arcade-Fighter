@@ -4479,7 +4479,7 @@ MonoBehaviour:
     onStrike: 1
     onBlock: 1
     onParry: 1
-    activeFramesBegins: 52
+    activeFramesBegins: 27
     activeFramesEnds: 58
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}

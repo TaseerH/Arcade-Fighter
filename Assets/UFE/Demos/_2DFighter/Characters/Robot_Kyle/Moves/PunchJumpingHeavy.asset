@@ -4473,7 +4473,7 @@ MonoBehaviour:
     onStrike: 1
     onBlock: 1
     onParry: 1
-    activeFramesBegins: 28
+    activeFramesBegins: 23
     activeFramesEnds: 29
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}

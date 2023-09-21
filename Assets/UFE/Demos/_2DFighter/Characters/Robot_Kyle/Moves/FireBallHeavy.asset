@@ -7326,7 +7326,7 @@ MonoBehaviour:
     buttonSequence: 
     buttonExecution: 0d000000
     editorToggle: 1
-    buttonSequenceToggle: 1
+    buttonSequenceToggle: 0
     buttonExecutionToggle: 1
   altInputs:
     chargeMove: 0
