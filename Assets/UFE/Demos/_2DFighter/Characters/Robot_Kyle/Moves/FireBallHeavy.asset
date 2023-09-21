@@ -7324,7 +7324,7 @@ MonoBehaviour:
     requireButtonPress: 0
     onPressExecution: 0
     buttonSequence: 
-    buttonExecution: 09000000
+    buttonExecution: 0d000000
     editorToggle: 1
     buttonSequenceToggle: 1
     buttonExecutionToggle: 1
@@ -7344,7 +7344,8 @@ MonoBehaviour:
     editorToggle: 1
     buttonSequenceToggle: 0
     buttonExecutionToggle: 0
-  previousMoves: []
+  previousMoves:
+  - {fileID: 11400000, guid: 606f9b5f2f9e5314e953190dfab8352c, type: 2}
   opponentConditions:
     basicMoveLimitation: 
     possibleMoveStates: []
@@ -7352,37 +7353,9 @@ MonoBehaviour:
     statesToggle: 0
   selfConditions:
     basicMoveLimitation: 
-    possibleMoveStates:
-    - possibleState: 0
-      jumpArc: 0
-      jumpArcBegins: 0
-      jumpArcEnds: 100
-      opponentDistance: 0
-      proximityRangeBegins: 0
-      proximityRangeEnds: 100
-      movingForward: 1
-      movingBack: 1
-      standBy: 1
-      blocking: 0
-      blockStunned: 0
-      stunned: 0
-      resetStunValue: 0
-    - possibleState: 1
-      jumpArc: 0
-      jumpArcBegins: 0
-      jumpArcEnds: 100
-      opponentDistance: 0
-      proximityRangeBegins: 0
-      proximityRangeEnds: 100
-      movingForward: 1
-      movingBack: 1
-      standBy: 1
-      blocking: 0
-      blockStunned: 0
-      stunned: 0
-      resetStunValue: 0
+    possibleMoveStates: []
     basicMovesToggle: 0
-    statesToggle: 0
+    statesToggle: 1
   moveClassification:
     attackType: 6
     hitType: 0

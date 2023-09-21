@@ -2596,13 +2596,13 @@ MonoBehaviour:
     anyHitType: 1
     anyHitConfirmType: 1
   frameLinks:
-  - linkType: 0
+  - linkType: 2
     allowBuffer: 1
     onStrike: 1
     onBlock: 1
     onParry: 1
-    activeFramesBegins: 10
-    activeFramesEnds: 17
+    activeFramesBegins: 13
+    activeFramesEnds: 16
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}
     disableHitImpact: 1
@@ -2615,34 +2615,9 @@ MonoBehaviour:
     ignoreInputs: 0
     ignorePlayerConditions: 0
     ignoreGauge: 0
-    nextMoveStartupFrame: 4
+    nextMoveStartupFrame: 1
     linkableMoves:
-    - {fileID: 11400000, guid: 304fc07e190e22248901f8df3867899e, type: 2}
-    linkableMovesToggle: 1
-    hitConfirmToggle: 1
-    counterMoveToggle: 1
-  - linkType: 0
-    allowBuffer: 1
-    onStrike: 1
-    onBlock: 1
-    onParry: 1
-    activeFramesBegins: 10
-    activeFramesEnds: 17
-    counterMoveType: 0
-    counterMoveFilter: {fileID: 0}
-    disableHitImpact: 1
-    anyHitStrength: 1
-    hitStrength: 0
-    anyStrokeHitBox: 1
-    hitBoxType: 0
-    anyHitType: 1
-    hitType: 0
-    ignoreInputs: 0
-    ignorePlayerConditions: 0
-    ignoreGauge: 0
-    nextMoveStartupFrame: 7
-    linkableMoves:
-    - {fileID: 11400000, guid: 4b9d5ea5671119d4880ef55ab362d82f, type: 2}
+    - {fileID: 11400000, guid: e181327f5f2e27e45abdbd912ae82758, type: 2}
     linkableMovesToggle: 1
     hitConfirmToggle: 1
     counterMoveToggle: 0
@@ -3052,11 +3027,11 @@ MonoBehaviour:
         _serializedValue: 0
     position:
       x:
-        _serializedValue: -2869453056
+        _serializedValue: -2869452544
       y:
-        _serializedValue: 16044616704
+        _serializedValue: 16044614656
       z:
-        _serializedValue: -157624576
+        _serializedValue: -157623808
   lockOnTargets: []
   switchCharacterOptions: []
   invincibleBodyParts: []

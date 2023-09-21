@@ -4162,21 +4162,7 @@ MonoBehaviour:
     statesToggle: 0
   selfConditions:
     basicMoveLimitation: 
-    possibleMoveStates:
-    - possibleState: 0
-      jumpArc: 0
-      jumpArcBegins: 0
-      jumpArcEnds: 100
-      opponentDistance: 0
-      proximityRangeBegins: 0
-      proximityRangeEnds: 100
-      movingForward: 1
-      movingBack: 1
-      standBy: 1
-      blocking: 0
-      blockStunned: 0
-      stunned: 0
-      resetStunValue: 0
+    possibleMoveStates: []
     basicMovesToggle: 0
     statesToggle: 1
   moveClassification:
@@ -4191,12 +4177,12 @@ MonoBehaviour:
     anyHitType: 1
     anyHitConfirmType: 1
   frameLinks:
-  - linkType: 0
+  - linkType: 2
     allowBuffer: 0
     onStrike: 1
     onBlock: 1
     onParry: 1
-    activeFramesBegins: 10
+    activeFramesBegins: 27
     activeFramesEnds: 28
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}
@@ -4210,9 +4196,9 @@ MonoBehaviour:
     ignoreInputs: 1
     ignorePlayerConditions: 0
     ignoreGauge: 0
-    nextMoveStartupFrame: 12
+    nextMoveStartupFrame: 1
     linkableMoves:
-    - {fileID: 11400000, guid: 3a6b1321720e6ed4e8dd777e899fff59, type: 2}
+    - {fileID: 11400000, guid: 5bae5c2d681fa5847a12e18677e8a6c0, type: 2}
     linkableMovesToggle: 1
     hitConfirmToggle: 1
     counterMoveToggle: 0
@@ -4678,11 +4664,11 @@ MonoBehaviour:
         _serializedValue: 0
     position:
       x:
-        _serializedValue: 5602959872
+        _serializedValue: 5602960384
       y:
-        _serializedValue: 18404868096
+        _serializedValue: 18404866048
       z:
-        _serializedValue: -1388343808
+        _serializedValue: -1388343296
   lockOnTargets: []
   switchCharacterOptions: []
   invincibleBodyParts: []

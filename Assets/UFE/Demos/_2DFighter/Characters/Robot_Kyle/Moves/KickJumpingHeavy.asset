@@ -4398,8 +4398,8 @@ MonoBehaviour:
   animSpeedKeyFrame: []
   totalFrames: 30
   startUpFrames: 7
-  activeFrames: 5
-  recoveryFrames: 18
+  activeFrames: 6
+  recoveryFrames: 17
   applyRootMotion: 0
   lockXMotion: 0
   lockYMotion: 0
@@ -4452,63 +4452,7 @@ MonoBehaviour:
     statesToggle: 0
   selfConditions:
     basicMoveLimitation: 
-    possibleMoveStates:
-    - possibleState: 2
-      jumpArc: 0
-      jumpArcBegins: 0
-      jumpArcEnds: 100
-      opponentDistance: 0
-      proximityRangeBegins: 0
-      proximityRangeEnds: 100
-      movingForward: 1
-      movingBack: 1
-      standBy: 1
-      blocking: 0
-      blockStunned: 0
-      stunned: 0
-      resetStunValue: 0
-    - possibleState: 3
-      jumpArc: 0
-      jumpArcBegins: 0
-      jumpArcEnds: 100
-      opponentDistance: 0
-      proximityRangeBegins: 0
-      proximityRangeEnds: 100
-      movingForward: 1
-      movingBack: 1
-      standBy: 1
-      blocking: 0
-      blockStunned: 0
-      stunned: 0
-      resetStunValue: 0
-    - possibleState: 4
-      jumpArc: 0
-      jumpArcBegins: 0
-      jumpArcEnds: 100
-      opponentDistance: 0
-      proximityRangeBegins: 0
-      proximityRangeEnds: 100
-      movingForward: 1
-      movingBack: 1
-      standBy: 1
-      blocking: 0
-      blockStunned: 0
-      stunned: 0
-      resetStunValue: 0
-    - possibleState: 0
-      jumpArc: 0
-      jumpArcBegins: 0
-      jumpArcEnds: 100
-      opponentDistance: 0
-      proximityRangeBegins: 0
-      proximityRangeEnds: 100
-      movingForward: 1
-      movingBack: 1
-      standBy: 1
-      blocking: 1
-      blockStunned: 0
-      stunned: 0
-      resetStunValue: 0
+    possibleMoveStates: []
     basicMovesToggle: 0
     statesToggle: 1
   moveClassification:
@@ -4523,13 +4467,13 @@ MonoBehaviour:
     anyHitType: 1
     anyHitConfirmType: 1
   frameLinks:
-  - linkType: 0
+  - linkType: 2
     allowBuffer: 1
     onStrike: 1
     onBlock: 1
     onParry: 1
-    activeFramesBegins: 0
-    activeFramesEnds: 30
+    activeFramesBegins: 26
+    activeFramesEnds: 29
     counterMoveType: 0
     counterMoveFilter: {fileID: 0}
     disableHitImpact: 1
@@ -4706,7 +4650,7 @@ MonoBehaviour:
     applyDifferentSelfBlockForce: 0
     _pushForce:
       x:
-        _serializedValue: 42949672960
+        _serializedValue: 8589934592
       y:
         _serializedValue: 0
       z:
@@ -5066,11 +5010,11 @@ MonoBehaviour:
         _serializedValue: 0
     position:
       x:
-        _serializedValue: -7387384320
+        _serializedValue: -7137554944
       y:
-        _serializedValue: 19227508736
+        _serializedValue: 19146190848
       z:
-        _serializedValue: -198789632
+        _serializedValue: 1295069696
   lockOnTargets: []
   switchCharacterOptions: []
   invincibleBodyParts: []

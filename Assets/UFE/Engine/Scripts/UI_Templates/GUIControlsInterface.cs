@@ -161,33 +161,26 @@ namespace UFE3D
         Kick1ComboStage currentKick1ComboStage = Kick1ComboStage.LightKick;
         Punch2ComboStage currentPunch2ComboStage = Punch2ComboStage.LightPunch2;
         Kick2ComboStage currentKick2ComboStage = Kick2ComboStage.LightKick2;
-        float comboResetDelay = 1.2f;
+        
 
         enum Punch1ComboStage : byte
         {
             LightPunch = ButtonPress.Button1,
-            MediumPunch,
-            HeavyPunch
         }
 
         enum Kick1ComboStage : byte
         {
             LightKick = ButtonPress.Button4,
-            MediumKick,
-            HeavyKick
         }
 
         enum Punch2ComboStage : byte
         {
             LightPunch2 = ButtonPress.Button7,
-            MediumPunch2,
         }
 
         enum Kick2ComboStage : byte
         {
             LightKick2 = ButtonPress.Button10,
-            MediumKick2,
-            HeavyKick2
         }
 
         public override void Initialize(IEnumerable<InputReferences> inputs)
@@ -249,23 +242,6 @@ namespace UFE3D
                 return;
             }
 
-            if (currentPunch1ComboStage == Punch1ComboStage.LightPunch)
-            {
-                currentPunch1ComboStage = Punch1ComboStage.MediumPunch;
-                StartCoroutine(ResetCombo());
-            }
-            else if (currentPunch1ComboStage == Punch1ComboStage.MediumPunch)
-            {
-                StopAllCoroutines();
-                currentPunch1ComboStage = Punch1ComboStage.HeavyPunch;
-                StartCoroutine(ResetCombo());
-            }
-            else if (currentPunch1ComboStage == Punch1ComboStage.HeavyPunch)
-            {
-                StopAllCoroutines();
-                currentPunch1ComboStage = Punch1ComboStage.LightPunch;
-            }
-
         }
 
         private void OnKick1(InputAction.CallbackContext ctx)
@@ -277,23 +253,6 @@ namespace UFE3D
                 btn = (ButtonPress)(byte)currentKick1ComboStage;
                 //Debug.Log(btn);
                 return;
-            }
-
-            if (currentKick1ComboStage == Kick1ComboStage.LightKick)
-            {
-                currentKick1ComboStage = Kick1ComboStage.MediumKick;
-                StartCoroutine(ResetCombo());
-            }
-            else if (currentKick1ComboStage == Kick1ComboStage.MediumKick)
-            {
-                StopAllCoroutines();
-                currentKick1ComboStage = Kick1ComboStage.HeavyKick;
-                StartCoroutine(ResetCombo());
-            }
-            else if (currentKick1ComboStage == Kick1ComboStage.HeavyKick)
-            {
-                StopAllCoroutines();
-                currentKick1ComboStage = Kick1ComboStage.LightKick;
             }
         }
 
@@ -308,17 +267,6 @@ namespace UFE3D
                 return;
             }
 
-            if (currentPunch2ComboStage == Punch2ComboStage.LightPunch2)
-            {
-                currentPunch2ComboStage = Punch2ComboStage.MediumPunch2;
-                StartCoroutine(ResetCombo());
-            }
-            else if (currentPunch2ComboStage == Punch2ComboStage.MediumPunch2)
-            {
-                StopAllCoroutines();
-                currentPunch2ComboStage = Punch2ComboStage.LightPunch2;
-                
-            }
         }
 
         private void OnKick2(InputAction.CallbackContext ctx)
@@ -330,23 +278,6 @@ namespace UFE3D
                 btn = (ButtonPress)(byte)currentKick2ComboStage;
                 //Debug.Log(btn);
                 return;
-            }
-
-            if (currentKick2ComboStage == Kick2ComboStage.LightKick2)
-            {
-                currentKick2ComboStage = Kick2ComboStage.MediumKick2;
-                StartCoroutine(ResetCombo());
-            }
-            else if (currentKick2ComboStage == Kick2ComboStage.MediumKick2)
-            {
-                StopAllCoroutines();
-                currentKick2ComboStage = Kick2ComboStage.HeavyKick2;
-                StartCoroutine(ResetCombo());
-            }
-            else if (currentKick2ComboStage == Kick2ComboStage.HeavyKick2)
-            {
-                StopAllCoroutines();
-                currentKick2ComboStage = Kick2ComboStage.LightKick2;
             }
         }
 
@@ -364,14 +295,6 @@ namespace UFE3D
         }
 
 
-        IEnumerator ResetCombo()
-        {
-            yield return new WaitForSeconds(comboResetDelay);
-            currentPunch1ComboStage = Punch1ComboStage.LightPunch;
-            currentKick1ComboStage = Kick1ComboStage.LightKick;
-            currentPunch2ComboStage = Punch2ComboStage.LightPunch2;
-            currentKick2ComboStage = Kick2ComboStage.LightKick2;
-        }
 
         public override InputEvents ReadInput(InputReferences inputReference)
         {
