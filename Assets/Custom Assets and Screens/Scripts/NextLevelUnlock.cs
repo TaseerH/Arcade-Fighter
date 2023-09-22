@@ -91,6 +91,10 @@ public class NextLevelUnlock : MonoBehaviour
             knockUnlock.SetActive(true);
         }
 
+        int currentLevelF = PlayerPrefs.GetInt("selectedLevel");
+        PlayerPrefs.SetInt($"level{currentLevelF}", 1);
+        
+
         switch (PlayerPrefs.GetInt("selectedLevel"))
         {
             case 2:
@@ -140,6 +144,7 @@ public class NextLevelUnlock : MonoBehaviour
 
         }
 
+        PlayerPrefs.SetInt("selectedLevel", currentLevelF + 1);
 
     }
 
