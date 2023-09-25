@@ -22,7 +22,7 @@ public class loadingMainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        AdsManager.Instance.ShowBannerRectangle();
+        //AdsManager.Instance.ShowBannerRectangle();
         //AdsManager.Instance.ShowAdmobInterstitial();
     }
 
@@ -60,7 +60,7 @@ public class loadingMainMenu : MonoBehaviour
 
     private void NextScreen()
     {
-        AdsManager.Instance.HideAdmobBannerRectangle(); 
+        //AdsManager.Instance.HideAdmobBannerRectangle(); 
         //MainMenu.SetActive(true);
         //if(!nextbtnload)
         //{

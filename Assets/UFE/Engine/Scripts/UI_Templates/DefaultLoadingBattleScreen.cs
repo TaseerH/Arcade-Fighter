@@ -27,7 +27,7 @@ public class DefaultLoadingBattleScreen : LoadingBattleScreen{
     {
 		//AdsManager.Instance.HideAllAds();
 		//AdsManager.Instance.ShowAdmobInterstitial();
-		AdsManager.Instance.HideAdmobBannerRectangle();
+		//AdsManager.Instance.HideAdmobBannerRectangle();
     }
 
     public override void OnShow (){
