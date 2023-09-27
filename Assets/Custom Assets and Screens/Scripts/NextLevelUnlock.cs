@@ -33,9 +33,10 @@ public class NextLevelUnlock : MonoBehaviour
 
         
 
-        //AdsManager.Instance.HideBanner();//AdsManager.Instance.HideAdmobBannerRectangle();
-        //AdsManager.OnRewardDoubleCoins += AdsManager_OnRewardDoubleCoins;
-        //AdsManager.OnRewardFreeCoinsFailed += AdsManager_OnRewardFreeCoinsFailed;
+        AdsManager.Instance.HideBanner();
+        //AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.OnRewardDoubleCoins += AdsManager_OnRewardDoubleCoins;
+        AdsManager.OnRewardFreeCoinsFailed += AdsManager_OnRewardFreeCoinsFailed;
 
 
         if (PlayerPrefs.GetInt("selectedLevel") == 20)
@@ -82,11 +83,11 @@ public class NextLevelUnlock : MonoBehaviour
 
             int currentLevel = PlayerPrefs.GetInt("selectedLevel");
             PlayerPrefs.SetInt($"level{currentLevel}", 1);
-            //AdsManager.Instance.HideAdmobBannerRectangle();
-            //AdsManager.Instance.HideAllAds();
+            AdsManager.Instance.HideAdmobBannerRectangle();
+            AdsManager.Instance.HideAllAds();
 
-            //AdsManager.Instance.HideAdmobBannerRectangle();
-            //AdsManager.Instance.HideBanner();
+            AdsManager.Instance.HideAdmobBannerRectangle();
+            AdsManager.Instance.HideBanner();
 
             knockUnlock.SetActive(true);
         }
@@ -99,47 +100,47 @@ public class NextLevelUnlock : MonoBehaviour
         {
             case 2:
                 unlockAllPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 4:
                 rateUsPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 6:
                 unlockAllPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 9:
                 unlockAllCharactersPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 12:
                 removeAdsPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 15:
                 unlockAllPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 18:
                 unlockAllPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 22:
                 unlockAllPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 24:
                 rateUsPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 26:
                 unlockAllPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
             case 29:
                 unlockAllCharactersPanel.SetActive(true);
-                //AdsManager.Instance.HideAdmobBannerRectangle();
+                AdsManager.Instance.HideAdmobBannerRectangle();
                 break;
 
         }
@@ -150,7 +151,7 @@ public class NextLevelUnlock : MonoBehaviour
 
     public void showAdRect()
     {
-        //AdsManager.Instance.ShowBannerRectangle();
+        AdsManager.Instance.ShowBannerRectangle();
     }
 
     private void AdsManager_OnRewardFreeCoinsFailed()
@@ -165,13 +166,13 @@ public class NextLevelUnlock : MonoBehaviour
 
     public void rewardAddition()
     {
-        //AdsManager.Instance.ShowAdmobRewarded(1);
+        AdsManager.Instance.ShowAdmobRewarded(1);
     }
 
 
     public void callRewardAddition()
     {
-        //AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideAdmobBannerRectangle();
         rewardSuccess.SetActive(true);
         successText.text = "Congratulations you 2X'd your reward";
     }
@@ -179,7 +180,7 @@ public class NextLevelUnlock : MonoBehaviour
 
     public void VideoRewardSuccess()
     {
-        //AdsManager.Instance.ShowBannerRectangle();
+        AdsManager.Instance.ShowBannerRectangle();
         reward *= 2;
 
         PlayerPrefs.SetInt("coin", currentCoins + reward);
@@ -195,22 +196,22 @@ public class NextLevelUnlock : MonoBehaviour
     public void videoRewardUnsuccessful()
     {
         //AdsManager.Instance.ShowBannerRectangle();
-        //AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideAdmobBannerRectangle();
         rewardSuccess.SetActive(false);
         rewardFail.SetActive(true);
     }
 
     public void rewardFailOk()
     {
-        //AdsManager.Instance.ShowBannerRectangle();
+        AdsManager.Instance.ShowBannerRectangle();
         rewardFail.SetActive(false);
     }
 
     public void knockOutUnlocked()
     {
 
-        //AdsManager.Instance.HideAdmobBannerRectangle();
-        //AdsManager.Instance.HideAllAds();
+        AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideAllAds();
         
         Debug.Log("Coins before going to knockout" + PlayerPrefs.GetInt("coin"));
         UFE.EndGame(true);

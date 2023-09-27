@@ -8,12 +8,12 @@ public class PauseMenuSettings : MonoBehaviour
     private void OnEnable()
     {
         
-        //AdsManager.Instance.ShowBannerRectangle();
+        AdsManager.Instance.ShowBannerRectangle();
     }
 
     private void OnDisable()
     {
-        //AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideAdmobBannerRectangle();
     }
 
     public void SoundOn()

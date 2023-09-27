@@ -28,9 +28,9 @@ public class StoryModeTextureScreen : StoryModeScreen {
 
     private void Start()
     {
-		//AdsManager.Instance.HideBanner();
-		//AdsManager.Instance.ShowAdmobInterstitial();
-		//AdsManager.Instance.ShowBannerRectangle();
+		AdsManager.Instance.HideBanner();
+		AdsManager.Instance.ShowAdmobInterstitial();
+		AdsManager.Instance.ShowBannerRectangle();
 
         
 
@@ -79,7 +79,7 @@ public class StoryModeTextureScreen : StoryModeScreen {
 	private void NextScreen()
     {
 
-		//AdsManager.Instance.HideAdmobBannerRectangle();
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		this.GoToNextScreen();
     }
 
@@ -87,8 +87,8 @@ public class StoryModeTextureScreen : StoryModeScreen {
     {
         
 
-        //AdsManager.Instance.HideAdmobBannerRectangle();
-		//AdsManager.Instance.ShowAdmobInterstitial();
+        AdsManager.Instance.HideAdmobBannerRectangle();
+		AdsManager.Instance.ShowAdmobInterstitial();
 		screenLoad.nextbtnload = true;
 		loadingAfterBattle.SetActive(true);
 		//this.GoToNextScreen();
@@ -97,8 +97,8 @@ public class StoryModeTextureScreen : StoryModeScreen {
 	public void restart()
 	{
         
-        //AdsManager.Instance.HideAdmobBannerRectangle();
-		//AdsManager.Instance.HideAllAds();
+        AdsManager.Instance.HideAdmobBannerRectangle();
+		AdsManager.Instance.HideAllAds();
 		screenLoad.nextbtnload = false;
 		loadingAfterBattle.SetActive(true);
 		//UFE.RestartMatch();
@@ -109,6 +109,7 @@ public class StoryModeTextureScreen : StoryModeScreen {
     {
         
         //AdsManager.Instance.HideAllAds();
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		UFE.EndGame(true);
 		
 		SceneManager.LoadScene(0, LoadSceneMode.Single);

@@ -94,7 +94,7 @@ public class DefaultBattleGUI : BattleGUI{
 
     private void OnEnable()
     {
-		//AdsManager.Instance.ShowBanner();
+		AdsManager.Instance.ShowBanner();
 	}
 
     private void Start()
@@ -123,7 +123,7 @@ public class DefaultBattleGUI : BattleGUI{
 
 	public void Pause()
     {
-		//AdsManager.Instance.HideBanner();
+		AdsManager.Instance.HideBanner();
 		Time.timeScale = 0;
 		panel.gameObject.SetActive(true);
 	}
@@ -131,7 +131,7 @@ public class DefaultBattleGUI : BattleGUI{
 	public void Resume()
     {
 
-		//AdsManager.Instance.ShowBanner();
+		AdsManager.Instance.ShowBanner();
 
 		Time.timeScale = 1;
 		panel.gameObject.SetActive(false);
@@ -139,8 +139,8 @@ public class DefaultBattleGUI : BattleGUI{
 
 	public void MainMenu()
     {
-		//AdsManager.Instance.HideBanner();
-		//AdsManager.Instance.HideAdmobBannerRectangle();
+		AdsManager.Instance.HideBanner();
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		UFE.EndGame(true);
 		Time.timeScale = 1;
 		SceneManager.LoadScene(0, LoadSceneMode.Single);
@@ -148,7 +148,7 @@ public class DefaultBattleGUI : BattleGUI{
 
 	public void restart()
     {
-		//AdsManager.Instance.HideAdmobBannerRectangle();
+		AdsManager.Instance.HideAdmobBannerRectangle();
 		panel.gameObject.SetActive(false);
 		UFE.RestartMatch();
     }

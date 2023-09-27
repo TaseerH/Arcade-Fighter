@@ -22,10 +22,13 @@ public class loadingMainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        //AdsManager.Instance.ShowBannerRectangle();
-        //AdsManager.Instance.ShowAdmobInterstitial();
-    }
+        AdsManager.Instance.ShowBannerRectangle();
+        if (PlayerPrefs.GetInt("backFromLevelSelection") != 1)
+        {
+            AdsManager.Instance.ShowAdmobInterstitial();
 
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +63,7 @@ public class loadingMainMenu : MonoBehaviour
 
     private void NextScreen()
     {
-        //AdsManager.Instance.HideAdmobBannerRectangle(); 
+        AdsManager.Instance.HideAdmobBannerRectangle(); 
         //MainMenu.SetActive(true);
         //if(!nextbtnload)
         //{

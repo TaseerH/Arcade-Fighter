@@ -81,8 +81,8 @@ public class GameManager : MonoBehaviour
     {
 
 
-        //AdsManager.Instance.HideAdmobBannerRectangle();
-        //AdsManager.Instance.HideBanner();
+        AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideBanner();
 
 
         if (PlayerPrefs.GetInt("freshcoin") == 0)
@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
             particles[0].SetActive(false);
             particles[1].SetActive(false);
 
-            //AdsManager.Instance.HideAdmobBannerRectangle();
+            AdsManager.Instance.HideAdmobBannerRectangle();
 
         }
 
@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
 
             particles[0].SetActive(false);
             particles[1].SetActive(false);
-            //AdsManager.Instance.HideAllAds();
+            AdsManager.Instance.HideAdmobBannerRectangle();
             //BackButtonStoryModeScreen();
             StoryModeScreen();
 
@@ -230,14 +230,14 @@ public class GameManager : MonoBehaviour
 
     public void addwatch()
     {
-        //AdsManager.Instance.ShowAdmobRewarded(0);
-        //adwatchSuccess();
+        AdsManager.Instance.ShowAdmobRewarded(0);
+        adwatchSuccess();
     }
 
     private void OnEnable()
     {
-        //AdsManager.OnRewardFreeCoins += AdsManager_OnRewardFreeCoins;
-        //AdsManager.OnRewardFreeCoinsFailed += AdsManager_OnRewardFreeCoinsFailed;
+        AdsManager.OnRewardFreeCoins += AdsManager_OnRewardFreeCoins;
+        AdsManager.OnRewardFreeCoinsFailed += AdsManager_OnRewardFreeCoinsFailed;
     }
 
     private void AdsManager_OnRewardFreeCoinsFailed()
@@ -247,8 +247,8 @@ public class GameManager : MonoBehaviour
 
     private void OnDisable()
     {
-        //AdsManager.OnRewardFreeCoins -= AdsManager_OnRewardFreeCoins;
-        //AdsManager.OnRewardFreeCoinsFailed -= AdsManager_OnRewardFreeCoinsFailed;
+        AdsManager.OnRewardFreeCoins -= AdsManager_OnRewardFreeCoins;
+        AdsManager.OnRewardFreeCoinsFailed -= AdsManager_OnRewardFreeCoinsFailed;
     }
 
     private void AdsManager_OnRewardFreeCoins()
@@ -310,9 +310,9 @@ public class GameManager : MonoBehaviour
 
     public void StoryModeScreen()
     {
-
-        //AdsManager.Instance.HideAdmobBannerRectangle();
-        //AdsManager.Instance.HideBanner();
+        
+        AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideBanner();
         
         PlayButtons.SetActive(false);
         storyon = true;

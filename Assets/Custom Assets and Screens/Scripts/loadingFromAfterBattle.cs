@@ -20,8 +20,8 @@ public class loadingFromAfterBattle : MonoBehaviour
 
     private void OnEnable()
     {
-        //AdsManager.Instance.ShowBannerRectangle();
-        //AdsManager.Instance.ShowAdmobInterstitial();
+        AdsManager.Instance.ShowBannerRectangle();
+        AdsManager.Instance.ShowAdmobInterstitial();
     }
 
 
@@ -49,7 +49,7 @@ public class loadingFromAfterBattle : MonoBehaviour
 
     private void NextScreen()
     {
-        //AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideAdmobBannerRectangle();
 
         this.gameObject.SetActive(false);
         //MainMenu.SetActive(true);

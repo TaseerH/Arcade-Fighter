@@ -31,9 +31,14 @@ public class LevelSelectionScript : MonoBehaviour
 
     public GameObject Store;
 
+    
+
     private void Awake()
     {
-        
+        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            allLevelsUnlockBtn.GetComponent<Button>().interactable = false;
+        }
     }
 
     // Start is called before the first frame update
@@ -83,10 +88,10 @@ public class LevelSelectionScript : MonoBehaviour
     {
         levelSystem();
 
-        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
-        {
-            allLevelsUnlockBtn.SetActive(false);
-        }
+        //if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        //{
+         //   allLevelsUnlockBtn.SetActive(false);
+       // }
 
     }
 
@@ -151,7 +156,7 @@ public class LevelSelectionScript : MonoBehaviour
             {
                 PlayerPrefs.SetInt($"level{i}", 1);
             }
-
+            PlayerPrefs.SetInt("allLevelsUnlocked", 1);
             allLevelsUnlock = 1;
             PlayerPrefs.SetInt("KnockOut_Unlock", 1);
             levelSystem();

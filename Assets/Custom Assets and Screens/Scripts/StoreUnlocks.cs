@@ -42,25 +42,24 @@ public class StoreUnlocks : MonoBehaviour
     {
         score.text = PlayerPrefs.GetInt("coin").ToString("N0");
 
-        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
         {
             unlockCharactersPack.interactable = false;
         }
-        
-        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+
+        if (PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
         {
             unlockLevelsPack.interactable = false;
         }
-        
-        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1 && PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1 && PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
         {
             unlockBundle.interactable = false;
         }
-        if(PlayerPrefs.GetInt("RemoveAds") == 1)
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
         {
             removeAds.interactable = false;
         }
-
 
     }
 

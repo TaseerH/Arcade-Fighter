@@ -6,8 +6,8 @@ public class adRemoval : MonoBehaviour
 {
     private void Start()
     {
-        //AdsManager.Instance.HideAdmobBannerRectangle();
-        //AdsManager.Instance.HideBanner();
+        AdsManager.Instance.HideAdmobBannerRectangle();
+        AdsManager.Instance.HideBanner();
         
     }
 }

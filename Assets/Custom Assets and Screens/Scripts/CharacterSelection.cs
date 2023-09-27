@@ -33,29 +33,36 @@ public class CharacterSelection : MonoBehaviour
     private void FixedUpdate()
     {
         Currency.SetText(PlayerPrefs.GetInt("coin").ToString("N0"));
-    
-        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
-        {
-            allCharactersUnlock.SetActive(false);
-        }
+
+        //if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        //{
+            //allCharactersUnlock.SetActive(false);
+        //}
 
     }
 
     private void Start()
     {
 
+        for (int i = 0; i < characters.Length; i++)
+        {
+            Debug.Log("Character Price 1 is: " + PlayerPrefs.GetInt($"characterprice{i}"));
+        }
+
         characters[PlayerPrefs.GetInt("character")].SetActive(true);
         selectedCharacter = PlayerPrefs.GetInt("character");
 
 
         Debug.Log($"Selected Level was {PlayerPrefs.GetInt("selectedLevel")}");
-        
+
         Buy.gameObject.SetActive(false);
-        
+
 
         //Debug.Log($"The Letter J is {j}");
-        if (PlayerPrefs.GetInt("freshinstall") == 0 && PlayerPrefs.GetInt("allCharactersUnlocked") == 0)
+        if (PlayerPrefs.GetInt("freshinstall") == 0 || PlayerPrefs.GetInt("allCharactersUnlocked") != 1)
         {
+            Debug.Log("Inside price setter");
+
             for (int i = 0; i < characters.Length; i++)
             {
                 if (i == 0)
@@ -93,6 +100,11 @@ public class CharacterSelection : MonoBehaviour
         if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
         {
             unlockAllSuccess();
+        }
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            Debug.Log("Character Price 2 is: " + PlayerPrefs.GetInt($"characterprice{i}"));
         }
     }
 
@@ -199,27 +211,11 @@ public class CharacterSelection : MonoBehaviour
         
     }
 
-    private bool charactersUnlocked;
+    
     public void unlockAllCharacters()
     {
-        for (int i = 0; i < characters.Length; i++)
-        {
-            if (PlayerPrefs.GetInt($"character{i}") == 1) {
-                charactersUnlocked = (true);
-            } else
-            {
-                charactersUnlocked = (false);
-            }
-        }
-        if (charactersUnlocked)
-        {
-            adWatchFailed.SetActive(true);
-        } else
-        {
-            adWatchSuccess.SetActive(true);
-        }
+        
         PlayerPrefs.SetInt("freshinstall", 1);
-        characters[selectedCharacter].SetActive(false);
     }
 
     public void unlockAllSuccess()
@@ -231,6 +227,7 @@ public class CharacterSelection : MonoBehaviour
             Buy.gameObject.SetActive(false);
         }
         adWatchSuccess.SetActive(false);
+        PlayerPrefs.SetInt("allCharactersUnlocked", 1);
         characters[selectedCharacter].SetActive(true);
     }
 
