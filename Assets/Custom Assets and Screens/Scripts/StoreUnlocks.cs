@@ -40,8 +40,10 @@ public class StoreUnlocks : MonoBehaviour
 
     private void Update()
     {
+        
         score.text = PlayerPrefs.GetInt("coin").ToString("N0");
 
+        /*
         if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
         {
             unlockCharactersPack.interactable = false;
@@ -60,6 +62,7 @@ public class StoreUnlocks : MonoBehaviour
         {
             removeAds.interactable = false;
         }
+        */
 
     }
 
@@ -158,7 +161,7 @@ public class StoreUnlocks : MonoBehaviour
 
     public void unlockAllChacracters()
     {
-        if(PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
         {
             purchaseFailure.SetActive(true);
         } else
@@ -171,28 +174,24 @@ public class StoreUnlocks : MonoBehaviour
 
     public void unlockAllLevels()
     {
-        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        if (PlayerPrefs.GetInt("allLevelsUnlocked") == 0)
         {
-            purchaseFailure.SetActive(true);
-        } else
-        {
+
             purchaseSuccess.SetActive(true);
             PlayerPrefs.SetInt("allLevelsUnlocked", 1);
             PlayerPrefs.SetInt("KnockOut_Unlock", 1);
             manager.knockout();
         }
-        
+
         //unlockAllLevelsScript.unlockAllLevels();
     }
 
     public void unlockEverything()
     {
-        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1 && PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        if (PlayerPrefs.GetInt("allLevelsUnlocked") == 0 || PlayerPrefs.GetInt("allCharactersUnlocked") == 0)
         {
-            purchaseFailure.SetActive(true);
-        } else
-        {
-            purchaseSuccess.SetActive(true);
+            
+            //purchaseSuccess.SetActive(true);
             PlayerPrefs.SetInt("allCharactersUnlocked", 1);
             PlayerPrefs.SetInt("allLevelsUnlocked", 1);
             PlayerPrefs.SetInt("KnockOut_Unlock", 1);

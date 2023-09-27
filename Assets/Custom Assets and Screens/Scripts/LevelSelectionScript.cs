@@ -33,7 +33,7 @@ public class LevelSelectionScript : MonoBehaviour
 
     
 
-    private void Awake()
+    private void Update()
     {
         if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
         {
@@ -88,10 +88,11 @@ public class LevelSelectionScript : MonoBehaviour
     {
         levelSystem();
 
-        //if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
-        //{
-         //   allLevelsUnlockBtn.SetActive(false);
-       // }
+        if(PlayerPrefs.GetInt("allLevelsUnlocked") == 1)
+        {
+            allLevelsUnlockBtn.GetComponent<Button>().interactable = false;
+            unlockAllLevelsSuccess();
+        }
 
     }
 
@@ -140,13 +141,8 @@ public class LevelSelectionScript : MonoBehaviour
 
     public void unlockAllLevels ()
     {
-        if(PlayerPrefs.GetInt("KnockOut_Unlock") == 0)
-        {
-            successMessage.SetActive(true);
-
-        } else { 
-            FailedMessage.SetActive(true); 
-        }
+        PlayerPrefs.SetInt("KnockOut_Unlock", 1);
+        PlayerPrefs.SetInt("allLevelsUnlocked", 1);
 
     }
 

@@ -34,10 +34,10 @@ public class CharacterSelection : MonoBehaviour
     {
         Currency.SetText(PlayerPrefs.GetInt("coin").ToString("N0"));
 
-        //if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
-        //{
-            //allCharactersUnlock.SetActive(false);
-        //}
+        if (PlayerPrefs.GetInt("allCharactersUnlocked") == 1)
+        {
+            allCharactersUnlock.GetComponent<Button>().interactable = false;
+        }
 
     }
 

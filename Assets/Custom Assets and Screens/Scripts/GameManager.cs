@@ -159,10 +159,18 @@ public class GameManager : MonoBehaviour
     {
         if(PlayerPrefs.GetInt("KnockOut_Unlock") == 1)
         {
-            knockOutModeBtn.image.sprite = knockOn;
+            if(knockOutModeBtn!=null)
+            {
+                knockOutModeBtn.image.sprite = knockOn;
+            }
+
         } else
         {
-            knockOutModeBtn.image.sprite = knockOff;
+            if (knockOutModeBtn != null)
+            {
+                knockOutModeBtn.image.sprite = knockOff;
+            }
+               
         }
     }
 

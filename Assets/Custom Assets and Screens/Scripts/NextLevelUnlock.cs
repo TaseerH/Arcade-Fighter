@@ -21,7 +21,7 @@ public class NextLevelUnlock : MonoBehaviour
 
 
     public GameObject knockUnlock;
-
+    public GameObject BattleGUI;
     public GameObject unlockAllPanel;
     public GameObject unlockAllCharactersPanel;
     public GameObject rateUsPanel;
@@ -172,6 +172,7 @@ public class NextLevelUnlock : MonoBehaviour
 
     public void callRewardAddition()
     {
+        //BattleGUI.SetActive(true);
         AdsManager.Instance.HideAdmobBannerRectangle();
         rewardSuccess.SetActive(true);
         successText.text = "Congratulations you 2X'd your reward";

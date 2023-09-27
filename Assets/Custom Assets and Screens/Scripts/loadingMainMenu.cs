@@ -25,7 +25,11 @@ public class loadingMainMenu : MonoBehaviour
         AdsManager.Instance.ShowBannerRectangle();
         if (PlayerPrefs.GetInt("backFromLevelSelection") != 1)
         {
-            AdsManager.Instance.ShowAdmobInterstitial();
+            if(PlayerPrefs.GetInt("freshinstall") == 1)
+            {
+                AdsManager.Instance.ShowAdmobInterstitial();
+            }
+            //AdsManager.Instance.ShowAdmobInterstitial();
 
         }
     }
